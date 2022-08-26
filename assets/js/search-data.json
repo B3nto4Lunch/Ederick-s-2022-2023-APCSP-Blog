@@ -2,10 +2,10 @@
   
     
         "post0": {
-            "title": "Blog Posts Week 2",
-            "content": "Burger .",
-            "url": "https://b3nto4lunch.github.io/Ederick-s-2022-2023-APCSP-Blog/markdown/2022/08/26/Week-2-Posts.html",
-            "relUrl": "/markdown/2022/08/26/Week-2-Posts.html",
+            "title": "Post With Image",
+            "content": "Image . ![](/Ederick-s-2022-2023-APCSP-Blog/(images/IMG_3299[1].JPG) .",
+            "url": "https://b3nto4lunch.github.io/Ederick-s-2022-2023-APCSP-Blog/markdown/2022/08/26/Post-With-An-Image.html",
+            "relUrl": "/markdown/2022/08/26/Post-With-An-Image.html",
             "date": " • Aug 26, 2022"
         }
         
