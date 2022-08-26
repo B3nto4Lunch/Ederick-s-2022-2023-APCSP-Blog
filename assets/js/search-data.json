@@ -2,10 +2,10 @@
   
     
         "post0": {
-            "title": "Markdown",
-            "content": "toc: true layout: post description: A minimal example of using markdown with fastpages. categories: [markdown] title: Blog Posts Week 2 . Burger .",
-            "url": "https://b3nto4lunch.github.io/Ederick-s-2022-2023-APCSP-Blog/2022/08/26/Markdown.html",
-            "relUrl": "/2022/08/26/Markdown.html",
+            "title": "Blog Posts Week 2",
+            "content": "Burger .",
+            "url": "https://b3nto4lunch.github.io/Ederick-s-2022-2023-APCSP-Blog/markdown/2022/08/26/Week-2-Posts.html",
+            "relUrl": "/markdown/2022/08/26/Week-2-Posts.html",
             "date": " • Aug 26, 2022"
         }
         
