@@ -2,10 +2,10 @@
 title: Post With Image
 toc: true
 layout: post
-description: A post of all the things completed in week 2 of APCSP (8/22-8/26)
+description: A cool picture of a tailess cat under my chair
 categories: [markdown]
 ---
 # Image
 
 
-![]({{ site.baseurl }}/(images/IMG_3299[1].JPG)
+![]({{ site.baseurl }}/images/IMG_3299[1].JPG)
