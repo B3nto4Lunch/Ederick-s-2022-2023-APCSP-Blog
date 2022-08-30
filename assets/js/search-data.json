@@ -13,10 +13,10 @@
   
     
         ,"post1": {
-            "title": "Title",
-            "content": ". title: Notebook for School . Notebook for School .",
-            "url": "https://b3nto4lunch.github.io/Ederick-s-2022-2023-APCSP-Blog/2022/08/29/Sophomore-Notebook.html",
-            "relUrl": "/2022/08/29/Sophomore-Notebook.html",
+            "title": "Sophomore Notebook",
+            "content": "{ “cells”: [ { “cell_type”: “markdown”, “metadata”: {}, “source”: [ “— n”, “title: Notebook for School n”, “— n”, “ n”, “# Notebook for School” ] } ], “metadata”: { “language_info”: { “name”: “python” }, “orig_nbformat”: 4 }, “nbformat”: 4, “nbformat_minor”: 2 } .",
+            "url": "https://b3nto4lunch.github.io/Ederick-s-2022-2023-APCSP-Blog/2022/08/29/Sophomore-Notebook.ipynb",
+            "relUrl": "/2022/08/29/Sophomore-Notebook.ipynb",
             "date": " • Aug 29, 2022"
         }
         
