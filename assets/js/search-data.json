@@ -47,7 +47,7 @@
     
         ,"post4": {
             "title": "List Practice",
-            "content": "def print_data(d_rec): print(d_rec[&quot;name&quot;], d_rec[&quot;name&quot;]) print(&quot; t&quot;, &quot;age:&quot;, d_rec[&quot;age&quot;]) print(&quot; t&quot;, &quot;school:&quot;, d_rec[&quot;DOB&quot;]) print() .",
+            "content": "print(&quot;What is my name?&quot;) name = &quot;Ederick Wong&quot; print(&quot;name&quot;, name, type(name)) print() print(&quot;What is my age?&quot;) age = 14 print(&quot;age&quot;, age, type(age)) print() print(&quot;What school do I go to?&quot;) school = &quot;Del Norte High school&quot; print(&quot;school&quot;, school, type(school)) . What is my name? name Ederick Wong &lt;class &#39;str&#39;&gt; What is my age? age 14 &lt;class &#39;int&#39;&gt; What school do I go to? school Del Norte High school &lt;class &#39;str&#39;&gt; . def print_data(d_rec): print(d_rec[&quot;name&quot;], d_rec[&quot;name&quot;]) print(&quot; t&quot;, &quot;age:&quot;, d_rec[&quot;age&quot;]) print(&quot; t&quot;, &quot;school:&quot;, d_rec[&quot;DOB&quot;]) print() .",
             "url": "https://b3nto4lunch.github.io/Ederick-s-2022-2023-APCSP-Blog/2022/08/30/Lists.html",
             "relUrl": "/2022/08/30/Lists.html",
             "date": " • Aug 30, 2022"
