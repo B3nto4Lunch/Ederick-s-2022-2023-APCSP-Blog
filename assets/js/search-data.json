@@ -24,17 +24,6 @@
   
     
         ,"post2": {
-            "title": "Appdata",
-            "content": "Quiz . Making this quiz was fairly simple, all I had to keep in mind were what I wanted to implement on the test and how I would record the score if someone picked the wrong answers. On top of my pondering, I also wanted to have a sound based test that would have audio play if you got the question wrong rather than a screen that directed you to whether the question was right or wrong. I used some audio files on my computer to create a yes and no audio. I decided that I would have a subtractive based code to determine one&#39;s score, with an initial score of 3, every question that the user gets wrong would subtact a point, therefore making the quiz viable for if you wanted to see the score or not. .",
-            "url": "https://b3nto4lunch.github.io/Ederick-s-2022-2023-APCSP-Blog/2022/09/11/Appdata.html",
-            "relUrl": "/2022/09/11/Appdata.html",
-            "date": " • Sep 11, 2022"
-        }
-        
-    
-  
-    
-        ,"post3": {
             "title": "Loop",
             "content": "def print_data(d_rec): print(d_rec[&quot;name&quot;]) print(&quot; t&quot;, &quot;Residence:&quot;, d_rec[&quot;Residence&quot;]) # t is a tab indent print(&quot; t&quot;, &quot;Birth Day:&quot;, d_rec[&quot;DOB&quot;]) print(&quot; t&quot;, &quot;Cars: &quot;, end=&quot;&quot;) # end=&quot;&quot; make sure no return occurs print(&quot;, &quot;.join(d_rec[&quot;Owns_Cars&quot;])) # join allows printing a string list with separator print() .",
             "url": "https://b3nto4lunch.github.io/Ederick-s-2022-2023-APCSP-Blog/2022/09/02/Loop.html",
@@ -45,7 +34,7 @@
     
   
     
-        ,"post4": {
+        ,"post3": {
             "title": "InfoDB",
             "content": "InfoDB = [] . InfoDB.append({ &quot;First Name&quot; : &quot;Ederick&quot;, &quot;Last Name&quot; : &quot;Wong&quot;, &quot;DOB&quot; : &quot;December 29&quot;, &quot;Grade&quot; : &quot;Sophomore&quot;, &quot;Favorite Food&quot; : &quot;Noodles&quot; }) . AttributeError Traceback (most recent call last) /home/b3nto4lunch/vscode/Ederick-s-2022-2023-APCSP-Blog/_notebooks/2022-09-02-InfoDB.ipynb Cell 3 in &lt;cell line: 1&gt;() -&gt; &lt;a href=&#39;vscode-notebook-cell://wsl%2Bubuntu/home/b3nto4lunch/vscode/Ederick-s-2022-2023-APCSP-Blog/_notebooks/2022-09-02-InfoDB.ipynb#W2sdnNjb2RlLXJlbW90ZQ%3D%3D?line=0&#39;&gt;1&lt;/a&gt; InfoDB.append({ &lt;a href=&#39;vscode-notebook-cell://wsl%2Bubuntu/home/b3nto4lunch/vscode/Ederick-s-2022-2023-APCSP-Blog/_notebooks/2022-09-02-InfoDB.ipynb#W2sdnNjb2RlLXJlbW90ZQ%3D%3D?line=1&#39;&gt;2&lt;/a&gt; &#34;First Name&#34; : &#34;Ederick&#34;, &lt;a href=&#39;vscode-notebook-cell://wsl%2Bubuntu/home/b3nto4lunch/vscode/Ederick-s-2022-2023-APCSP-Blog/_notebooks/2022-09-02-InfoDB.ipynb#W2sdnNjb2RlLXJlbW90ZQ%3D%3D?line=2&#39;&gt;3&lt;/a&gt; &#34;Last Name&#34; : &#34;Wong&#34;, &lt;a href=&#39;vscode-notebook-cell://wsl%2Bubuntu/home/b3nto4lunch/vscode/Ederick-s-2022-2023-APCSP-Blog/_notebooks/2022-09-02-InfoDB.ipynb#W2sdnNjb2RlLXJlbW90ZQ%3D%3D?line=3&#39;&gt;4&lt;/a&gt; &#34;DOB&#34; : &#34;December 29&#34;, &lt;a href=&#39;vscode-notebook-cell://wsl%2Bubuntu/home/b3nto4lunch/vscode/Ederick-s-2022-2023-APCSP-Blog/_notebooks/2022-09-02-InfoDB.ipynb#W2sdnNjb2RlLXJlbW90ZQ%3D%3D?line=4&#39;&gt;5&lt;/a&gt; &#34;Grade&#34; : &#34;Sophomore&#34;, &lt;a href=&#39;vscode-notebook-cell://wsl%2Bubuntu/home/b3nto4lunch/vscode/Ederick-s-2022-2023-APCSP-Blog/_notebooks/2022-09-02-InfoDB.ipynb#W2sdnNjb2RlLXJlbW90ZQ%3D%3D?line=5&#39;&gt;6&lt;/a&gt; &#34;Favorite Food&#34; : &#34;Noodles&#34; &lt;a href=&#39;vscode-notebook-cell://wsl%2Bubuntu/home/b3nto4lunch/vscode/Ederick-s-2022-2023-APCSP-Blog/_notebooks/2022-09-02-InfoDB.ipynb#W2sdnNjb2RlLXJlbW90ZQ%3D%3D?line=6&#39;&gt;7&lt;/a&gt; }) AttributeError: &#39;function&#39; object has no attribute &#39;append&#39; . Dictionary = [&quot;Ederick&quot;, &quot;Wong&quot;, &quot;DNHS&quot;] for x in Dictionary: print(x) . Ederick Wong DNHS . def InfoDB(): print(&quot;InfoDB&quot;) print() .",
             "url": "https://b3nto4lunch.github.io/Ederick-s-2022-2023-APCSP-Blog/2022/09/02/InfoDB.html",
@@ -56,7 +45,7 @@
     
   
     
-        ,"post5": {
+        ,"post4": {
             "title": "Week 2 - HTML Fragments",
             "content": "",
             "url": "https://b3nto4lunch.github.io/Ederick-s-2022-2023-APCSP-Blog/weeks/2022/08/31/Tagging.html",
@@ -67,7 +56,7 @@
     
   
     
-        ,"post6": {
+        ,"post5": {
             "title": "List Practice",
             "content": "print(&quot;What is my name?&quot;) name = &quot;Ederick Wong&quot; print(&quot;name&quot;, name, type(name)) print() print(&quot;What is my age?&quot;) age = 14 print(&quot;age&quot;, age, type(age)) print() print(&quot;What school do I go to?&quot;) school = &quot;Del Norte High school&quot; print(&quot;school&quot;, school, type(school)) . What is my name? name Ederick Wong &lt;class &#39;str&#39;&gt; What is my age? age 14 &lt;class &#39;int&#39;&gt; What school do I go to? school Del Norte High school &lt;class &#39;str&#39;&gt; . def print_data(d_rec): print(d_rec[&quot;name&quot;], d_rec[&quot;name&quot;]) print(&quot; t&quot;, &quot;age:&quot;, d_rec[&quot;age&quot;]) print(&quot; t&quot;, &quot;school:&quot;, d_rec[&quot;DOB&quot;]) print() .",
             "url": "https://b3nto4lunch.github.io/Ederick-s-2022-2023-APCSP-Blog/2022/08/30/Lists.html",
@@ -78,7 +67,7 @@
     
   
     
-        ,"post7": {
+        ,"post6": {
             "title": "Dictionary, Lists, and InfoDB",
             "content": "print(&quot;What is my name?&quot;) name = &quot;Ederick Wong&quot; print(&quot;name&quot;, name, type(name)) print() print(&quot;What is my age?&quot;) age = 14 print(&quot;age&quot;, age, type(age)) print() print(&quot;What percentage of my grade are for tests?&quot;) score = 75.0 print(&quot;score&quot;, score, type(score)) print() print(&quot;Give me some info on X&quot;) person = { &quot;Ederick&quot; : name, &quot;14&quot; : 14, &quot;90.0&quot; : 90.0 } print(&quot;What is my name?&quot;) print(&quot;What is my age?&quot;) langs = [&quot;Python&quot;, &quot;JavaScript&quot;, &quot;Java&quot;] print(&quot;langs&quot;, langs, type(langs), &quot;length&quot;, len(langs)) print(&quot;- langs[0]&quot;, langs[0], type(langs[0])) print() print(&quot;Basic Info on Me&quot;) print(&quot;Try to see any changes&quot;) person = { &quot;name&quot;: name, &quot;age&quot;: age, &quot;score&quot;: score, &quot;langs&quot;: langs } print(&quot;person&quot;, person, type(person), &quot;length&quot;, len(person)) print(&#39;- person[&quot;name&quot;]&#39;, person[&quot;name&quot;], type(person[&quot;name&quot;])) numbers = [1, 2, 3, 4] for x in (numbers): print(numbers) . What is my name? name Ederick Wong &lt;class &#39;str&#39;&gt; What is my age? age 14 &lt;class &#39;int&#39;&gt; What percentage of my grade are for tests? score 75.0 &lt;class &#39;float&#39;&gt; Give me some info on X What is my name? What is my age? langs [&#39;Python&#39;, &#39;JavaScript&#39;, &#39;Java&#39;] &lt;class &#39;list&#39;&gt; length 3 - langs[0] Python &lt;class &#39;str&#39;&gt; Basic Info on Me Try to see any changes person {&#39;name&#39;: &#39;Ederick Wong&#39;, &#39;age&#39;: 14, &#39;score&#39;: 75.0, &#39;langs&#39;: [&#39;Python&#39;, &#39;JavaScript&#39;, &#39;Java&#39;]} &lt;class &#39;dict&#39;&gt; length 4 - person[&#34;name&#34;] Ederick Wong &lt;class &#39;str&#39;&gt; [1, 2, 3, 4] [1, 2, 3, 4] [1, 2, 3, 4] [1, 2, 3, 4] . dictionary = [&quot;Ederick&quot;, &quot;DNHS&quot;, &quot;14&quot;] print(dictionary) . [&#39;Ederick&#39;, &#39;DNHS&#39;, &#39;14&#39;] . InfoDB = [] InfoDB.append({ &quot;Name&quot; : &quot;Ederick Wong&quot;, &quot;Age&quot; : &quot;14&quot;, &quot;Percentage on Tests&quot; : &quot;75.0&quot;, }) .",
             "url": "https://b3nto4lunch.github.io/Ederick-s-2022-2023-APCSP-Blog/2022/08/30/Dictionary.html",
@@ -89,7 +78,7 @@
     
   
     
-        ,"post8": {
+        ,"post7": {
             "title": "School Notebook for School 2022-2023",
             "content": "This will be an &quot;online notebook&quot; for things in the future. . The courses that I am currently taking are WH, Int IIIa, Chinese, APCSP, and AP Bio . Integrated IIIa Calendar: Integrated IIIa . AP Biology: https://docs.google.com/document/d/1dQvNBH_TDJQEz8DsNwrLZnDGMAPq-IB1Q2LhppIqU70/edit .",
             "url": "https://b3nto4lunch.github.io/Ederick-s-2022-2023-APCSP-Blog/2022/08/29/Sophomore-Notebook.html",
@@ -100,7 +89,7 @@
     
   
     
-        ,"post9": {
+        ,"post8": {
             "title": "Chinese",
             "content": "This is a document to test my docx file for VSCode. . Chinese is my favorite subject for multiple reasons. For one, learning Chinese is really fun because it’s great to learn about another country’s culture and language. My parents are both Mandarin and I would like to know what they are saying too. My last name in chinese is 黄 as in 黄色的黄。 .",
             "url": "https://b3nto4lunch.github.io/Ederick-s-2022-2023-APCSP-Blog/2022/08/29/Chinese.html",
@@ -111,7 +100,7 @@
     
   
     
-        ,"post10": {
+        ,"post9": {
             "title": "Post With Image",
             "content": "Image . .",
             "url": "https://b3nto4lunch.github.io/Ederick-s-2022-2023-APCSP-Blog/markdown/2022/08/26/Post-With-An-Image.html",
@@ -122,7 +111,7 @@
     
   
     
-        ,"post11": {
+        ,"post10": {
             "title": "Quiz",
             "content": "import getpass, sys def question_with_response(prompt): print(&quot;Question: &quot; + prompt) msg = input() return msg questions = 3 questions = 3 correct = 0 print(&#39;Hello, &#39; + getpass.getuser() + &quot; running &quot; + sys.executable) print(&quot;You will be asked &quot; + str(questions) + &quot; questions.&quot;) # question_and_answer(&quot;Are you ready to take a test?&quot;) rsp = question_with_response(&quot;Name the Python output command mentioned in this lesson?&quot;) if rsp == &quot;print&quot;: print(rsp + &quot; is correct!&quot;) correct += 1 else: print(rsp + &quot; is incorrect!&quot;) rsp = question_with_response(&quot;What command is used to evaluate correct or incorrect response in this example?&quot;) if rsp == &quot;if&quot;: print(rsp + &quot; is correct!&quot;) correct += 1 else: print(rsp + &quot; is incorrect!&quot;) rsp = question_with_response(&quot;Each &#39;if&#39; command contains an &#39;_________&#39; to determine a true or false condition?&quot;) if rsp == &quot;expression&quot;: print(rsp + &quot; is correct!&quot;) correct += 1 else: print(rsp + &quot; is incorrect!&quot;) print(getpass.getuser() + &quot; you scored &quot; + str(correct) +&quot;/&quot; + str(questions)) . Hello, b3nto4lunch running /bin/python3 You will be asked 3 questions. Question: Name the Python output command mentioned in this lesson? print is correct! Question: What command is used to evaluate correct or incorrect response in this example? if is correct! Question: Each &#39;if&#39; command contains an &#39;_________&#39; to determine a true or false condition? if is incorrect! b3nto4lunch you scored 2/3 .",
             "url": "https://b3nto4lunch.github.io/Ederick-s-2022-2023-APCSP-Blog/2022/08/24/Quiz.html",
@@ -133,7 +122,7 @@
     
   
     
-        ,"post12": {
+        ,"post11": {
             "title": "This is a test",
             "content": "print(&quot;Hello&quot;) .",
             "url": "https://b3nto4lunch.github.io/Ederick-s-2022-2023-APCSP-Blog/2022/08/22/Python.html",
@@ -144,7 +133,7 @@
     
   
     
-        ,"post13": {
+        ,"post12": {
             "title": "Fastpages Notebook Blog Post",
             "content": "About . This notebook is a demonstration of some of capabilities of fastpages with notebooks. . With fastpages you can save your jupyter notebooks into the _notebooks folder at the root of your repository, and they will be automatically be converted to Jekyll compliant blog posts! . Front Matter . The first cell in your Jupyter Notebook or markdown blog post contains front matter. Front matter is metadata that can turn on/off options in your Notebook. It is formatted like this: . # &quot;My Title&quot; &gt; &quot;Awesome summary&quot; - toc:true- branch: master - badges: true - comments: true - author: Hamel Husain &amp; Jeremy Howard - categories: [fastpages, jupyter] . Setting toc: true will automatically generate a table of contents | Setting badges: true will automatically include GitHub and Google Colab links to your notebook. | Setting comments: true will enable commenting on your blog post, powered by utterances. | . The title and description need to be enclosed in double quotes only if they include special characters such as a colon. More details and options for front matter can be viewed on the front matter section of the README. . Markdown Shortcuts . A #hide comment at the top of any code cell will hide both the input and output of that cell in your blog post. . A #hide_input comment at the top of any code cell will only hide the input of that cell. . The comment #hide_input was used to hide the code that produced this. . put a #collapse-hide flag at the top of any cell if you want to hide that cell by default, but give the reader the option to show it: . import pandas as pd import altair as alt . . put a #collapse-show flag at the top of any cell if you want to show that cell by default, but give the reader the option to hide it: . cars = &#39;https://vega.github.io/vega-datasets/data/cars.json&#39; movies = &#39;https://vega.github.io/vega-datasets/data/movies.json&#39; sp500 = &#39;https://vega.github.io/vega-datasets/data/sp500.csv&#39; stocks = &#39;https://vega.github.io/vega-datasets/data/stocks.csv&#39; flights = &#39;https://vega.github.io/vega-datasets/data/flights-5k.json&#39; . . place a #collapse-output flag at the top of any cell if you want to put the output under a collapsable element that is closed by default, but give the reader the option to open it: . print(&#39;The comment #collapse-output was used to collapse the output of this cell by default but you can expand it.&#39;) . The comment #collapse-output was used to collapse the output of this cell by default but you can expand it. . . Interactive Charts With Altair . Charts made with Altair remain interactive. Example charts taken from this repo, specifically this notebook. . Example 1: DropDown . # use specific hard-wired values as the initial selected values selection = alt.selection_single( name=&#39;Select&#39;, fields=[&#39;Major_Genre&#39;, &#39;MPAA_Rating&#39;], init={&#39;Major_Genre&#39;: &#39;Drama&#39;, &#39;MPAA_Rating&#39;: &#39;R&#39;}, bind={&#39;Major_Genre&#39;: alt.binding_select(options=genres), &#39;MPAA_Rating&#39;: alt.binding_radio(options=mpaa)} ) # scatter plot, modify opacity based on selection alt.Chart(df).mark_circle().add_selection( selection ).encode( x=&#39;Rotten_Tomatoes_Rating:Q&#39;, y=&#39;IMDB_Rating:Q&#39;, tooltip=&#39;Title:N&#39;, opacity=alt.condition(selection, alt.value(0.75), alt.value(0.05)) ) . Example 2: Tooltips . alt.Chart(df).mark_circle().add_selection( alt.selection_interval(bind=&#39;scales&#39;, encodings=[&#39;x&#39;]) ).encode( alt.X(&#39;Rotten_Tomatoes_Rating&#39;, type=&#39;quantitative&#39;), alt.Y(&#39;IMDB_Rating&#39;, type=&#39;quantitative&#39;, axis=alt.Axis(minExtent=30)), # y=alt.Y(&#39;IMDB_Rating:Q&#39;, ), # use min extent to stabilize axis title placement tooltip=[&#39;Title:N&#39;, &#39;Release_Date:N&#39;, &#39;IMDB_Rating:Q&#39;, &#39;Rotten_Tomatoes_Rating:Q&#39;] ).properties( width=500, height=400 ) . Example 3: More Tooltips . label = alt.selection_single( encodings=[&#39;x&#39;], # limit selection to x-axis value on=&#39;mouseover&#39;, # select on mouseover events nearest=True, # select data point nearest the cursor empty=&#39;none&#39; # empty selection includes no data points ) # define our base line chart of stock prices base = alt.Chart().mark_line().encode( alt.X(&#39;date:T&#39;), alt.Y(&#39;price:Q&#39;, scale=alt.Scale(type=&#39;log&#39;)), alt.Color(&#39;symbol:N&#39;) ) alt.layer( base, # base line chart # add a rule mark to serve as a guide line alt.Chart().mark_rule(color=&#39;#aaa&#39;).encode( x=&#39;date:T&#39; ).transform_filter(label), # add circle marks for selected time points, hide unselected points base.mark_circle().encode( opacity=alt.condition(label, alt.value(1), alt.value(0)) ).add_selection(label), # add white stroked text to provide a legible background for labels base.mark_text(align=&#39;left&#39;, dx=5, dy=-5, stroke=&#39;white&#39;, strokeWidth=2).encode( text=&#39;price:Q&#39; ).transform_filter(label), # add text labels for stock prices base.mark_text(align=&#39;left&#39;, dx=5, dy=-5).encode( text=&#39;price:Q&#39; ).transform_filter(label), data=stocks ).properties( width=500, height=400 ) . Data Tables . You can display tables per the usual way in your blog: . df[[&#39;Title&#39;, &#39;Worldwide_Gross&#39;, &#39;Production_Budget&#39;, &#39;Distributor&#39;, &#39;MPAA_Rating&#39;, &#39;IMDB_Rating&#39;, &#39;Rotten_Tomatoes_Rating&#39;]].head() . Title Worldwide_Gross Production_Budget Distributor MPAA_Rating IMDB_Rating Rotten_Tomatoes_Rating . 0 The Land Girls | 146083.0 | 8000000.0 | Gramercy | R | 6.1 | NaN | . 1 First Love, Last Rites | 10876.0 | 300000.0 | Strand | R | 6.9 | NaN | . 2 I Married a Strange Person | 203134.0 | 250000.0 | Lionsgate | None | 6.8 | NaN | . 3 Let&#39;s Talk About Sex | 373615.0 | 300000.0 | Fine Line | None | NaN | 13.0 | . 4 Slam | 1087521.0 | 1000000.0 | Trimark | R | 3.4 | 62.0 | . Images . Local Images . You can reference local images and they will be copied and rendered on your blog automatically. You can include these with the following markdown syntax: . ![](my_icons/fastai_logo.png) . . Remote Images . Remote images can be included with the following markdown syntax: . ![](https://image.flaticon.com/icons/svg/36/36686.svg) . . Animated Gifs . Animated Gifs work, too! . ![](https://upload.wikimedia.org/wikipedia/commons/7/71/ChessPawnSpecialMoves.gif) . . Captions . You can include captions with markdown images like this: . ![](https://www.fast.ai/images/fastai_paper/show_batch.png &quot;Credit: https://www.fast.ai/2020/02/13/fastai-A-Layered-API-for-Deep-Learning/&quot;) . . Other Elements . GitHub Flavored Emojis . Typing I give this post two :+1:! will render this: . I give this post two :+1:! . Tweetcards . Typing &gt; twitter: https://twitter.com/jakevdp/status/1204765621767901185?s=20 will render this: Altair 4.0 is released! https://t.co/PCyrIOTcvvTry it with: pip install -U altairThe full list of changes is at https://t.co/roXmzcsT58 ...read on for some highlights. pic.twitter.com/vWJ0ZveKbZ . &mdash; Jake VanderPlas (@jakevdp) December 11, 2019 . Youtube Videos . Typing &gt; youtube: https://youtu.be/XfoYk_Z5AkI will render this: . Boxes / Callouts . Typing &gt; Warning: There will be no second warning! will render this: . Warning: There will be no second warning! . Typing &gt; Important: Pay attention! It&#39;s important. will render this: . Important: Pay attention! It&#8217;s important. . Typing &gt; Tip: This is my tip. will render this: . Tip: This is my tip. . Typing &gt; Note: Take note of this. will render this: . Note: Take note of this. . Typing &gt; Note: A doc link to [an example website: fast.ai](https://www.fast.ai/) should also work fine. will render in the docs: . Note: A doc link to an example website: fast.ai should also work fine. . Footnotes . You can have footnotes in notebooks, however the syntax is different compared to markdown documents. This guide provides more detail about this syntax, which looks like this: . For example, here is a footnote {% fn 1 %}. And another {% fn 2 %} {{ &#39;This is the footnote.&#39; | fndetail: 1 }} {{ &#39;This is the other footnote. You can even have a [link](www.github.com)!&#39; | fndetail: 2 }} . For example, here is a footnote 1. . And another 2 . 1. This is the footnote.↩ . 2. This is the other footnote. You can even have a link!↩ .",
             "url": "https://b3nto4lunch.github.io/Ederick-s-2022-2023-APCSP-Blog/jupyter/2020/02/20/test.html",
@@ -155,7 +144,7 @@
     
   
     
-        ,"post14": {
+        ,"post13": {
             "title": "An Example Markdown Post",
             "content": "Example Markdown Post . Basic setup . Jekyll requires blog post files to be named according to the following format: . YEAR-MONTH-DAY-filename.md . Where YEAR is a four-digit number, MONTH and DAY are both two-digit numbers, and filename is whatever file name you choose, to remind yourself what this post is about. .md is the file extension for markdown files. . The first line of the file should start with a single hash character, then a space, then your title. This is how you create a “level 1 heading” in markdown. Then you can create level 2, 3, etc headings as you wish but repeating the hash character, such as you see in the line ## File names above. . Basic formatting . You can use italics, bold, code font text, and create links. Here’s a footnote 1. Here’s a horizontal rule: . . Lists . Here’s a list: . item 1 | item 2 | . And a numbered list: . item 1 | item 2 | Boxes and stuff . This is a quotation . . You can include alert boxes …and… . . You can include info boxes Images . . Code . You can format text and code per usual . General preformatted text: . # Do a thing do_thing() . Python code and output: . # Prints &#39;2&#39; print(1+1) . 2 . Formatting text as shell commands: . echo &quot;hello world&quot; ./some_script.sh --option &quot;value&quot; wget https://example.com/cat_photo1.png . Formatting text as YAML: . key: value - another_key: &quot;another value&quot; . Tables . Column 1 Column 2 . A thing | Another thing | . Tweetcards . Altair 4.0 is released! https://t.co/PCyrIOTcvvTry it with: pip install -U altairThe full list of changes is at https://t.co/roXmzcsT58 ...read on for some highlights. pic.twitter.com/vWJ0ZveKbZ . &mdash; Jake VanderPlas (@jakevdp) December 11, 2019 Footnotes . This is the footnote. &#8617; . |",
             "url": "https://b3nto4lunch.github.io/Ederick-s-2022-2023-APCSP-Blog/markdown/2020/01/14/test-markdown-post.html",
