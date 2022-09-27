@@ -203,6 +203,22 @@
   
 
   
+      ,"page2": {
+          "title": "Frontend",
+          "content": "&lt;table&gt; &lt;tr&gt; &lt;th&gt;I&lt;/th&gt; &lt;th&gt;Love&lt;/th&gt; &lt;th&gt;China&lt;/th&gt; &lt;/tr&gt; &lt;tr&gt; &lt;td&gt;Doofensmirch&lt;/td&gt; &lt;td&gt;Evil&lt;/td&gt; &lt;td&gt;Germany&lt;/td&gt; &lt;/tr&gt; &lt;tr&gt; &lt;td&gt;Phineas&lt;/td&gt; &lt;td&gt;and&lt;/td&gt; &lt;td&gt;Ferb&lt;/td&gt; &lt;/tr&gt; &lt;/table&gt; . I love phineas and ferb .",
+          "url": "https://b3nto4lunch.github.io/Ederick-s-2022-2023-APCSP-Blog/_pages/frontend.html",
+          "relUrl": "/_pages/frontend.html",
+          "date": ""
+      }
+      
+  
+
+  
+
+  
+  
+
+  
 
   
   
@@ -213,11 +229,6 @@
   
 
   
-
-  
-  
-
-  
   
 
   
@@ -226,7 +237,7 @@
   
 
   
-      ,"page11": {
+      ,"page12": {
           "title": "",
           "content": "Sitemap: {{ “sitemap.xml” | absolute_url }} | .",
           "url": "https://b3nto4lunch.github.io/Ederick-s-2022-2023-APCSP-Blog/robots.txt",
