@@ -15,9 +15,9 @@
         ,"post1": {
             "title": "Tech Talk Diagram",
             "content": "For our project, we will be creating a scheduling program that consists of using Canvas&#39;s API to make a reliable program that allows for prime schedule making so that students will have no more trouble integrated their daily schedule in with their work. . Front End Dev: Alan Back End Dev: Noor DevOPs: Ederick Scrum Master: Steven . We should have the layout done in the next three days of the project and have the software done by the end of project. .",
-            "url": "https://b3nto4lunch.github.io/Ederick-s-2022-2023-APCSP-Blog/2022/09/26/=09-26-Techtalk.html",
-            "relUrl": "/2022/09/26/=09-26-Techtalk.html",
-            "date": " • Sep 26, 2022"
+            "url": "https://b3nto4lunch.github.io/Ederick-s-2022-2023-APCSP-Blog/2022/10/04/=09-26-Techtalk.html",
+            "relUrl": "/2022/10/04/=09-26-Techtalk.html",
+            "date": " • Oct 4, 2022"
         }
         
     
@@ -179,7 +179,7 @@
     
         ,"post16": {
             "title": "This is a test",
-            "content": "print(&quot;Hello&quot;) .",
+            "content": "print(&quot;Hello&quot;) . name = input(&quot;What is your name? &quot;) print(&quot;Hello &quot; + name) color = input(&quot;What is your favorite color? &quot;) print(name + &quot; likes &quot; + color) . Hello Ederick Ederick likes Blue . weight_lbs = input(&quot;How many pounds do you weigh? &quot;) weight_kilos = int(weight_lbs) / 2.2 print(weight_kilos) . 72.72727272727272 .",
             "url": "https://b3nto4lunch.github.io/Ederick-s-2022-2023-APCSP-Blog/2022/08/22/Python.html",
             "relUrl": "/2022/08/22/Python.html",
             "date": " • Aug 22, 2022"
