@@ -24,8 +24,8 @@
   
     
         ,"post2": {
-            "title": "Title",
-            "content": "import requests url = &quot;https://corona-virus-world-and-india-data.p.rapidapi.com/api&quot; headers = { &quot;X-RapidAPI-Key&quot;: &quot;d484bbc718mshdd2dcfbcf99954bp1222f2jsn6c13602d819c&quot;, &quot;X-RapidAPI-Host&quot;: &quot;corona-virus-world-and-india-data.p.rapidapi.com&quot; } response = requests.request(&quot;GET&quot;, url, headers=headers) #print(response.text) print(&quot;Country Totals&quot;) country1 = input(&quot;country&quot;) countries = response.json().get(&#39;countries_stat&#39;) for country in countries: # countries is a list if country[&quot;country_name&quot;] == country1: # this filters for USA for key, value in country.items(): # this finds key, value pairs in country print(key, value) . Country Totals country_name Egypt cases 515,645 deaths 24,613 region total_recovered 442,182 new_deaths 0 new_cases 0 serious_critical 122 active_cases 48,850 total_cases_per_1m_population 4,873 deaths_per_1m_population 233 total_tests 3,693,367 tests_per_1m_population 34,903 . import requests url = &quot;https://forecast9.p.rapidapi.com/&quot; headers = { &quot;X-RapidAPI-Key&quot;: &quot;d484bbc718mshdd2dcfbcf99954bp1222f2jsn6c13602d819c&quot;, &quot;X-RapidAPI-Host&quot;: &quot;forecast9.p.rapidapi.com&quot; } response = requests.request(&quot;GET&quot;, url, headers=headers) print(response.json()) . {&#39;title&#39;: &#39;wetter.com REST API&#39;, &#39;version&#39;: &#39;2.3&#39;, &#39;documentation&#39;: &#39;https://tapi.wetter.com/v2.3/documentation/index.html&#39;} .",
+            "title": "API Testing",
+            "content": "import requests url = &quot;https://corona-virus-world-and-india-data.p.rapidapi.com/api&quot; headers = { &quot;X-RapidAPI-Key&quot;: &quot;d484bbc718mshdd2dcfbcf99954bp1222f2jsn6c13602d819c&quot;, &quot;X-RapidAPI-Host&quot;: &quot;corona-virus-world-and-india-data.p.rapidapi.com&quot; } response = requests.request(&quot;GET&quot;, url, headers=headers) #print(response.text) print(&quot;Country Totals&quot;) country1 = input(&quot;country&quot;) countries = response.json().get(&#39;countries_stat&#39;) for country in countries: # countries is a list if country[&quot;country_name&quot;] == country1: # this filters for USA for key, value in country.items(): # this finds key, value pairs in country print(key, value) . Country Totals . import requests url = &quot;https://forecast9.p.rapidapi.com/&quot; headers = { &quot;X-RapidAPI-Key&quot;: &quot;d484bbc718mshdd2dcfbcf99954bp1222f2jsn6c13602d819c&quot;, &quot;X-RapidAPI-Host&quot;: &quot;forecast9.p.rapidapi.com&quot; } response = requests.request(&quot;GET&quot;, url, headers=headers) print(response.json()) . {&#39;title&#39;: &#39;wetter.com REST API&#39;, &#39;version&#39;: &#39;2.3&#39;, &#39;documentation&#39;: &#39;https://tapi.wetter.com/v2.3/documentation/index.html&#39;} .",
             "url": "https://b3nto4lunch.github.io/Ederick-s-2022-2023-APCSP-Blog/2022/10/06/BetterthanNoor.html",
             "relUrl": "/2022/10/06/BetterthanNoor.html",
             "date": " • Oct 6, 2022"
@@ -227,7 +227,7 @@
   
       ,"page2": {
           "title": "Frontend",
-          "content": "home | .",
+          "content": "home | &lt;a href=&quot; | API | . .",
           "url": "https://b3nto4lunch.github.io/Ederick-s-2022-2023-APCSP-Blog/_pages/frontend.html",
           "relUrl": "/_pages/frontend.html",
           "date": ""
