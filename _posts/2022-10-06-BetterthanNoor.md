@@ -1,6 +1,6 @@
 ---
 keywords: fastai
-title: Title
+title: API Testing
 nb_path: _notebooks/2022-10-06-BetterthanNoor.ipynb
 layout: notebook
 ---
@@ -54,19 +54,6 @@ layout: notebook
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Country Totals
-country_name Egypt
-cases 515,645
-deaths 24,613
-region 
-total_recovered 442,182
-new_deaths 0
-new_cases 0
-serious_critical 122
-active_cases 48,850
-total_cases_per_1m_population 4,873
-deaths_per_1m_population 233
-total_tests 3,693,367
-tests_per_1m_population 34,903
 </pre>
 </div>
 </div>
@@ -113,6 +100,36 @@ tests_per_1m_population 34,903
 </div>
 </div>
 
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">requests</span>
+
+<span class="n">url</span> <span class="o">=</span> <span class="s2">&quot;https://weatherapi-com.p.rapidapi.com/future.json&quot;</span>
+
+<span class="n">querystring</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;q&quot;</span><span class="p">:</span><span class="s2">&quot;London&quot;</span><span class="p">,</span><span class="s2">&quot;dt&quot;</span><span class="p">:</span><span class="s2">&quot;2022-12-25&quot;</span><span class="p">}</span>
+
+<span class="n">headers</span> <span class="o">=</span> <span class="p">{</span>
+	<span class="s2">&quot;X-RapidAPI-Key&quot;</span><span class="p">:</span> <span class="s2">&quot;d484bbc718mshdd2dcfbcf99954bp1222f2jsn6c13602d819c&quot;</span><span class="p">,</span>
+	<span class="s2">&quot;X-RapidAPI-Host&quot;</span><span class="p">:</span> <span class="s2">&quot;weatherapi-com.p.rapidapi.com&quot;</span>
+<span class="p">}</span>
+
+<span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">request</span><span class="p">(</span><span class="s2">&quot;GET&quot;</span><span class="p">,</span> <span class="n">url</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="n">querystring</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
+</pre></div>
+
+    </div>
 </div>
 </div>
 
