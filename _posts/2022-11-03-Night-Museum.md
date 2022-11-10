@@ -19,6 +19,8 @@ Our program was a calendar scheduling program and it displayed the weather on sp
 
 In the computer 3d animation's room, this student created such beautiful artwork. It shows the depiction of many different colors clashing with each other. The view of the sky is also amazing; it gives off a very welcome-y vibe! Props to whoever created this piece of art because it really reflects their effort throughout this entire trimester. It is unfortunate I could not see other work done by them.
 
+![]({{ site.baseurl }}/images/IMG_3994.JPG)
+
 
 
 Next, a trip to the ceramics room! There were so many great crafts to marvel at, but the two things that caught my attention the most were the Gomu-Gomu-no-mi (Nika nika) and the lovely octopus.
