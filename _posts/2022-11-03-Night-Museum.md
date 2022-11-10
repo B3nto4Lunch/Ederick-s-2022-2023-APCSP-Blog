@@ -27,3 +27,4 @@ Next, a trip to the ceramics room! There were so many great crafts to marvel at,
 
 The reason I loved the gomu gomu craft is because it is from one of my favorite shows of all time: One Piece. The attention to detail was immaculate and it is evident that they gave the swirls a definite value to add more detail. The attention to even the more minute details were amazing, and additionally the creator managed to create a convenience factor into their craft, making it capable of holding multipe small items and liquids! 
 
+![]({{ site.baseurl }}/images/IMG_3998.JPG)
