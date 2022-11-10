@@ -1,5 +1,5 @@
 ---
-title: Post With Image
+title: Night of the Museum
 toc: true
 layout: post
 description: Night of the Museum
@@ -11,6 +11,8 @@ Today was such a great night at Night of the Museum. The first project that I en
 Their website is essentially a time based project that focalizes on the convenience of projecting the time for ANY Timezone in specific cities. Additionally, Yuri's program also enables the user to have access to an alarm clock and stopwatch features. The alarm clock is such a life saver because I'm such a sleepy head! Wow! such a great looking site, the frontend sure does look amazing! I will definitely look into https://dnhstime.com and use it in the future!!!
 
 A quote from the master Yuri himself: "Sometimes you just gotta eat a burger to finish."
+
+![]({{ site.baseurl }}/images/timednhs.JPG)
 
 
 Our program was a calendar scheduling program and it displayed the weather on specific days. You can click on specific days on the calendar and add events there with a popup. Additionally, the program will then sort the dates that you made for each day and put them into a list on the side and display them accordingly by date. You can search up the weather in any city as well.
