@@ -12,7 +12,7 @@ Their website is essentially a time based project that focalizes on the convenie
 
 A quote from the master Yuri himself: "Sometimes you just gotta eat a burger to finish."
 
-![]({{ site.baseurl }}/images/timednhs.jpg)
+![]({{ site.baseurl }}/images/IMG_3993.JPG)
 
 
 Our program was a calendar scheduling program and it displayed the weather on specific days. You can click on specific days on the calendar and add events there with a popup. Additionally, the program will then sort the dates that you made for each day and put them into a list on the side and display them accordingly by date. You can search up the weather in any city as well.
