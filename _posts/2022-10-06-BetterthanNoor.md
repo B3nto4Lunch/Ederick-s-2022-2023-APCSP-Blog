@@ -54,6 +54,19 @@ layout: notebook
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Country Totals
+country_name USA
+cases 82,649,779
+deaths 1,018,316
+region 
+total_recovered 80,434,925
+new_deaths 0
+new_cases 0
+serious_critical 1,465
+active_cases 1,196,538
+total_cases_per_1m_population 247,080
+deaths_per_1m_population 3,044
+total_tests 1,000,275,726
+tests_per_1m_population 2,990,303
 </pre>
 </div>
 </div>
@@ -117,7 +130,7 @@ layout: notebook
 
 <span class="n">url</span> <span class="o">=</span> <span class="s2">&quot;https://weatherapi-com.p.rapidapi.com/future.json&quot;</span>
 
-<span class="n">querystring</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;q&quot;</span><span class="p">:</span><span class="s2">&quot;London&quot;</span><span class="p">,</span><span class="s2">&quot;dt&quot;</span><span class="p">:</span><span class="s2">&quot;2022-12-25&quot;</span><span class="p">}</span>
+<span class="n">querystring</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;q&quot;</span><span class="p">:</span><span class="s2">&quot;Mexico&quot;</span><span class="p">,</span><span class="s2">&quot;dt&quot;</span><span class="p">:</span><span class="s2">&quot;2022-12-25&quot;</span><span class="p">}</span>
 
 <span class="n">headers</span> <span class="o">=</span> <span class="p">{</span>
 	<span class="s2">&quot;X-RapidAPI-Key&quot;</span><span class="p">:</span> <span class="s2">&quot;d484bbc718mshdd2dcfbcf99954bp1222f2jsn6c13602d819c&quot;</span><span class="p">,</span>
@@ -130,6 +143,20 @@ layout: notebook
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>{&#34;message&#34;:&#34;This endpoint is disabled for your subscription&#34;}
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
