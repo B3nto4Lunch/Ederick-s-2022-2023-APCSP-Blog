@@ -38,9 +38,21 @@ baseurl: "/Ederick-s-2022-2023-APCSP-Blog" # the subpath of your site, e.g. "/bl
 
 # Github and twitter are optional:
 minima:
+  skin: dark
+  #  social_links:
+  #    twitter: NighthawkCoding
+  #    github: nighthawkcoders
+  #   youtube_channel: UClIKOsDS5dsfzFA3zveDT3Q
   social_links:
-    twitter: fastdotai
-    github: B3nto4Lunch
+    - { platform: github, user_url: ”
+https://github.com/nighthawkcoders
+“}
+    - { platform: twitter, user_url: ”
+https://twitter.com/NighthawkCoding
+“}
+    - { platform: youtube, user_url: ”
+https://www.youtube.com/channel/UClIKOsDS5dsfzFA3zveDT3Q
+“}
 
 # Set this to true to get LaTeX math equation support
 use_math: 
