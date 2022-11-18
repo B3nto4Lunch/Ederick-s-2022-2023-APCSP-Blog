@@ -27,11 +27,70 @@ description: How variables are used</p>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<p>PLAN FOR VARIABLES</p>
+<p>Firstly, starting with an introduction to the variables will be optimal for understanding the content of the course and will make it easier for different references or problems being introduced in the future</p>
+<ul>
+<li>Go over the materials learned in the course and show how it can be used in commonly used code and how they can use it in code two</li>
+<li>Introduce a practice problem for each given variables (Winner possibly gets prize, have not fully thought out yet)</li>
+<li>After the practice problems, rinse and repeat throughout to consistently to strengthen understanding. </li>
+<li>At the very end of the topic/lesson, make a short practice quiz and FRQ (maybe only like a 1 minute quiz) to check for understanding and how it can be used for improvement in the future.</li>
+<li>Have a smooth transition into the next person introducing a similar topic</li>
+</ul>
+<p>Things to go over:</p>
+<ul>
+<li>What EXACTLY is a Variable?</li>
+<li>What are the qualities of a Variable?</li>
+<li>Can variables be updated and how can they be used in code to make sentences?</li>
+<li>Why can't I just use raw answers rather than code?</li>
+<li>Tips for organization when using variables</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <p>Variables are used to assign values to particular and specific names, such as "Firstname" being assigned a value of "Steve." For example, variables can be used to be printed and are constantly being updated depending on the most recent change towards said update. (eg. if I had a code block, for instance, that had Firstname = "Steve", but the very next line is now Firstname = "John", the new value is now John rather than Steve.</p>
 
 </div>
 </div>
 </div>
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="s2">&quot;Jae&quot;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Jae&quot;</span><span class="p">)</span>
+
+<span class="c1"># Notice how we can use x as a faster alternation that printing &quot;Jae&quot; every single time, saves more space and makes it more organized</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Jae
+Jae
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
     {% raw %}
     
 <div class="cell border-box-sizing code_cell rendered">
@@ -81,7 +140,7 @@ description: How variables are used</p>
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">Name</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;What is your name? &quot;</span><span class="p">)</span>
 <span class="n">Color</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;What is your favorite color? &quot;</span><span class="p">)</span>
-
+<span class="c1"># Using the two variables, we can create a sentence using the inputs the user gave to create a sentence!</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">Name</span> <span class="o">+</span> <span class="s2">&quot; likes &quot;</span> <span class="o">+</span> <span class="n">Color</span> <span class="o">+</span> <span class="s2">&quot;.&quot;</span><span class="p">)</span>
 </pre></div>
 
@@ -95,7 +154,7 @@ description: How variables are used</p>
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Ederick likes Blue.
+<pre>Blue likes .
 </pre>
 </div>
 </div>
