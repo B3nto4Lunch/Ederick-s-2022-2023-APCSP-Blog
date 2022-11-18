@@ -1,3 +1,10 @@
+---
+title: Variables
+toc: false
+layout: post
+description: How variables are used
+---
+# Variables
 {
  "cells": [
   {

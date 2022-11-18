@@ -15,6 +15,7 @@ type: pbl
 <!-- Hack 3: do your own thing -->
 
 
+
 {% assign BITS = 3 %}
 
 <div class="container bg-primary">
@@ -32,7 +33,7 @@ type: pbl
                 <th>Decimal</th>
                 <th>Minus</th>
                 <th>Two</th>
-                <th>Multiply x2</th>
+                <th>Divide</th>
             </tr>
             <tr>
                 <td><button type="button" id="add1" onclick="add(1)">+1</button></td>
@@ -40,9 +41,9 @@ type: pbl
                 <td id="octal">0</td>
                 <td id="hexadecimal">0</td>
                 <td id="decimal">0</td>
-                <td><button type="button" id="sub1" onclick="add(-2)">-2</button></td>
+                <td><button type="button" id="sub1" onclick="add(-1)">-1</button></td>
                 <td><button type="button" id="add2" onclick="add(2)">+2</button></td>
-                <td><button type="button" id="add2" onclick="multiply(2)">*2</button></td>
+                 <td><button type="button" id="Divide2" onclick="divide(2)">/2</button></td>
             </tr>
             </table>
         </div>
@@ -160,6 +161,8 @@ type: pbl
         }
         }
     }
+</script>
+
 
     function leftShift(bin) {
         let dec = parseInt(bin, 2);
@@ -168,3 +171,10 @@ type: pbl
     while 
 </script>
 
+      if (n > 0) {  // PLUS
+        decimal = MAX === decimal ? 0 : decimal += n; // OVERFLOW or PLUS
+        } else  {     // MINUS
+        decimal = 0 === decimal ? MAX : decimal += n; // OVERFLOW or MINUS
+        }
+        // convert the result back to binary
+        
