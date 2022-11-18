@@ -167,6 +167,13 @@ Jae
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<p>Sometimes, it is significantly easier to simply use variables rather than raw data so that the value can be constantly updated!</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <p><a href="https://www.youtube.com/watch?v=ghCbURMWBD8">Learn More About Variables</a></p>
 
 </div>
