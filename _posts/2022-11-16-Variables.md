@@ -175,4 +175,4 @@ Jae
 </div>
  
 
-A variable is a way of storing information in a computer program. Think of a variable like a container and the name of the variable as the label on the container which shows us what is inside. Variables are used in coding and programming to help coders understand, remember, and use the information in the program.
+A variable is a way of storing information in a computer program. Think of a variable like a container and the name of the variable as the label on the container which shows us what is inside. Variables are used in coding and programming to help coders understand, remember, and use the information in the program...
