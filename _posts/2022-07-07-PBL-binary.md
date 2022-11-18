@@ -1,5 +1,5 @@
 ---
-title: Binary Math
+title: Binary Math Experimentation
 layout: default
 description: A Binary Math illustrative application using HTML, Liquid, and JavaScript.
 permalink: /frontend/binary
@@ -31,6 +31,8 @@ type: pbl
                 <th>Hexadecimal</th>
                 <th>Decimal</th>
                 <th>Minus</th>
+                <th>Two</th>
+                <th>Multiply x2</th>
             </tr>
             <tr>
                 <td><button type="button" id="add1" onclick="add(1)">+1</button></td>
@@ -38,7 +40,9 @@ type: pbl
                 <td id="octal">0</td>
                 <td id="hexadecimal">0</td>
                 <td id="decimal">0</td>
-                <td><button type="button" id="sub1" onclick="add(-1)">-1</button></td>
+                <td><button type="button" id="sub1" onclick="add(-2)">-2</button></td>
+                <td><button type="button" id="add2" onclick="add(2)">+2</button></td>
+                <td><button type="button" id="add2" onclick="multiply(2)">*2</button></td>
             </tr>
             </table>
         </div>
@@ -156,4 +160,11 @@ type: pbl
         }
         }
     }
+
+    function leftShift(bin) {
+        let dec = parseInt(bin, 2);
+        let doubled = dec*2;
+    }
+    while 
 </script>
+
