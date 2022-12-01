@@ -6,10 +6,10 @@
 2. Get next number in the list
 3. If number = item, display "item found"
 4. If there are more numbers in the list, go back to Step 2.
-5. Display "item not found."m 
+5. Display "item not found."
 
  
-Sequencing: 1, 2, 5
+Sequencing: 1, 2, 5 (technically all steps are sequence)
 Selection: 3
 Iteration: 4,
 
