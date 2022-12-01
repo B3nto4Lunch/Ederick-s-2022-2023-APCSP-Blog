@@ -21,6 +21,8 @@ Crossword Puzzle:
 * 2 Down: Selection
 * 3 Across: Sequence
 
+![]({{ site.baseurl }}/images/Result.png)
+
 
 # Matty's Hacks
 
