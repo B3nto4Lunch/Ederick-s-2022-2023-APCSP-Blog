@@ -25,7 +25,7 @@
     
         ,"post2": {
             "title": "Week 1 Notes",
-            "content": "3.3 . algorithm: A finite set of instructions that accomplishes a task. This can expressed by natural language, diagrams, and various other methods | Three parts to an algorithm: Sequencing: The order of how to do something to achieve a result, similarly to how you follow &quot;instructions from a teacher.&quot; | Selection: Selections allow an algorithm to mkae a decision based on if a condition is met (fulfilled or confirmed). An example of this would be traveling to a gas station to fill your car, | Iteration: An iteration is a loop and continues to loop until the condition if met, like if there was a check for when you put away your computer when you finish your work every five seconds, and will continue to repeat until you finish your work, otherwise meaning that your conditions are met. | . | . Mathematical Expressions . Sequential code statement: Sequential statements are used in processes to specify how signals are assigned. The process is executed in order as a whole. After all the sequential statements in the process are executed the signals are assigned their new values. They execute in the order in which they appear in the process. | Sequencing: First step to do, then do the second step, then do the third step, all in order. | Use algorithms to create mathematical expressions. | . Arithmetic operator: languages that use addition, substraction, multipliations, division, and modulus operator. . Examples of arithmetic operators: 10 + (5 * 8) / 4 . num1 = 10 | num2 = 5 | num3 = 7 result = num1 + num2 + num3 print(result) = answer | .",
+            "content": "3.3 . algorithm: A finite set of instructions that accomplishes a task. This can expressed by natural language, diagrams, and various other methods | Three parts to an algorithm: Sequencing: The order of how to do something to achieve a result, similarly to how you follow &quot;instructions from a teacher.&quot; | Selection: Selections allow an algorithm to make a decision based on if a condition is met (fulfilled or confirmed). An example of this would be traveling to a gas station to fill your car, | Iteration: An iteration is a loop and continues to loop until the condition if met, like if there was a check for when you put away your computer when you finish your work every five seconds, and will continue to repeat until you finish your work, otherwise meaning that your conditions are met. | . | . Mathematical Expressions . Sequential code statement: Sequential statements are used in processes to specify how signals are assigned. The process is executed in order as a whole. After all the sequential statements in the process are executed the signals are assigned their new values. They execute in the order in which they appear in the process. | Sequencing: First step to do, then do the second step, then do the third step, all in order. | Use algorithms to create mathematical expressions. | . Arithmetic operator: languages that use addition, substraction, multipliations, division, and modulus operator. . Examples of arithmetic operators: 10 + (5 * 8) / 4 . num1 = 10 | num2 = 5 | num3 = 7 result = num1 + num2 + num3 print(result) = answer | .",
             "url": "https://b3nto4lunch.github.io/Ederick-s-2022-2023-APCSP-Blog/2022/11/29/Week-1-Notes.html",
             "relUrl": "/2022/11/29/Week-1-Notes.html",
             "date": " • Nov 29, 2022"
@@ -90,8 +90,8 @@
   
     
         ,"post8": {
-            "title": "Title",
-            "content": "",
+            "title": "Java Script: Calculator",
+            "content": "This was supposed to be a calculator but it was never finalized :( .",
             "url": "https://b3nto4lunch.github.io/Ederick-s-2022-2023-APCSP-Blog/2022/10/26/Java-Grade-Calculator.html",
             "relUrl": "/2022/10/26/Java-Grade-Calculator.html",
             "date": " • Oct 26, 2022"
