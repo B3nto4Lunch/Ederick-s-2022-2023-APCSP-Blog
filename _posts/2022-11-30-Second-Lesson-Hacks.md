@@ -9,9 +9,9 @@
 5. Display "item not found."
 
  
-Sequencing: 1, 2, 5 (technically all steps are sequence)
-Selection: 3
-Iteration: 4,
+* Sequencing: 1, 2, 5 (technically all steps are sequence)
+* Selection: 3
+* Iteration: 4,
 
 
 # Antony's Hacks
