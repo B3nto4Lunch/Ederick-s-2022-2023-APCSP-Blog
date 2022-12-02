@@ -1,6 +1,6 @@
 ---
 keywords: fastai
-title: Title
+title: Java Script Calculator (Incomplete)
 nb_path: _notebooks/2022-10-26-Java-Grade-Calculator.ipynb
 layout: notebook
 ---
