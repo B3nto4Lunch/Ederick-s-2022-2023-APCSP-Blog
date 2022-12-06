@@ -79,7 +79,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      1 min read
+      3 min read
     
 </span></p>
 
@@ -187,8 +187,11 @@ window.onload = wrap_img;
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">8</span><span class="p">):</span>
-    
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">number</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">10</span> <span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">69</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">56</span><span class="p">,</span> <span class="mi">190</span><span class="p">,</span> <span class="mi">2001</span><span class="p">,</span> <span class="mi">19983</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">72</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Regular list: &#39;</span><span class="p">,</span> <span class="n">number</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">number</span><span class="p">:</span>
+    <span class="n">number</span><span class="o">.</span><span class="n">sort</span><span class="p">(</span><span class="n">reverse</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Sorted list:&#39;</span><span class="p">,</span> <span class="n">number</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -200,17 +203,180 @@ window.onload = wrap_img;
 
 <div class="output_area">
 
-<div class="output_subarea output_text output_error">
-<pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
-Cell <span class="ansi-green-fg">In[13], line 3</span>
-<span class="ansi-green-intense-fg ansi-bold">      1</span> for i in range(8):
-<span class="ansi-green-intense-fg ansi-bold">      2</span>     i = 8
-<span class="ansi-green-fg">----&gt; 3</span>     num == i - 1
-<span class="ansi-green-intense-fg ansi-bold">      4</span>     print(num)
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Regular list:  [1, 10, 20, 69, 12, 56, 190, 2001, 19983, 2, 3, 6, 72]
+Sorted list: [19983, 2001, 190, 72, 69, 56, 20, 12, 10, 6, 3, 2, 1]
+</pre>
+</div>
+</div>
 
-<span class="ansi-red-fg">NameError</span>: name &#39;num&#39; is not defined</pre>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span> <span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">14</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">29</span><span class="p">,</span> <span class="mi">42</span><span class="p">,</span> <span class="mi">55</span><span class="p">,</span> <span class="mi">68</span><span class="p">,</span> <span class="mi">81</span><span class="p">]</span>
+<span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">numbers</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">numbers</span> <span class="o">==</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">29</span><span class="p">,</span> <span class="mi">42</span><span class="p">,</span> <span class="mi">55</span><span class="p">,</span> <span class="mi">68</span><span class="p">,</span> <span class="mi">81</span><span class="p">]:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">item</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="3.8.3">3.8.3<a class="anchor-link" href="#3.8.3"> </a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>No Hacks given on presentation</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="3.10-Hacks">3.10 Hacks<a class="anchor-link" href="#3.10-Hacks"> </a></h3>
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">nums</span> <span class="o">=</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">35</span><span class="p">]</span>
+<span class="nb">min</span> <span class="o">=</span> <span class="mi">20</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">nums</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="nb">min</span><span class="p">:</span>
+        <span class="nb">min</span> <span class="o">=</span> <span class="n">i</span>
+        <span class="nb">print</span><span class="p">(</span><span class="nb">min</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>10
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">getpass</span><span class="o">,</span> <span class="nn">sys</span>
+<span class="kn">import</span> <span class="nn">random</span>
+
+<span class="k">def</span> <span class="nf">ask_question</span> <span class="p">(</span><span class="n">question</span><span class="p">,</span> <span class="n">answer</span><span class="p">):</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="n">question</span><span class="p">)</span>
+    <span class="n">ans</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="n">question</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">ans</span><span class="p">)</span>
+   
+    <span class="k">if</span> <span class="n">ans</span> <span class="o">==</span> <span class="n">answer</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Correct!&quot;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="mi">1</span>
+
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Wrong&quot;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="mi">0</span>
+
+<span class="n">question_list</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;What allows a value to be inserted into a list at index i?&quot;</span> <span class="p">,</span> <span class="s2">&quot;What allows an element at index i to be deleted from a list?&quot;</span> <span class="p">,</span> <span class="s2">&quot;What returns the number of elements currently in a specific list?&quot;</span> <span class="p">,</span> <span class="s2">&quot;What allows a value to be added at the end of a list?&quot;</span><span class="p">]</span>
+<span class="n">answer_list</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;index()&quot;</span><span class="p">,</span> <span class="s2">&quot;remove()&quot;</span><span class="p">,</span> <span class="s2">&quot;length()&quot;</span> <span class="p">,</span> <span class="s2">&quot;append()&quot;</span><span class="p">]</span>
+
+<span class="c1"># Set points to 0 at the start of the quiz</span>
+<span class="n">points</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="c1"># If the length of the quiz is greater than 0, then random questions will be chosen from the &quot;question_list&quot; set</span>
+<span class="k">while</span> <span class="nb">len</span><span class="p">(</span><span class="n">question_list</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="n">index</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">question_list</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+    
+<span class="c1"># The points system where a point is rewarded for each correct answer    </span>
+    <span class="n">points</span> <span class="o">=</span> <span class="n">points</span> <span class="o">+</span> <span class="n">ask_question</span><span class="p">(</span><span class="n">question_list</span><span class="p">[</span><span class="n">index</span><span class="p">],</span> <span class="n">answer_list</span><span class="p">[</span><span class="n">index</span><span class="p">])</span>
+    
+<span class="c1"># If a question or answer has already been used, then it shall be deleted    </span>
+    <span class="k">del</span> <span class="n">question_list</span><span class="p">[</span><span class="n">index</span><span class="p">]</span>
+    <span class="k">del</span> <span class="n">answer_list</span><span class="p">[</span><span class="n">index</span><span class="p">]</span>
+
+<span class="c1"># Calculating score using the points system and dividing it by the total number of questions (6)</span>
+<span class="n">score</span> <span class="o">=</span> <span class="p">(</span><span class="n">points</span> <span class="o">/</span> <span class="mi">4</span><span class="p">)</span>
+
+<span class="c1"># Calculating the percentage of correct answers by multiplying the score by 100</span>
+<span class="n">percent</span> <span class="o">=</span> <span class="p">(</span><span class="n">score</span> <span class="o">*</span> <span class="mi">100</span><span class="p">)</span>
+
+<span class="c1"># Printing the percentage, and formatting the percentage in a way where two decimals can be shown (through &quot;{:.2f}&quot;)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">{:.2f}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">percent</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;%&quot;</span><span class="p">)</span>
+
+<span class="c1"># Adding final remarks based upon the users given scores</span>
+<span class="k">if</span> <span class="n">points</span> <span class="o">&gt;=</span> <span class="mi">5</span><span class="p">:</span>
+         <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Your total score is: &quot;</span><span class="p">,</span> <span class="n">points</span><span class="p">,</span> <span class="s2">&quot;out of 4. Amazing job!&quot;</span><span class="p">)</span>
+
+<span class="k">elif</span> <span class="n">points</span> <span class="o">==</span> <span class="mi">4</span><span class="p">:</span>
+         <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Your total score is: &quot;</span><span class="p">,</span> <span class="n">points</span><span class="p">,</span> <span class="s2">&quot;out of 4. Not too bad, keep on studying! &quot;</span> <span class="p">)</span>
+
+<span class="k">else</span><span class="p">:</span>
+         <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Your total score is: &quot;</span><span class="p">,</span> <span class="n">points</span><span class="p">,</span> <span class="s2">&quot;out of 4. Its alright, better luck next time!&quot;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>What allows a value to be added at the end of a list?
+append()
+Correct!
+What returns the number of elements currently in a specific list?
+length()
+Correct!
+What allows a value to be inserted into a list at index i?
+index()
+Correct!
+What allows an element at index i to be deleted from a list?
+remove()
+Correct!
+100.00%
+Your total score is:  4 out of 4. Not too bad, keep on studying! 
+</pre>
 </div>
 </div>
 

@@ -79,7 +79,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      1 min read
+      2 min read
     
 </span></p>
 
@@ -198,6 +198,22 @@ Iteration Statement - cause statements to be executed zero or more times, subjec
     <span class="k">if</span> <span class="n">i</span> <span class="o">==</span> <span class="s2">&quot;fish&quot;</span><span class="p">:</span>
         <span class="k">break</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+
+    <span class="c1"># Make piece of code that gives three different recommendations for possible classes to take at a school based on two different conditions. These conditions could be if the student likes STEM or not.</span>
+
+<span class="n">stem</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Biology&quot;</span><span class="p">,</span> <span class="s2">&quot;Math&quot;</span><span class="p">,</span> <span class="s2">&quot;Engineering&quot;</span><span class="p">]</span>
+<span class="n">notstem</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;pe&quot;</span><span class="p">,</span> <span class="s2">&quot;offrole&quot;</span><span class="p">]</span>
+
+<span class="n">love</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Alex&quot;</span><span class="p">,</span> <span class="s2">&quot;Daniel&quot;</span><span class="p">]</span>
+<span class="n">dislike</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;kim&quot;</span><span class="p">,</span> <span class="s2">&quot;elliot&quot;</span><span class="p">]</span>
+
+<span class="nb">list</span> <span class="o">=</span> <span class="p">[</span><span class="n">love</span><span class="p">,</span> <span class="n">dislike</span><span class="p">]</span>
+
+<span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="nb">list</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">love</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">stem</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">dislike</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">notstem</span><span class="p">)</span>
 </pre></div>
 
     </div>
