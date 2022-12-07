@@ -79,7 +79,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      3 min read
+      5 min read
     
 </span></p>
 
@@ -223,13 +223,34 @@ Sorted list: [19983, 2001, 190, 72, 69, 56, 20, 12, 10, 6, 3, 2, 1]
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span> <span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">14</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">29</span><span class="p">,</span> <span class="mi">42</span><span class="p">,</span> <span class="mi">55</span><span class="p">,</span> <span class="mi">68</span><span class="p">,</span> <span class="mi">81</span><span class="p">]</span>
-<span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">numbers</span><span class="p">:</span>
-    <span class="k">if</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">numbers</span> <span class="o">==</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">29</span><span class="p">,</span> <span class="mi">42</span><span class="p">,</span> <span class="mi">55</span><span class="p">,</span> <span class="mi">68</span><span class="p">,</span> <span class="mi">81</span><span class="p">]:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="n">item</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># for item in numbers:</span>
+<span class="c1">#     print(item)</span>
+
+<span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">82</span><span class="p">,</span><span class="mi">13</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">item</span><span class="p">)</span>
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>3
+16
+29
+42
+55
+68
+81
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -386,6 +407,96 @@ Your total score is:  4 out of 4. Not too bad, keep on studying!
 </div>
     
 
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Extra-Credit">Extra Credit<a class="anchor-link" href="#Extra-Credit"> </a></h1>
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">grades</span> <span class="o">=</span> <span class="p">[</span><span class="mi">100</span><span class="p">,</span> <span class="mi">98</span><span class="p">,</span> <span class="mi">56</span><span class="p">,</span> <span class="mi">72</span><span class="p">,</span> <span class="mi">60</span><span class="p">,</span> <span class="mi">88</span><span class="p">,</span> <span class="mi">92</span><span class="p">,</span> <span class="mi">92</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">81</span><span class="p">]</span>
+<span class="n">students</span> <span class="o">=</span> <span class="mi">21</span>
+<span class="n">passing</span> <span class="o">=</span> <span class="mi">75</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Original grade list: &quot;</span><span class="p">,</span> <span class="n">grades</span><span class="p">)</span>
+<span class="k">while</span> <span class="nb">len</span><span class="p">(</span><span class="n">grades</span><span class="p">)</span> <span class="o">&lt;</span> <span class="n">students</span><span class="p">:</span>
+    <span class="n">item</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Enter another student&#39;s grade&quot;</span><span class="p">))</span>
+    <span class="n">grades</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">item</span><span class="p">)</span>
+<span class="n">grades</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Updated List of Grades &quot;</span><span class="p">,</span> <span class="n">grades</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">grades</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">item</span> <span class="o">&gt;=</span> <span class="mi">75</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;eligible for credit&quot;</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">item</span> <span class="o">&lt;</span> <span class="mi">75</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;ineligible for credit&quot;</span><span class="p">)</span>
+
+<span class="c1"># I essentially have some grades that I have already corrected, but I have 21 students. I use the while function to make sure that </span>
+<span class="c1"># I get the rest of the remaining tests needed to be input, where it will then stop asking me for more grades to put in once i get everyone.</span>
+<span class="c1"># After that, I ask the code to sort the list</span>
+<span class="c1"># Additionally, after getting the grades for each student, I need it to sort the grades from least to greatest</span>
+<span class="c1"># Thats where I use the if and elif for whether they have enough for credit or not.</span>
+    
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Original grade list:  [100, 98, 56, 72, 60, 88, 92, 92, 100, 81]
+Updated List of Grades  [12, 34, 56, 56, 60, 67, 72, 76, 78, 81, 88, 89, 90, 90, 92, 92, 98, 98, 100, 100, 100]
+ineligible for credit
+ineligible for credit
+ineligible for credit
+ineligible for credit
+ineligible for credit
+ineligible for credit
+ineligible for credit
+eligible for credit
+eligible for credit
+eligible for credit
+eligible for credit
+eligible for credit
+eligible for credit
+eligible for credit
+eligible for credit
+eligible for credit
+eligible for credit
+eligible for credit
+eligible for credit
+eligible for credit
+eligible for credit
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>I essentially have some grades that I have already corrected, but I have 21 students. I use the while function to make sure that 
+ I get the rest of the remaining tests needed to be input, where it will then stop asking me for more grades to put in once i get everyone.
+ After that, I ask the code to sort the list
+ Additionally, after getting the grades for each student, I need it to sort the grades from least to greatest
+Thats where I use the if and elif for whether they have enough for credit or not.</p>
+
+</div>
+</div>
+</div>
 </div>
 
 
