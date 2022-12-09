@@ -133,13 +133,90 @@ window.onload = wrap_img;
 <li>It is important to know that algorithms that look different can do the same thing because there are a multitude of different methods and structures that can be used to receive the same answer. For example, in the examples given in the presentation, there are different methods that were used to derive similar results. One used if and else statements to find out which conditions best suited the predicament. The other one simply used factors A, B, and C to categorize the value given, and although both displayed the same result, different inputs may result in different outcomes (outputs).</li>
 </ul>
 </li>
-<li><p>Converted Boolean conversion (???)</p>
+<li><p>Converted Boolean conversion:</p>
 </li>
 </ol>
 
 </div>
 </div>
 </div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">Working</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="n">Gaming</span> <span class="o">=</span> <span class="kc">False</span>
+
+<span class="k">if</span> <span class="n">Gaming</span> <span class="o">==</span> <span class="kc">True</span> <span class="ow">and</span> <span class="n">Working</span> <span class="o">==</span> <span class="kc">True</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Go to bed at 10:00!&quot;</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">Gaming</span> <span class="o">==</span> <span class="kc">True</span> <span class="ow">and</span> <span class="n">Working</span> <span class="o">==</span> <span class="kc">False</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Finish your work first!&quot;</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">Gaming</span> <span class="o">==</span> <span class="kc">False</span> <span class="ow">and</span> <span class="n">Working</span> <span class="o">==</span> <span class="kc">True</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Go have fun!&quot;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Go have fun!
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">Sick</span> <span class="o">=</span> <span class="kc">False</span>
+<span class="n">Practice</span> <span class="o">=</span> <span class="kc">True</span>
+
+<span class="n">Bed</span> <span class="o">=</span> <span class="ow">not</span><span class="p">(</span><span class="n">Practice</span><span class="p">)</span> <span class="ow">and</span> <span class="p">(</span><span class="n">Sick</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">Bed</span> <span class="o">==</span> <span class="kc">True</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Stay in bed!&quot;</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">Bed</span> <span class="o">==</span> <span class="kc">False</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Go to practice!&quot;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Go to practice!
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="3.9.2-Hacks">3.9.2 Hacks<a class="anchor-link" href="#3.9.2-Hacks"> </a></h3>
@@ -226,14 +303,12 @@ window.onload = wrap_img;
 Shirts are $3, Pants are $4
 If you do not have enough money, we will ask that you put away some items and try again
 Are you going to pay with cash or credit?
-cash
-How much money do you have?
-1
+credit
 How many shirts do you have?
-3
+4
 How many pants do you have
 2
-Bro you can&#39;t afford anything in the first place
+Your total is: 20, have a good day
 </pre>
 </div>
 </div>
@@ -311,17 +386,17 @@ Bro you can&#39;t afford anything in the first place
 
 <span class="c1">#Write a function that gets a guess from the user using input()</span>
 <span class="k">def</span> <span class="nf">guess</span><span class="p">():</span>
-    <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;guess a number&quot;</span><span class="p">)</span><span class="c1">#add something here</span>
-    <span class="k">return</span> <span class="n">guess</span><span class="p">()</span> <span class="c1">#add something here </span>
+    <span class="n">numero</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Number&quot;</span><span class="p">))</span>
+    <span class="k">return</span> <span class="n">numero</span><span class="c1">#add something here </span>
 
 <span class="c1">#Change the print statements to give feedback on whether the player guessed too high or too low</span>
 <span class="k">def</span> <span class="nf">search</span><span class="p">(</span><span class="n">number</span><span class="p">,</span> <span class="n">guess</span><span class="p">):</span>
     <span class="k">global</span> <span class="n">lower_bound</span><span class="p">,</span> <span class="n">upper_bound</span>
     <span class="k">if</span> <span class="n">guess</span> <span class="o">&lt;</span> <span class="n">number</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Higher&quot;</span><span class="p">)</span> <span class="c1">#change this</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Too low&quot;</span><span class="p">)</span> <span class="c1">#change this</span>
         <span class="n">lower_bound</span> <span class="o">=</span> <span class="n">guess</span>
     <span class="k">elif</span> <span class="n">guess</span> <span class="o">&gt;</span> <span class="n">number</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Lower&quot;</span><span class="p">)</span> <span class="c1">#change this</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;too high&quot;</span><span class="p">)</span> <span class="c1">#change this</span>
         <span class="n">upper_bound</span> <span class="o">=</span> <span class="n">guess</span>
     <span class="k">return</span> <span class="n">lower_bound</span><span class="p">,</span> <span class="n">upper_bound</span>
 
@@ -346,67 +421,70 @@ Bro you can&#39;t afford anything in the first place
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>I&#39;m thinking of a number between 1 and 100.
+You guessed 50.
+Too low
+Guess a number between 50 and 100.
+You guessed 75.
+too high
+Guess a number between 50 and 75.
+You guessed 60.
+Too low
+Guess a number between 60 and 75.
+You guessed 60.
+Too low
+Guess a number between 60 and 75.
+You guessed 70.
+too high
+Guess a number between 60 and 70.
+You guessed 65.
+Too low
+Guess a number between 65 and 70.
+You guessed 68.
+Too low
+Guess a number between 68 and 70.
+You guessed 69.
+Guess a number between 68 and 70.
+You guessed the number in 13 guesses!
 </pre>
 </div>
 </div>
 
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">divide</span><span class="p">(</span><span class="n">num</span><span class="p">,</span> <span class="n">a</span><span class="p">):</span>
+    <span class="n">num</span> <span class="o">=</span> <span class="mi">3</span>
+    <span class="n">a</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">num</span>
+
+<span class="n">divide</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
 <div class="output_area">
 
-<div class="output_subarea output_text output_error">
-<pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">KeyboardInterrupt</span>                         Traceback (most recent call last)
-Cell <span class="ansi-green-fg">In[3], line 33</span>
-<span class="ansi-green-intense-fg ansi-bold">     30</span>     return lower_bound, upper_bound
-<span class="ansi-green-intense-fg ansi-bold">     32</span> while user_guess != number:
-<span class="ansi-green-fg">---&gt; 33</span>     user_guess = guess()
-<span class="ansi-green-intense-fg ansi-bold">     34</span>     num_guesses += 1
-<span class="ansi-green-intense-fg ansi-bold">     35</span>     print(f&#34;You guessed {user_guess}.&#34;)
 
-Cell <span class="ansi-green-fg">In[3], line 19</span>, in <span class="ansi-cyan-fg">guess</span><span class="ansi-blue-fg">()</span>
-<span class="ansi-green-intense-fg ansi-bold">     17</span> def guess():
-<span class="ansi-green-intense-fg ansi-bold">     18</span>     input(&#34;guess a number&#34;)#add something here
-<span class="ansi-green-fg">---&gt; 19</span>     return guess()
 
-Cell <span class="ansi-green-fg">In[3], line 19</span>, in <span class="ansi-cyan-fg">guess</span><span class="ansi-blue-fg">()</span>
-<span class="ansi-green-intense-fg ansi-bold">     17</span> def guess():
-<span class="ansi-green-intense-fg ansi-bold">     18</span>     input(&#34;guess a number&#34;)#add something here
-<span class="ansi-green-fg">---&gt; 19</span>     return guess()
-
-    <span class="ansi-red-fg">[... skipping similar frames: guess at line 19 (13 times)]</span>
-
-Cell <span class="ansi-green-fg">In[3], line 19</span>, in <span class="ansi-cyan-fg">guess</span><span class="ansi-blue-fg">()</span>
-<span class="ansi-green-intense-fg ansi-bold">     17</span> def guess():
-<span class="ansi-green-intense-fg ansi-bold">     18</span>     input(&#34;guess a number&#34;)#add something here
-<span class="ansi-green-fg">---&gt; 19</span>     return guess()
-
-Cell <span class="ansi-green-fg">In[3], line 18</span>, in <span class="ansi-cyan-fg">guess</span><span class="ansi-blue-fg">()</span>
-<span class="ansi-green-intense-fg ansi-bold">     17</span> def guess():
-<span class="ansi-green-fg">---&gt; 18</span>     input(&#34;guess a number&#34;)#add something here
-<span class="ansi-green-intense-fg ansi-bold">     19</span>     return guess()
-
-File <span class="ansi-green-fg">~/.local/lib/python3.8/site-packages/ipykernel/kernelbase.py:1177</span>, in <span class="ansi-cyan-fg">Kernel.raw_input</span><span class="ansi-blue-fg">(self, prompt)</span>
-<span class="ansi-green-intense-fg ansi-bold">   1173</span> if not self._allow_stdin:
-<span class="ansi-green-intense-fg ansi-bold">   1174</span>     raise StdinNotImplementedError(
-<span class="ansi-green-intense-fg ansi-bold">   1175</span>         &#34;raw_input was called, but this frontend does not support input requests.&#34;
-<span class="ansi-green-intense-fg ansi-bold">   1176</span>     )
-<span class="ansi-green-fg">-&gt; 1177</span> return self._input_request(
-<span class="ansi-green-intense-fg ansi-bold">   1178</span>     str(prompt),
-<span class="ansi-green-intense-fg ansi-bold">   1179</span>     self._parent_ident[&#34;shell&#34;],
-<span class="ansi-green-intense-fg ansi-bold">   1180</span>     self.get_parent(&#34;shell&#34;),
-<span class="ansi-green-intense-fg ansi-bold">   1181</span>     password=False,
-<span class="ansi-green-intense-fg ansi-bold">   1182</span> )
-
-File <span class="ansi-green-fg">~/.local/lib/python3.8/site-packages/ipykernel/kernelbase.py:1219</span>, in <span class="ansi-cyan-fg">Kernel._input_request</span><span class="ansi-blue-fg">(self, prompt, ident, parent, password)</span>
-<span class="ansi-green-intense-fg ansi-bold">   1216</span>             break
-<span class="ansi-green-intense-fg ansi-bold">   1217</span> except KeyboardInterrupt:
-<span class="ansi-green-intense-fg ansi-bold">   1218</span>     # re-raise KeyboardInterrupt, to truncate traceback
-<span class="ansi-green-fg">-&gt; 1219</span>     raise KeyboardInterrupt(&#34;Interrupted by user&#34;) from None
-<span class="ansi-green-intense-fg ansi-bold">   1220</span> except Exception:
-<span class="ansi-green-intense-fg ansi-bold">   1221</span>     self.log.warning(&#34;Invalid Message:&#34;, exc_info=True)
-
-<span class="ansi-red-fg">KeyboardInterrupt</span>: Interrupted by user</pre>
+<div class="output_text output_subarea output_execute_result">
+<pre>3</pre>
 </div>
+
 </div>
 
 </div>
@@ -447,8 +525,9 @@ File <span class="ansi-green-fg">~/.local/lib/python3.8/site-packages/ipykernel/
 </ol>
 <p>a. ["amy", "beverly", "christian", "devin"]</p>
 <p>b. [-1, 2, 6, 9, 19]</p>
-<p><strong>c. [3, 2, 8, 12, 99]</strong> because the numbers are not sorted into ascending or descending order like b and it is not in alphabetical order like d and a</p>
+<p>c. [3, 2, 8, 12, 99]</p>
 <p>d. ["xylophone", "snowman", "snake", "doorbell", "author"]</p>
+<p><strong>c. [3, 2, 8, 12, 99]</strong> because the numbers are not sorted into ascending or descending order like b and it is not in alphabetical order like d and a!!!!</p>
 
 </div>
 </div>
