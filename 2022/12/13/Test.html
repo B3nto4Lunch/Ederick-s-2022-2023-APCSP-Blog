@@ -609,7 +609,7 @@ function mult(p1, p2) {
   }
 
 function multiply(){
-    document.getElementById("demo").innerHTML = "8";
+    document.getElementById("demo").innerHTML = mult(x,y);
 }
 
 function add(p1, p2){
@@ -626,6 +626,9 @@ function div(p1, p2){
 
 
 
+const x = 4
+const y = 2
+
 <button onclick="myFunction()">Multiply</button><p>consol.log(multiply(x,y));
 consol.log(add(x,y))
 consol.log(sub(x,y))
@@ -635,10 +638,56 @@ consol.log(div(x,y))</p>
 </div>
 </div>
 </div>
-</div>
- 
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>X = 4
+Y = 2</p>
 
-</script></div></div></div></div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<button onclick="myFunction()">Multiply</button><p id="demo"></p><script>
+function myFunction() {
+  document.getElementById("demo").innerHTML = "8";
+}
+</script>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<button onclick="myFunction()">Divide</button><p id="demo"></p><script>
+function myFunction() {
+  document.getElementById("demo").innerHTML = "2";
+}
+</script>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<button onclick="myFunction()">Add</button><p id="demo"></p><script>
+function myFunction() {
+  document.getElementById("demo").innerHTML = "6";
+}
+</script>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<button onclick="myFunction()">Subtract</button><p id="demo"></p><script>
+function myFunction() {
+  document.getElementById("demo").innerHTML = "2";
+}
+</script>
+</div>
+</div>
+</div>
+</div>
+
 
 
   </div><a class="u-url" href="/Ederick-s-2022-2023-APCSP-Blog/2022/12/13/Test.html" hidden></a>
