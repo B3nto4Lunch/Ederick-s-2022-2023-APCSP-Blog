@@ -169,8 +169,8 @@
         ,"post15": {
             "title": "Working on the Final Project",
             "content": "Working on this project was pretty grueling. A lot of our members worked on the following issues: - trying to fix the date being constantly recording Sunday - Accessing weather api and it displaying accurate data - having events being displayed on our calendar - Moving the api created from frontend to backend (simple fix) .",
-            "url": "https://b3nto4lunch.github.io/Ederick-s-2022-2023-APCSP-Blog/2022/11/02/Working-On-The-Final-Project.html",
-            "relUrl": "/2022/11/02/Working-On-The-Final-Project.html",
+            "url": "https://b3nto4lunch.github.io/Ederick-s-2022-2023-APCSP-Blog/webapp/2022/11/02/Working-On-The-Final-Project.html",
+            "relUrl": "/webapp/2022/11/02/Working-On-The-Final-Project.html",
             "date": " • Nov 2, 2022"
         }
         
@@ -178,8 +178,8 @@
   
     
         ,"post16": {
-            "title": "Java Script Calculator (Incomplete)",
-            "content": "",
+            "title": "Java Script: Calculator",
+            "content": "This was supposed to be a calculator but it was never finalized :( .",
             "url": "https://b3nto4lunch.github.io/Ederick-s-2022-2023-APCSP-Blog/2022/10/26/Java-Grade-Calculator.html",
             "relUrl": "/2022/10/26/Java-Grade-Calculator.html",
             "date": " • Oct 26, 2022"
@@ -191,8 +191,8 @@
         ,"post17": {
             "title": "Programming Schedule Video",
             "content": "Link to the Video . This video has all of our group members our purpose and layout for our programming. All links and resources refered in the video are linked in the description. :) .",
-            "url": "https://b3nto4lunch.github.io/Ederick-s-2022-2023-APCSP-Blog/2022/10/24/Scheduling-Program-Video.html",
-            "relUrl": "/2022/10/24/Scheduling-Program-Video.html",
+            "url": "https://b3nto4lunch.github.io/Ederick-s-2022-2023-APCSP-Blog/webapp/2022/10/24/Scheduling-Program-Video.html",
+            "relUrl": "/webapp/2022/10/24/Scheduling-Program-Video.html",
             "date": " • Oct 24, 2022"
         }
         
@@ -202,8 +202,8 @@
         ,"post18": {
             "title": "API Testing With Jokes",
             "content": "import random jokes_data = [] joke_list = [ &quot;If you give someone a program... you will frustrate them for a day; if you teach them how to program... you will &quot; &quot;frustrate them for a lifetime.&quot;, &quot;Q: Why did I divide sin by tan? A: Just cos.&quot;, &quot;UNIX is basically a simple operating system... but you have to be a genius to understand the simplicity.&quot;, &quot;Enter any 11-digit prime number to continue.&quot;, &quot;If at first you don&#39;t succeed; call it version 1.0.&quot;, &quot;Java programmers are some of the most materialistic people I know, very object-oriented&quot;, &quot;The oldest computer can be traced back to Adam and Eve. It was an apple but with extremely limited memory. Just &quot; &quot;1 byte. And then everything crashed.&quot;, &quot;Q: Why did Wi-Fi and the computer get married? A: Because they had a connection&quot;, &quot;Bill Gates teaches a kindergarten class to count to ten. 1, 2, 3, 3.1, 95, 98, ME, 2000, XP, Vista, 7, 8, 10.&quot;, &quot;Q: What’s a aliens favorite computer key? A: the space bar!&quot;, &quot;There are 10 types of people in the world: those who understand binary, and those who don’t.&quot;, &quot;If it wasn&#39;t for C, we’d all be programming in BASI and OBOL.&quot;, &quot;Computers make very fast, very accurate mistakes.&quot;, &quot;Q: Why is it that programmers always confuse Halloween with Christmas? A: Because 31 OCT = 25 DEC.&quot;, &quot;Q: How many programmers does it take to change a light bulb? A: None. It’s a hardware problem.&quot;, &quot;The programmer got stuck in the shower because the instructions on the shampoo bottle said: Lather, Rinse, Repeat.&quot;, &quot;Q: What is the biggest lie in the entire universe? A: I have read and agree to the Terms and Conditions.&quot;, &#39;An SQL statement walks into a bar and sees two tables. It approaches, and asks may I join you?&#39; ] # Initialize jokes def initJokes(): # setup jokes into a dictionary with id, joke, haha, boohoo item_id = 0 for item in joke_list: jokes_data.append({&quot;id&quot;: item_id, &quot;joke&quot;: item, &quot;haha&quot;: 0, &quot;boohoo&quot;: 0}) item_id += 1 # prime some haha responses for i in range(200): id = getRandomJoke()[&#39;id&#39;] addJokeHaHa(id) # prime some haha responses for i in range(50): id = getRandomJoke()[&#39;id&#39;] addJokeBooHoo(id) # Return all jokes from jokes_data def getJokes(): return(jokes_data) # Joke getter def getJoke(id): return(jokes_data[id]) # Return random joke from jokes_data def getRandomJoke(): return(random.choice(jokes_data)) # Liked joke def favoriteJoke(): best = 0 bestID = -1 for joke in getJokes(): if joke[&#39;haha&#39;] &gt; best: best = joke[&#39;haha&#39;] bestID = joke[&#39;id&#39;] return jokes_data[bestID] # Jeered joke def jeeredJoke(): worst = 0 worstID = -1 for joke in getJokes(): if joke[&#39;boohoo&#39;] &gt; worst: worst = joke[&#39;boohoo&#39;] worstID = joke[&#39;id&#39;] return jokes_data[worstID] # Add to haha for requested id def addJokeHaHa(id): jokes_data[id][&#39;haha&#39;] = jokes_data[id][&#39;haha&#39;] + 1 return jokes_data[id][&#39;haha&#39;] # Add to boohoo for requested id def addJokeBooHoo(id): jokes_data[id][&#39;boohoo&#39;] = jokes_data[id][&#39;boohoo&#39;] + 1 return jokes_data[id][&#39;boohoo&#39;] # Pretty Print joke def printJoke(joke): print(joke[&#39;id&#39;], joke[&#39;joke&#39;], &quot; n&quot;, &quot;haha:&quot;, joke[&#39;haha&#39;], &quot; n&quot;, &quot;boohoo:&quot;, joke[&#39;boohoo&#39;], &quot; n&quot;) # Number of jokes def countJokes(): return len(jokes_data) # Test Joke Model if __name__ == &quot;__main__&quot;: initJokes() # initialize jokes # Most likes and most jeered best = favoriteJoke() print(&quot;Most liked&quot;, best[&#39;haha&#39;]) printJoke(best) worst = jeeredJoke() print(&quot;Most jeered&quot;, worst[&#39;boohoo&#39;]) printJoke(worst) # Random joke print(&quot;Random joke&quot;) printJoke(getRandomJoke()) # Count of Jokes print(&quot;Jokes Count: &quot; + str(countJokes())) .",
-            "url": "https://b3nto4lunch.github.io/Ederick-s-2022-2023-APCSP-Blog/2022/10/20/Jokes.html",
-            "relUrl": "/2022/10/20/Jokes.html",
+            "url": "https://b3nto4lunch.github.io/Ederick-s-2022-2023-APCSP-Blog/webapp/2022/10/20/Jokes.html",
+            "relUrl": "/webapp/2022/10/20/Jokes.html",
             "date": " • Oct 20, 2022"
         }
         
@@ -235,8 +235,8 @@
         ,"post21": {
             "title": "Error Testing",
             "content": "",
-            "url": "https://b3nto4lunch.github.io/Ederick-s-2022-2023-APCSP-Blog/2022/10/06/Error-Testing.html",
-            "relUrl": "/2022/10/06/Error-Testing.html",
+            "url": "https://b3nto4lunch.github.io/Ederick-s-2022-2023-APCSP-Blog/webapp/2022/10/06/Error-Testing.html",
+            "relUrl": "/webapp/2022/10/06/Error-Testing.html",
             "date": " • Oct 6, 2022"
         }
         
@@ -246,8 +246,8 @@
         ,"post22": {
             "title": "API Testing",
             "content": "import requests url = &quot;https://corona-virus-world-and-india-data.p.rapidapi.com/api&quot; headers = { &quot;X-RapidAPI-Key&quot;: &quot;d484bbc718mshdd2dcfbcf99954bp1222f2jsn6c13602d819c&quot;, &quot;X-RapidAPI-Host&quot;: &quot;corona-virus-world-and-india-data.p.rapidapi.com&quot; } response = requests.request(&quot;GET&quot;, url, headers=headers) #print(response.text) print(&quot;Country Totals&quot;) country1 = input(&quot;country&quot;) countries = response.json().get(&#39;countries_stat&#39;) for country in countries: # countries is a list if country[&quot;country_name&quot;] == country1: # this filters for USA for key, value in country.items(): # this finds key, value pairs in country print(key, value) . Country Totals country_name USA cases 82,649,779 deaths 1,018,316 region total_recovered 80,434,925 new_deaths 0 new_cases 0 serious_critical 1,465 active_cases 1,196,538 total_cases_per_1m_population 247,080 deaths_per_1m_population 3,044 total_tests 1,000,275,726 tests_per_1m_population 2,990,303 . import requests url = &quot;https://forecast9.p.rapidapi.com/&quot; headers = { &quot;X-RapidAPI-Key&quot;: &quot;d484bbc718mshdd2dcfbcf99954bp1222f2jsn6c13602d819c&quot;, &quot;X-RapidAPI-Host&quot;: &quot;forecast9.p.rapidapi.com&quot; } response = requests.request(&quot;GET&quot;, url, headers=headers) print(response.json()) . {&#39;title&#39;: &#39;wetter.com REST API&#39;, &#39;version&#39;: &#39;2.3&#39;, &#39;documentation&#39;: &#39;https://tapi.wetter.com/v2.3/documentation/index.html&#39;} . import requests url = &quot;https://weatherapi-com.p.rapidapi.com/future.json&quot; querystring = {&quot;q&quot;:&quot;Mexico&quot;,&quot;dt&quot;:&quot;2022-12-25&quot;} headers = { &quot;X-RapidAPI-Key&quot;: &quot;d484bbc718mshdd2dcfbcf99954bp1222f2jsn6c13602d819c&quot;, &quot;X-RapidAPI-Host&quot;: &quot;weatherapi-com.p.rapidapi.com&quot; } response = requests.request(&quot;GET&quot;, url, headers=headers, params=querystring) print(response.text) . {&#34;message&#34;:&#34;This endpoint is disabled for your subscription&#34;} .",
-            "url": "https://b3nto4lunch.github.io/Ederick-s-2022-2023-APCSP-Blog/2022/10/06/BetterthanNoor.html",
-            "relUrl": "/2022/10/06/BetterthanNoor.html",
+            "url": "https://b3nto4lunch.github.io/Ederick-s-2022-2023-APCSP-Blog/webapp/2022/10/06/BetterthanNoor.html",
+            "relUrl": "/webapp/2022/10/06/BetterthanNoor.html",
             "date": " • Oct 6, 2022"
         }
         
@@ -279,8 +279,8 @@
         ,"post25": {
             "title": "Response to Stress Ted Talk",
             "content": "print(&quot;What can you do to deal with stress?&quot;) name = &quot;Listening to music, sleeping, playing video games, hanging out with friends, reading a book, and eating are all methods people use to handle stress&quot; print(&quot;name&quot;, name, type(name)) print() print(&quot;What are signs that you are stressed?&quot;) age = &quot;Increased heart rate, anxiety, unease, and sometimes depression are all symptoms of severe stress.&quot; print(&quot;age&quot;, age, type(age)) print() print(&quot;How can you develop good habits to prevent stress?&quot;) score = &quot;Creating good habits like a balanced diet, daily exercise, a decent sleep schedule, and not procrastinating can help prevent stress&quot; print(&quot;score&quot;, score, type(score)) print() print(&quot;Give me some info on Stress&quot;) person = { &quot;Listening to music, sleeping, playing video games, hanging out with friends, reading a book, and eating are all methods people use to handle stress&quot; : name, &quot;Increased heart rate, anxiety, unease, and sometimes depression are all symptoms of severe stress.&quot; : age, &quot;Creating good habits like a balanced diet, daily exercise, a decent sleep schedule, and not procrastinating can help prevent stress&quot; : score } . What can you do to deal with stress? name Listening to music, sleeping, playing video games, hanging out with friends, reading a book, and eating are all methods people use to handle stress &lt;class &#39;str&#39;&gt; What are signs that you are stressed? age Increased heart rate, anxiety, unease, and sometimes depression are all symptoms of severe stress. &lt;class &#39;str&#39;&gt; How can you develop good habits to prevent stress? score Creating good habits like a balanced diet, daily exercise, a decent sleep schedule, and not procrastinating can help prevent stress &lt;class &#39;str&#39;&gt; Give me some info on Stress . Someone that helps me reduce stress are my friends online and in person. Most of the time when I&#39;m stressed, I usually play games online or talk about general topics about school or outside activities. I love playing TFPS games like Counter Strike and Valorant and have gotten decent at the games. I love all the games I play with my friends because they give me memories that I will definitely live to laugh by. . Here&#39;s a Video Demonstrating my Amazing Skills . I am grateful for my family, friends, and the luxury of having a good school to travel to and having afterschool activities. . I want to continue to educate myself so that I can get into a decent college. . I Want to make it so that I can make others happy. I want to make my family happy (except my sister of course) . Other ways I like to handle stress is draw. I love watching funny shows people recommend to me .",
-            "url": "https://b3nto4lunch.github.io/Ederick-s-2022-2023-APCSP-Blog/2022/09/20/Tedtalk.html",
-            "relUrl": "/2022/09/20/Tedtalk.html",
+            "url": "https://b3nto4lunch.github.io/Ederick-s-2022-2023-APCSP-Blog/trimester%201/2022/09/20/Tedtalk.html",
+            "relUrl": "/trimester%201/2022/09/20/Tedtalk.html",
             "date": " • Sep 20, 2022"
         }
         
