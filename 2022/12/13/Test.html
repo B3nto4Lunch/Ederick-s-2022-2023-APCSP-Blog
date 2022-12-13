@@ -601,13 +601,15 @@ words starting with s : 3
 
 
 <script>
+const x = 4
+const y = 2   
 
 function mult(p1, p2) {
     return p1 * p2; 
   }
 
 function multiply(){
-    document.getElementById("demo").innerHTML = mult(4,2);
+    document.getElementById("demo").innerHTML = mult(x,y);
 }
 
 function add(p1, p2){
@@ -623,9 +625,6 @@ function div(p1, p2){
 }
 
 
-
-const x = 4
-const y = 2
 
 <button onclick="myFunction()">Multiply</button><p>consol.log(multiply(x,y));
 consol.log(add(x,y))
