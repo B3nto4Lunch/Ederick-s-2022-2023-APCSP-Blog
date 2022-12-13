@@ -596,13 +596,15 @@ words starting with s : 3
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<button type="button">Multiply</button>
-<button type="button">Divide</button>
-<button type="button">Add</button>
-<button type="button">Subtract</button><script>
+<button onclick="multiply()">Multiply</button>
+<p id="demo"></p>
+
+
+<script>
 
 function multiply(p1, p2) {
     return p1 * p2;
+    document.getElementById("demo").innerHTML = multiply(4,2);
   }
 
 function add(p1, p2){
@@ -617,23 +619,24 @@ function div(p1, p2){
     return p2 / p2;
 }
 
+
+
 const x = 4
 const y = 2
 
-<button onclick="myFunction()">m</button>
-
-
-consol.log(multiply(x,y));
+<button onclick="myFunction()">Multiply</button><p>consol.log(multiply(x,y));
 consol.log(add(x,y))
 consol.log(sub(x,y))
-consol.log(div(x,y))
+consol.log(div(x,y))</p>
+<p>&lt;/script&gt;</p>
 
-</script>
 </div>
 </div>
 </div>
 </div>
+ 
 
+</script></div></div></div></div>
 
 
   </div><a class="u-url" href="/Ederick-s-2022-2023-APCSP-Blog/2022/12/13/Test.html" hidden></a>
