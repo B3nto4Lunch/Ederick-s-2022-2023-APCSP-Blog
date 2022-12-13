@@ -79,7 +79,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      8 min read
+      6 min read
     
 </span></p>
 
@@ -144,11 +144,7 @@ window.onload = wrap_img;
 <li>Quiz code shown below)</li>
 </ul>
 </li>
-<li>Define Return Values and Output Parameters in your own words<ul>
-<li>Return Values: a value that a function returns to the calling function when it completes its task or given instructions.</li>
-<li>Output Parameter: the parameters that are called from the function. Kind of like the thing that is assigned for the parameter, which is originally an independent variable that can hold any value. </li>
-</ul>
-</li>
+<li>Define Return Values and Output Parameters in your own words</li>
 <li>Code a procedure that finds the square root of any given number. (make sure to call and return the function)</li>
 </ol>
 
@@ -302,7 +298,7 @@ Score: 3 / 3
 <span class="n">shirt</span> <span class="o">=</span> <span class="mi">5</span>
 <span class="n">pants</span> <span class="o">=</span> <span class="mi">10</span>
 
- 
+
 <span class="k">def</span> <span class="nf">shirtply</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
     <span class="k">return</span> <span class="n">s</span> <span class="o">*</span> <span class="mi">5</span>
 
@@ -436,19 +432,16 @@ Below is what the code would be without the defined sub procedures</p>
     <span class="n">count</span> <span class="o">=</span> <span class="n">count_words_starting_with_letter</span><span class="p">(</span><span class="n">words</span><span class="p">,</span> <span class="s2">&quot;d&quot;</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">count</span>
 
-<span class="k">def</span> <span class="nf">letter_count</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
+<span class="k">def</span> <span class="nf">letter_that_this_word_starts_with</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
     <span class="n">words</span> <span class="o">=</span> <span class="n">split_string</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
-    <span class="n">count</span> <span class="o">=</span> <span class="n">count_words_starting_with_letter</span><span class="p">(</span><span class="n">words</span><span class="p">,</span> <span class="n">letter</span><span class="p">)</span>
-    <span class="k">return</span> <span class="n">count</span>
-<span class="n">letter</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;What is your letter?&quot;</span><span class="p">)</span>
+    <span class="n">count</span> <span class="o">=</span> <span class="n">letter_that_this_word_starts_with</span><span class="p">(</span><span class="n">words</span><span class="p">,</span> <span class="n">s</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+
 <span class="c1"># example usage:</span>
 <span class="n">s</span> <span class="o">=</span> <span class="s2">&quot;   This is  a  test  string! Don&#39;t you think this is cool? &quot;</span>
 <span class="n">a_count</span> <span class="o">=</span> <span class="n">count_words_starting_with_a_in_string</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
 <span class="n">d_count</span> <span class="o">=</span> <span class="n">count_words_starting_with_d_in_string</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
-<span class="n">any_count</span> <span class="o">=</span> <span class="n">letter_count</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Words starting with a:&quot;</span><span class="p">,</span> <span class="n">a_count</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Words starting with d:&quot;</span><span class="p">,</span> <span class="n">d_count</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Words starting with&quot;</span><span class="p">,</span> <span class="n">letter</span><span class="p">,</span> <span class="s2">&quot;:&quot;</span><span class="p">,</span> <span class="n">any_count</span> <span class="p">)</span>
 </pre></div>
 
     </div>
@@ -463,74 +456,6 @@ Below is what the code would be without the defined sub procedures</p>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Words starting with a: 1
 Words starting with d: 1
-Words starting with t : 4
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-    
-
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>I added some code to make it so that you can choose what input is given. For example, all you need to do is type the letter you want to be counted in the sentence ("This is a test string! Don't you think this is cool?"). I did t, so it gave 4</p>
-<p>Below is the added to the code</p>
-<div class="highlight"><pre><span></span><span class="c1"># The code counts the letters that start with the user&#39;s input</span>
-<span class="k">def</span> <span class="nf">letter_count</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
-    <span class="n">words</span> <span class="o">=</span> <span class="n">split_string</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
-    <span class="n">count</span> <span class="o">=</span> <span class="n">count_words_starting_with_letter</span><span class="p">(</span><span class="n">words</span><span class="p">,</span> <span class="n">letter</span><span class="p">)</span>
-    <span class="k">return</span> <span class="n">count</span>
-<span class="n">letter</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;What is your letter?&quot;</span><span class="p">)</span>
-
-<span class="c1"># Prints the result</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Words starting with&quot;</span><span class="p">,</span> <span class="n">letter</span><span class="p">,</span> <span class="s2">&quot;:&quot;</span><span class="p">,</span> <span class="n">any_count</span> <span class="p">)</span>
-</pre></div>
-<p>An alternate way you could do that allows for a unique string to be counted is shown below (very similar to the code used in the example)</p>
-
-</div>
-</div>
-</div>
-    
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">count_input_character</span> <span class="p">(</span><span class="n">input_str</span><span class="p">,</span> <span class="n">character</span><span class="p">):</span>
-    <span class="n">input_str</span> <span class="o">=</span> <span class="n">input_str</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
-    <span class="n">character</span> <span class="o">=</span> <span class="n">character</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
-    <span class="n">count</span> <span class="o">=</span> <span class="mi">0</span>
-    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">input_str</span><span class="p">)):</span>
-     <span class="k">if</span> <span class="n">input_str</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="n">character</span> <span class="ow">and</span> <span class="p">(</span><span class="n">i</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">or</span> <span class="n">input_str</span><span class="p">[</span><span class="n">i</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot; &quot;</span><span class="p">):</span>
-            <span class="n">count</span> <span class="o">+=</span> <span class="mi">1</span>
-    <span class="k">return</span> <span class="p">(</span><span class="n">count</span><span class="p">)</span>
-
-<span class="n">input_str</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Enter a string: &quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">input_str</span><span class="p">)</span>
-<span class="n">character</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;What character do you want counted?&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">character</span><span class="p">)</span>
-<span class="n">result</span> <span class="o">=</span> <span class="n">count_input_character</span><span class="p">(</span><span class="n">input_str</span><span class="p">,</span> <span class="n">character</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;words starting with&quot;</span><span class="p">,</span><span class="n">character</span><span class="p">,</span> <span class="s2">&quot;:&quot;</span><span class="p">,</span><span class="n">result</span><span class="p">)</span>
-    
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>The swift and sly fox graceously jumps over the lazy dog that sleeps in the corner.
-s
-words starting with s : 3
 </pre>
 </div>
 </div>
@@ -573,11 +498,7 @@ words starting with s : 3
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<button onclick="myFunction()">Add</button><p id="demo"></p><script>
-function myFunction() {
-  document.getElementById("demo").innerHTML = a + b;
-}
-</script>
+<button type="button">Click Me!</button>
 </div>
 </div>
 </div>
