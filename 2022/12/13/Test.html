@@ -572,72 +572,6 @@ words starting with s : 3
 </div>
 </div>
 </div>
-    
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">const</span> <span class="n">btn</span> <span class="o">=</span> <span class="n">document</span><span class="o">.</span><span class="n">createElement</span><span class="p">(</span><span class="s1">&#39;Button&#39;</span><span class="p">);</span>
-<span class="n">undefined</span>
-<span class="n">btn</span><span class="o">.</span><span class="n">innerText</span> <span class="o">=</span> <span class="s1">&#39;Add A + B&#39;</span><span class="p">;</span>
-<span class="s2">&quot;Add A + B&quot;</span>
-<span class="n">document</span><span class="o">.</span><span class="n">body</span><span class="o">.</span><span class="n">appendChild</span><span class="p">(</span><span class="n">btn</span><span class="p">);</span>
-    <span class="o">&lt;</span><span class="n">button</span><span class="o">&gt;</span><span class="n">Add</span> <span class="n">A</span> <span class="ow">and</span> <span class="n">B</span><span class="o">&lt;/</span><span class="n">button</span><span class="o">&gt;</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-    
-
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<button onclick="multiply()">Multiply</button>
-<p id="demo"></p>
-
-
-<script>
-const x = 4
-const y = 2   
-
-function mult(p1, p2) {
-    return p1 * p2; 
-  }
-
-function multiply(){
-    document.getElementById("demo").innerHTML = mult(x,y);
-}
-
-function add(p1, p2){
-    return p1 + p2;
-}
-
-function sub(p1, p2){
-    return p1 - p2; 
-}
-
-function div(p1, p2){
-    return p2 / p2;
-}
-
-
-
-const x = 4
-const y = 2
-
-<button onclick="myFunction()">Multiply</button><p>consol.log(multiply(x,y));
-consol.log(add(x,y))
-consol.log(sub(x,y))
-consol.log(div(x,y))</p>
-<p>&lt;/script&gt;</p>
-
-</div>
-</div>
-</div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h5 id="X-=-4">X = 4<a class="anchor-link" href="#X-=-4"> </a></h5><h5 id="Y-=-2">Y = 2<a class="anchor-link" href="#Y-=-2"> </a></h5>
@@ -646,8 +580,8 @@ consol.log(div(x,y))</p>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<button onclick="myFunction()">Multiply</button><p id="demo"></p><script>
-function myFunction() {
+<button onclick="myFunction1()">Multiply</button><p id="demo"></p><script>
+function myFunction1() {
   document.getElementById("demo").innerHTML = "8";
 }
 </script>
@@ -656,8 +590,8 @@ function myFunction() {
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<button onclick="myFunction()">Divide</button><p id="demo1"></p><script>
-function myFunction() {
+<button onclick="myFunction2()">Divide</button><p id="demo1"></p><script>
+function myFunction2() {
   document.getElementById("demo1").innerHTML = "2";
 }
 </script>
@@ -666,8 +600,8 @@ function myFunction() {
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<button onclick="myFunction()">Add</button><p id="demo2"></p><script>
-function myFunction() {
+<button onclick="myFunction3()">Add</button><p id="demo2"></p><script>
+function myFunction3() {
   document.getElementById("demo2").innerHTML = "6";
 }
 </script>
@@ -676,8 +610,8 @@ function myFunction() {
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<button onclick="myFunction()">Subtract</button><p id="demo3"></p><script>
-function myFunction() {
+<button onclick="myFunction4()">Subtract</button><p id="demo3"></p><script>
+function myFunction4() {
   document.getElementById("demo3").innerHTML = "2";
 }
 </script>
