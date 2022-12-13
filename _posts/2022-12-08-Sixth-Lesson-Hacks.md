@@ -28,6 +28,8 @@ layout: notebook
 </ul>
 </li>
 <li>Define Return Values and Output Parameters in your own words</li>
+<li>Return Values: a value that a function returns to the calling function when it completes its task or given instructions.</li>
+<li>Output Parameter: the parameters that are called from the function. Kind of like the thing that is assigned for the parameter, which is originally an independent</li> variable that can hold any value.
 <li>Code a procedure that finds the square root of any given number. (make sure to call and return the function)</li>
 </ol>
 
