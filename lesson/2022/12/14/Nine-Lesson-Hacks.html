@@ -147,22 +147,6 @@ window.onload = wrap_img;
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">collatz</span><span class="p">(</span><span class="n">i</span><span class="p">):</span>
-    <span class="k">while</span> <span class="n">i</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
-        <span class="k">if</span> <span class="p">(</span><span class="n">i</span> <span class="o">%</span> <span class="mi">2</span><span class="p">):</span>
-            <span class="c1"># i is odd</span>
-            <span class="n">i</span> <span class="o">=</span> <span class="mi">3</span><span class="o">*</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span>
-        <span class="k">else</span><span class="p">:</span>
-            <span class="c1"># i is even</span>
-            <span class="n">i</span> <span class="o">=</span> <span class="n">i</span><span class="o">//</span><span class="mi">2</span>
-    <span class="nb">print</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
- 
- 
-<span class="n">i</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Enter i: &#39;</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Sequence: &#39;</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
-<span class="n">collatz</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
-
-<span class="k">def</span> <span class="nf">collatz</span><span class="p">(</span><span class="n">i</span><span class="p">):</span>
     <span class="k">while</span> <span class="n">i</span> <span class="o">!=</span> <span class="mi">1</span><span class="p">:</span>
         <span class="k">if</span> <span class="n">i</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
              <span class="n">i</span> <span class="o">=</span><span class="p">((</span><span class="mi">3</span> <span class="o">*</span> <span class="n">i</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
@@ -200,9 +184,9 @@ window.onload = wrap_img;
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Sequence: 56 28 14 7 22 11 34 17 52 26 13 40 20 10 5 16 8 4 2 1Please enter a number: 
-Number of iterations: 46
-[123, 370, 185.0, 556.0, 278.0, 139.0, 418.0, 209.0, 628.0, 314.0, 157.0, 472.0, 236.0, 118.0, 59.0, 178.0, 89.0, 268.0, 134.0, 67.0, 202.0, 101.0, 304.0, 152.0, 76.0, 38.0, 19.0, 58.0, 29.0, 88.0, 44.0, 22.0, 11.0, 34.0, 17.0, 52.0, 26.0, 13.0, 40.0, 20.0, 10.0, 5.0, 16.0, 8.0, 4.0, 2.0, 1.0]
+<pre>Please enter a number: 
+Number of iterations: 6
+[10, 5.0, 16.0, 8.0, 4.0, 2.0, 1.0]
 </pre>
 </div>
 </div>
