@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>5.3 and 5.4 Hacks | Ederick Wong’s 2022-2023 APCSP Blog</title>
+<meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="5.3 and 5.4 Hacks" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="5.3 and 5.4 hacks on Computing Bias and Crowd sourcing" />
+<meta property="og:description" content="5.3 and 5.4 hacks on Computing Bias and Crowd sourcing" />
+<link rel="canonical" href="https://b3nto4lunch.github.io/Ederick-s-2022-2023-APCSP-Blog/etracker/cb/2023/02/05/Lesson-53-54.html" />
+<meta property="og:url" content="https://b3nto4lunch.github.io/Ederick-s-2022-2023-APCSP-Blog/etracker/cb/2023/02/05/Lesson-53-54.html" />
+<meta property="og:site_name" content="Ederick Wong’s 2022-2023 APCSP Blog" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2023-02-05T00:00:00-06:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="5.3 and 5.4 Hacks" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2023-02-05T00:00:00-06:00","datePublished":"2023-02-05T00:00:00-06:00","description":"5.3 and 5.4 hacks on Computing Bias and Crowd sourcing","headline":"5.3 and 5.4 Hacks","mainEntityOfPage":{"@type":"WebPage","@id":"https://b3nto4lunch.github.io/Ederick-s-2022-2023-APCSP-Blog/etracker/cb/2023/02/05/Lesson-53-54.html"},"url":"https://b3nto4lunch.github.io/Ederick-s-2022-2023-APCSP-Blog/etracker/cb/2023/02/05/Lesson-53-54.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/Ederick-s-2022-2023-APCSP-Blog/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://b3nto4lunch.github.io/Ederick-s-2022-2023-APCSP-Blog/feed.xml" title="Ederick Wong's 2022-2023 APCSP Blog" /><link rel="shortcut icon" type="image/x-icon" href="/Ederick-s-2022-2023-APCSP-Blog/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+
+<script>
+function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title") && (el.className != "emoji")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+}
+window.onload = wrap_img;
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+    // add link icon to anchor tags
+    var elem = document.querySelectorAll(".anchor-link")
+    elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+    });
+</script>
+</head>
+<body><header class="site-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/Ederick-s-2022-2023-APCSP-Blog/">Ederick Wong&#39;s 2022-2023 APCSP Blog</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/Ederick-s-2022-2023-APCSP-Blog/about/">About Me</a><a class="page-link" href="/Ederick-s-2022-2023-APCSP-Blog/_pages/frontend.html">Frontend</a><a class="page-link" href="/Ederick-s-2022-2023-APCSP-Blog/search/">Search</a><a class="page-link" href="/Ederick-s-2022-2023-APCSP-Blog/categories/">Tags</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">5.3 and 5.4 Hacks</h1><p class="page-description">5.3 and 5.4 hacks on Computing Bias and Crowd sourcing</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2023-02-05T00:00:00-06:00" itemprop="datePublished">
+        Feb 5, 2023
+      </time>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      4 min read
+    
+</span></p>
+
+    
+      <p class="category-tags"><i class="fas fa-tags category-tags-icon"></i></i> 
+      
+        <a class="category-tags-link" href="/Ederick-s-2022-2023-APCSP-Blog/categories/#eTracker">eTracker</a>
+        &nbsp;
+      
+        <a class="category-tags-link" href="/Ederick-s-2022-2023-APCSP-Blog/categories/#CB">CB</a>
+        
+      
+      </p>
+    
+
+    
+      
+        <div class="pb-5 d-flex flex-justify-center">
+          <div class="px-2">
+
+    <a href="https://github.com/B3nto4Lunch/Ederick-s-2022-2023-APCSP-Blog/tree/master/_notebooks/2023-2-4-Lesson-53-54.ipynb" role="button" target="_blank">
+<img class="notebook-badge-image" src="/Ederick-s-2022-2023-APCSP-Blog/assets/badges/github.svg" alt="View On GitHub">
+    </a>
+</div>
+
+          <div class="px-2">
+    <a href="https://mybinder.org/v2/gh/B3nto4Lunch/Ederick-s-2022-2023-APCSP-Blog/master?filepath=_notebooks%2F2023-2-4-Lesson-53-54.ipynb" target="_blank">
+        <img class="notebook-badge-image" src="/Ederick-s-2022-2023-APCSP-Blog/assets/badges/binder.svg" alt="Open In Binder"/>
+    </a>
+</div>
+
+          <div class="px-2">
+    <a href="https://colab.research.google.com/github/B3nto4Lunch/Ederick-s-2022-2023-APCSP-Blog/blob/master/_notebooks/2023-2-4-Lesson-53-54.ipynb" target="_blank">
+        <img class="notebook-badge-image" src="/Ederick-s-2022-2023-APCSP-Blog/assets/badges/colab.svg" alt="Open In Colab"/>
+    </a>
+</div>
+          <div class="px-2">
+  <a href="https://deepnote.com/launch?url=https%3A%2F%2Fgithub.com%2FB3nto4Lunch%2FEderick-s-2022-2023-APCSP-Blog%2Fblob%2Fmaster%2F_notebooks%2F2023-2-4-Lesson-53-54.ipynb" target="_blank">
+      <img class="notebook-badge-image" src="/Ederick-s-2022-2023-APCSP-Blog/assets/badges/deepnote.svg" alt="Launch in Deepnote"/>
+  </a>
+</div>
+
+        </div>
+      </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <!--
+#################################################
+### THIS FILE WAS AUTOGENERATED! DO NOT EDIT! ###
+#################################################
+# file to edit: _notebooks/2023-2-4-Lesson-53-54.ipynb
+-->
+
+<div class="container" id="notebook-container">
+        
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-python"><pre><span></span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="5.3-Computing-Bias">5.3 Computing Bias<a class="anchor-link" href="#5.3-Computing-Bias"> </a></h2><ul>
+<li>Google: Face Book vs TikTok Agegroup:<ul>
+<li>The data suggests that the average age of a TikTok user is significantly younger than the age of the averange Face book user. This does make a lot of sense, however. Facebook was created many years ago, where many adults today back then as adolescents that needed a form of social media used facebook, and simply did not want to transition platforms after newer medias like Twitter and TikTok came out. Facebook is still a good profitable business, but is nowhere near its original monetary value increase.</li>
+</ul>
+</li>
+<li>Why do virtual assistants have female voices?<ul>
+<li>Many different virtual assistants like Amazon, Alexa, Google, Apple Siri, all have female voices for many reasons. For one, I think many businesses think that the use of female voices makes the actual communication more coherrent, and this can be supported through the use of changing accents and languages. On top of that, I think that female is just a default option since you can create different other vocals, including male voices.</li>
+</ul>
+</li>
+<li>Algorithm tht influences decisions<ul>
+<li>Algorithms like the For You Page (FYP) influence my decisions on a daily basis. For example, if I were to like episodes of X creator on tiktok, the algorithm will be like, "Hey, this user likes X creator! Let's continue to post more videos similar to this creator's content" to keep my attention span for longer, which is good for profit.</li>
+</ul>
+</li>
+</ul>
+<h3 id="HP-Computers-are-Racist">HP Computers are Racist<a class="anchor-link" href="#HP-Computers-are-Racist"> </a></h3><p>Obviously, the owner/brand owner was unaware that this was going to happen. HP probably just had the camera focus on higher beams of light to recognize faces, which is why darker skinned individuals were undetected by the AI. If you were to single out an entire race, then that means unforgiving canceling (for social media platforms) and marketing purposes because you are noncoveraging a large chunk of the consumer market. If it WAS intentional though, that would mean that HP's reputation would be crippled and would end up creating many problems. I do not think HP is trying to ruin their reputation and harm users. Using a different algorithm to detect facial features of people to include the skin tone will make a more efficient method to detect facial features.
+To avoid Bias in our project, I think we should definitely include the different features that different people may have. Some of which include...</p>
+<ul>
+<li>Different physical capabilities (Physical strength)</li>
+<li>Any body parts lacking?</li>
+<li>Any recent muscle trauma?</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="5.4-Crowdsourcing">5.4 Crowdsourcing<a class="anchor-link" href="#5.4-Crowdsourcing"> </a></h2><p>Notes:</p>
+<ul>
+<li>Crowdsourcing provides the ability to obtain shared information, share information, and participate in distributed computing</li>
+<li>Crowd sourcing <strong>CAN</strong> be inaccurate, but there are many editiorial teams that ensure the accuracy is good</li>
+<li>Example: Crypto currency and the associated block chain have many exchanges of money that are validated at least 3 times a day by individuals daily. If there is a flaw the calculations are reiterated until done correctly. This makes it more reliable and impacts the affirmations of the government.</li>
+</ul>
+<ul>
+<li>Computer Science 150 students Question:<ul>
+<li>Computer science has about 150 students. This means that there is a lot of information being spread around that associates with work and social communication through interactions with the students themselves and teacher. Crowd sourcing is a way of getting a job done by involving a larger party rather than an individual, meaning that data can be collected a lot easier. Because of this, if you have a certain party of students that are in charge of grading certain tasks, like if we have multiple hacks and a certain person is in charge of grading a certain portion, then that can allow for more efficiency.</li>
+</ul>
+</li>
+<li>Del Norte Crowdsourcing?:<ul>
+<li>It is true that Del Norte has done a great job gathering information from many students using different methods, one of which may be surveys and self assessments. However, a problem with these statistics is that biasing may be involved, so it is important to make it so that the user is not pressured into saying something that is not true to put them in a better impression to the interviewer. Taking this into account, we need to be as transparent with our users as possible to make sure no response bias, noncoverage, or other outlier skews the user's data and affects their experience with our program.</li>
+</ul>
+</li>
+<li>How can we show this at N@tM?<ul>
+<li>Well, we want to demonstrate our control over the data that we collect through our program. Using this data, we have to utilize it in as many ways possible to get an effective amount of advice and quality of life for the user for the smallest amount of data given. For example, if we ask for something simple, like their age, we can generate a lot of advice catered towards their age and can use that, paired with the dream goals, to create something to "wow."</li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+</div>
+</div>
+
+
+
+  </div><a class="u-url" href="/Ederick-s-2022-2023-APCSP-Blog/etracker/cb/2023/02/05/Lesson-53-54.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/Ederick-s-2022-2023-APCSP-Blog/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="https://b3nto4lunch.github.io/Ederick-s-2022-2023-APCSP-Blog/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/Ederick-s-2022-2023-APCSP-Blog/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+      </div>
+      <div class="footer-col">
+        <p>A blog for my APCSP course.</p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"><li>
+  <a rel="me" href="” https://github.com/nighthawkcoders “" target="_blank" title="github">
+    <svg class="svg-icon grey">
+      <use xlink:href="/Ederick-s-2022-2023-APCSP-Blog/assets/minima-social-icons.svg#github"></use>
+    </svg>
+  </a>
+</li>
+<li>
+  <a rel="me" href="” https://twitter.com/NighthawkCoding “" target="_blank" title="twitter">
+    <svg class="svg-icon grey">
+      <use xlink:href="/Ederick-s-2022-2023-APCSP-Blog/assets/minima-social-icons.svg#twitter"></use>
+    </svg>
+  </a>
+</li>
+<li>
+  <a rel="me" href="” https://www.youtube.com/channel/UClIKOsDS5dsfzFA3zveDT3Q “" target="_blank" title="youtube">
+    <svg class="svg-icon grey">
+      <use xlink:href="/Ederick-s-2022-2023-APCSP-Blog/assets/minima-social-icons.svg#youtube"></use>
+    </svg>
+  </a>
+</li>
+</ul>
+</div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
