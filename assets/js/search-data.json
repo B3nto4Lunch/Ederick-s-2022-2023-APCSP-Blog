@@ -36,7 +36,7 @@
     
         ,"post3": {
             "title": "Trimester 2 CPT and Presentation",
-            "content": "CSP Video Presentation . Link to Frontend . Link to Backend .",
+            "content": "CSP Video Presentation . Link to Frontend . Link to Backend . Program Purpose and Function . 4.A: . THe overall purpose of the program is to make it easier for the user to track their goals and such. This is performed by having the user put in specific key values to describe said goals, and is subsequently created through the backend and stored in a database, where all of the user&#39;s inputs are displayed in the table below. | . Data Abstraction . 3.b . The two code segments below show how the data is stored in the list and the other demonstrates how it is fulfilled in the entirety of the program. | . - . All of the information in the list represents each specific goal that is created, where its difficulty and date specificity is defined in addition to its name. | . Managing Complexity . The list organizes each goal by categoring and identifying each variable by its traits, where the difficulty and the date classify each specific goal. The goals are also displayed in a organized table rather than being placed all over the page. .",
             "url": "https://b3nto4lunch.github.io/Ederick-s-2022-2023-APCSP-Blog/etracker/2023/02/26/CPT.html",
             "relUrl": "/etracker/2023/02/26/CPT.html",
             "date": " • Feb 26, 2023"
