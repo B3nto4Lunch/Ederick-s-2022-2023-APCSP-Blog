@@ -20,5 +20,5 @@ categories: [markdown]
 
 The user's inputs are stored as a list in the database, where that said list is then sent to be displayed in the table in the frontend
 
-[]({{ site.baseurl }}/images/InfoDB.png)
+[]({{site.baseurl}}/images/InfoDB.png)
 
