@@ -46,11 +46,13 @@ As shown from the code, this function is known to the program as "add_row" and i
 This program also has selection by giving options between whether formatting is valid or invalid, and iterates by checking whether any progress has been made to satify these requirements, which is then put as a sequence.
 Additionally, after the error check process is finished, we have another function, "read_goal" that essentially takes the data created and places it in the table. 
 
-![]({{ site.baseurl }}/images/Grading.png)
 
 3dii: There also conditions for said functions. One, of which, is checking for whether the user's input is a string or a integer. Depending on one of the columns, a notifcation will pop up and will prompt the user to fix said errors before putting in the correct data.
 
 Results are the user's inputs being displayed in the table.
+
+![]({{ site.baseurl }}/images/Grading.png)
+
 
 
 
