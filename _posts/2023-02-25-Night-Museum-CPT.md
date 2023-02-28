@@ -25,7 +25,16 @@ The user's inputs are stored as a list in the database, where that said list is 
 ![]({{ site.baseurl }}/images/Calling.png)
 
 
-3biii: There is simply only a single list being used here, and that is the Database that stores all of the information that is used, in the code, this is known as "ResultContainer." This manages the complexity by making sure that only valid responses are being recorded into the table and prevents confusion. Additionally, the specificity for each of the cateogires prevents confusion and therefore also manages complexity.
+3biii: The list being used in the code here is identified as "ResultContainer." The data represented in this list is formatted into the table for the visible eye to see.
+
+## 3c
+
+3c: There is simply only a single list being used here, and that is the Database that stores all of the information that is used, in the code, this is known as "ResultContainer." This manages the complexity by making sure that only valid responses are being recorded into the table and prevents confusion. Additionally, the specificity for each of the cateogires prevents confusion and therefore also manages complexity.
+
+![]({{ site.baseurl }}/images/ManageComplex.png)
+
+
+
 
 
 
