@@ -22,3 +22,6 @@ The user's inputs are stored as a list in the database, where that said list is 
 
 []({{site.baseurl}}/images/InfoDB.png)
 
+
+
+
