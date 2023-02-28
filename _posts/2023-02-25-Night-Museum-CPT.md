@@ -29,9 +29,23 @@ The user's inputs are stored as a list in the database, where that said list is 
 
 ## 3c
 
-3c: There is simply only a single list being used here, and that is the Database that stores all of the information that is used, in the code, this is known as "ResultContainer." This manages the complexity by making sure that only valid responses are being recorded into the table and prevents confusion. Additionally, the specificity for each of the cateogires prevents confusion and therefore also manages complexity.
+3c: There is simply only a single list being used here, and that is the Database that stores all of the information that is used, in the code, this is known as "ResultContainer." This manages the complexity by making sure that only valid responses are being recorded into the table and prevents confusion. Additionally, the specificity for each of the cateogires prevents confusion and therefore also manages complexity. Additionally, there are more parts that manage complexity, such as Modularity: The code is divided into functions with specific tasks, such as read_goal(), createGoal(), and add_row(), which makes it easier to understand and maintain.
 
-![]({{ site.baseurl }}/images/ManageComplex.png)
+![]({{ site.baseurl }}/images/real.png)
+
+3c(iii): This function, keep in mind, is used from the list that is created with the backend data (as shown in images above) and uses that to convert into the table with the according variables.
+
+
+## 3d
+
+![]({{ site.baseurl }}/images/Procedural.png)
+
+As shown from the code, this function is known to the program as "add_row" and is applied to the button that creates said data. The function will intake all of the user's inputs, and after the backend has it, will post it as a part of the table.
+This program also has selection by giving options between whether formatting is valid or invalid, and iterates by checking whether any progress has been made to satify these requirements, which is then put as a sequence.
+
+![]({{ site.baseurl }}/images/Grading.png)
+
+
 
 
 
