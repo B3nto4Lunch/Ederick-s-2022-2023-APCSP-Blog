@@ -81,7 +81,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      10 min read
+      12 min read
     
 </span></p>
 
@@ -270,6 +270,64 @@ window.onload = wrap_img;
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">FileNotFoundError</span>                         Traceback (most recent call last)
+Cell <span class="ansi-green-fg">In[4], line 25</span>
+<span class="ansi-green-intense-fg ansi-bold">     22</span> if __name__ == "__main__":
+<span class="ansi-green-intense-fg ansi-bold">     23</span>     # print parameter supplied image
+<span class="ansi-green-intense-fg ansi-bold">     24</span>     green_square = image_data(images=[{'source': "Internet", 'label': "Green Square", 'file': "green-square-16.png"}])
+<span class="ansi-green-fg">---&gt; 25</span>     image_display(green_square)
+<span class="ansi-green-intense-fg ansi-bold">     27</span>     # display default images from image_data()
+<span class="ansi-green-intense-fg ansi-bold">     28</span>     default_images = image_data()
+
+Cell <span class="ansi-green-fg">In[4], line 18</span>, in <span class="ansi-cyan-fg">image_display</span><span class="ansi-blue-fg">(images)</span>
+<span class="ansi-green-intense-fg ansi-bold">     16</span> def image_display(images):
+<span class="ansi-green-intense-fg ansi-bold">     17</span>     for image in images:  
+<span class="ansi-green-fg">---&gt; 18</span>         display(Image(filename=image['filename']))
+
+File <span class="ansi-green-fg">~/Library/Python/3.9/lib/python/site-packages/IPython/core/display.py:970</span>, in <span class="ansi-cyan-fg">Image.__init__</span><span class="ansi-blue-fg">(self, data, url, filename, format, embed, width, height, retina, unconfined, metadata, alt)</span>
+<span class="ansi-green-intense-fg ansi-bold">    968</span> self.unconfined = unconfined
+<span class="ansi-green-intense-fg ansi-bold">    969</span> self.alt = alt
+<span class="ansi-green-fg">--&gt; 970</span> super(Image, self).__init__(data=data, url=url, filename=filename,
+<span class="ansi-green-intense-fg ansi-bold">    971</span>         metadata=metadata)
+<span class="ansi-green-intense-fg ansi-bold">    973</span> if self.width is None and self.metadata.get('width', {}):
+<span class="ansi-green-intense-fg ansi-bold">    974</span>     self.width = metadata['width']
+
+File <span class="ansi-green-fg">~/Library/Python/3.9/lib/python/site-packages/IPython/core/display.py:327</span>, in <span class="ansi-cyan-fg">DisplayObject.__init__</span><span class="ansi-blue-fg">(self, data, url, filename, metadata)</span>
+<span class="ansi-green-intense-fg ansi-bold">    324</span> elif self.metadata is None:
+<span class="ansi-green-intense-fg ansi-bold">    325</span>     self.metadata = {}
+<span class="ansi-green-fg">--&gt; 327</span> self.reload()
+<span class="ansi-green-intense-fg ansi-bold">    328</span> self._check_data()
+
+File <span class="ansi-green-fg">~/Library/Python/3.9/lib/python/site-packages/IPython/core/display.py:1005</span>, in <span class="ansi-cyan-fg">Image.reload</span><span class="ansi-blue-fg">(self)</span>
+<span class="ansi-green-intense-fg ansi-bold">   1003</span> """Reload the raw data from file or URL."""
+<span class="ansi-green-intense-fg ansi-bold">   1004</span> if self.embed:
+<span class="ansi-green-fg">-&gt; 1005</span>     super(Image,self).reload()
+<span class="ansi-green-intense-fg ansi-bold">   1006</span>     if self.retina:
+<span class="ansi-green-intense-fg ansi-bold">   1007</span>         self._retina_shape()
+
+File <span class="ansi-green-fg">~/Library/Python/3.9/lib/python/site-packages/IPython/core/display.py:353</span>, in <span class="ansi-cyan-fg">DisplayObject.reload</span><span class="ansi-blue-fg">(self)</span>
+<span class="ansi-green-intense-fg ansi-bold">    351</span> if self.filename is not None:
+<span class="ansi-green-intense-fg ansi-bold">    352</span>     encoding = None if "b" in self._read_flags else "utf-8"
+<span class="ansi-green-fg">--&gt; 353</span>     with open(self.filename, self._read_flags, encoding=encoding) as f:
+<span class="ansi-green-intense-fg ansi-bold">    354</span>         self.data = f.read()
+<span class="ansi-green-intense-fg ansi-bold">    355</span> elif self.url is not None:
+<span class="ansi-green-intense-fg ansi-bold">    356</span>     # Deferred import
+
+<span class="ansi-red-fg">FileNotFoundError</span>: [Errno 2] No such file or directory: 'images/green-square-16.png'</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div>
     
 
@@ -441,6 +499,29 @@ window.onload = wrap_img;
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">ModuleNotFoundError</span>                       Traceback (most recent call last)
+Cell <span class="ansi-green-fg">In[2], line 3</span>
+<span class="ansi-green-intense-fg ansi-bold">      1</span> from IPython.display import HTML, display
+<span class="ansi-green-intense-fg ansi-bold">      2</span> from pathlib import Path  # https://medium.com/@ageitgey/python-3-quick-tip-the-easy-way-to-deal-with-file-paths-on-windows-mac-and-linux-11a072b58d5f
+<span class="ansi-green-fg">----&gt; 3</span> from PIL import Image as pilImage # as pilImage is used to avoid conflicts
+<span class="ansi-green-intense-fg ansi-bold">      4</span> from io import BytesIO
+<span class="ansi-green-intense-fg ansi-bold">      5</span> import base64
+
+<span class="ansi-red-fg">ModuleNotFoundError</span>: No module named 'PIL'</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -632,6 +713,29 @@ window.onload = wrap_img;
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">ModuleNotFoundError</span>                       Traceback (most recent call last)
+Cell <span class="ansi-green-fg">In[1], line 3</span>
+<span class="ansi-green-intense-fg ansi-bold">      1</span> from IPython.display import HTML, display
+<span class="ansi-green-intense-fg ansi-bold">      2</span> from pathlib import Path  # https://medium.com/@ageitgey/python-3-quick-tip-the-easy-way-to-deal-with-file-paths-on-windows-mac-and-linux-11a072b58d5f
+<span class="ansi-green-fg">----&gt; 3</span> from PIL import Image as pilImage # as pilImage is used to avoid conflicts
+<span class="ansi-green-intense-fg ansi-bold">      4</span> from io import BytesIO
+<span class="ansi-green-intense-fg ansi-bold">      5</span> import base64
+
+<span class="ansi-red-fg">ModuleNotFoundError</span>: No module named 'PIL'</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div>
     
 
@@ -673,7 +777,8 @@ window.onload = wrap_img;
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<!-- ![](/Ederick-s-2022-2023-APCSP-Blog/images/group.JPG) -->
+<p>![<a href="https://www.google.com/search?q=Happy+face&amp;rlz=1C5CHFA_enUS1043US1043&amp;sxsrf=AJOqlzUfkMlerch3LO-2gMvzs6VOM_5LlA:1678228581097&amp;source=lnms&amp;tbm=isch&amp;sa=X&amp;ved=2ahUKEwixkbbT8Mr9AhWWHUQIHcB8DQ0Q_AUoAXoECAEQAw&amp;biw=1440&amp;bih=694&amp;dpr=2#imgrc=7cvhAm2z_mGeGM">https://www.google.com/search?q=Happy+face&amp;rlz=1C5CHFA_enUS1043US1043&amp;sxsrf=AJOqlzUfkMlerch3LO-2gMvzs6VOM_5LlA:1678228581097&amp;source=lnms&amp;tbm=isch&amp;sa=X&amp;ved=2ahUKEwixkbbT8Mr9AhWWHUQIHcB8DQ0Q_AUoAXoECAEQAw&amp;biw=1440&amp;bih=694&amp;dpr=2#imgrc=7cvhAm2z_mGeGM</a></p>
+
 </div>
 </div>
 </div>
