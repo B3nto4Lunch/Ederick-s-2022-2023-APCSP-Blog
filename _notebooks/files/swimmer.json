@@ -1,0 +1,28 @@
+{
+    "Athlete":{
+      "0":"Jace",
+      "1":"Steven",
+      "2":"Julien",
+      "3":"Ederick",
+      "4":"Nathan",
+      "5":"Marcus"
+
+    },
+    "Class":{
+      "0":"Varsity",
+      "1":"Varsity",
+      "2":"Varsity",
+      "3":"Varsity",
+      "4":"JV",
+      "5":"JV"
+
+    },
+    "Event":{
+      "0":"Breaststroke",
+      "1":"Breaststroke",
+      "2":"Freestyle",
+      "3":"Backstroke",
+      "4":"Freestyle",
+      "5":"IM"
+    }
+}
