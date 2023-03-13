@@ -327,6 +327,8 @@ window.onload = wrap_img;
 
 <span class="c1">#try two columns and remove the index from print statement</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="p">[[</span><span class="s1">'Student ID'</span><span class="p">,</span><span class="s1">'GPA'</span><span class="p">]]</span><span class="o">.</span><span class="n">to_string</span><span class="p">(</span><span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">))</span>
+
+<span class="c1"># Raw data, no garbage check</span>
 </pre></div>
 
     </div>
@@ -402,6 +404,7 @@ window.onload = wrap_img;
 
 <span class="c1">#sort the values in reverse order</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="p">[</span><span class="s1">'GPA'</span><span class="p">],</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">))</span>
+<span class="c1"># sorting the values can lead to better organization</span>
 </pre></div>
 
     </div>
@@ -472,6 +475,8 @@ window.onload = wrap_img;
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="o">.</span><span class="n">GPA</span> <span class="o">&gt;</span> <span class="mf">3.00</span><span class="p">])</span>
+
+<span class="c1"># if you want to make a dataset with people that oly meet a certain cirteria, you can use this code</span>
 </pre></div>
 
     </div>
@@ -522,6 +527,8 @@ window.onload = wrap_img;
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="o">.</span><span class="n">GPA</span> <span class="o">==</span> <span class="n">df</span><span class="o">.</span><span class="n">GPA</span><span class="o">.</span><span class="n">max</span><span class="p">()])</span>
 <span class="nb">print</span><span class="p">()</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="o">.</span><span class="n">GPA</span> <span class="o">==</span> <span class="n">df</span><span class="o">.</span><span class="n">GPA</span><span class="o">.</span><span class="n">min</span><span class="p">()])</span>
+
+<span class="c1"># shows common outliers or specifics</span>
 </pre></div>
 
     </div>
@@ -593,6 +600,8 @@ window.onload = wrap_img;
 <span class="c1">#or with the index argument, you can label rows.</span>
 <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="nb">dict</span><span class="p">,</span> <span class="n">index</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"day1"</span><span class="p">,</span> <span class="s2">"day2"</span><span class="p">,</span> <span class="s2">"day3"</span><span class="p">,</span> <span class="s2">"day4"</span><span class="p">])</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+
+<span class="c1"># how to create a custom DB, must make own rows and such,</span>
 </pre></div>
 
     </div>
@@ -757,6 +766,8 @@ None
 
 <span class="nb">print</span><span class="p">(</span><span class="s2">"--Duration Bottom 10------"</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">tail</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span>
+
+<span class="c1"># not everything is shown because it is compressed??</span>
 </pre></div>
 
     </div>
