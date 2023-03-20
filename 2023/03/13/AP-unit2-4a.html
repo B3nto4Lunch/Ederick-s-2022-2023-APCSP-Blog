@@ -81,7 +81,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      9 min read
+      10 min read
     
 </span></p>
 
@@ -185,8 +185,10 @@ window.onload = wrap_img;
 <li>Comment on where you have observed these working?</li>
 </ul>
 <ol>
-<li>Flask app object</li>
-<li>SQLAlchemy object</li>
+<li>Flask app object
+ Ive seen this working in the CPT projects in flask</li>
+<li>SQLAlchemy object
+ This is in the model and the API</li>
 </ol>
 
 </div>
@@ -435,9 +437,12 @@ window.onload = wrap_img;
 <li>Comment on how these work?</li>
 </ul>
 <ol>
-<li>Create All Tables from db Object</li>
-<li>User Object Constructors</li>
-<li>Try / Except </li>
+<li>Create All Tables from db Object
+ All items are created using the DB object</li>
+<li>User Object Constructors
+ Object constructors create the specific columns and such</li>
+<li>Try / Except 
+ Try this... except if something happens, do this...</li>
 </ol>
 
 </div>
@@ -451,6 +456,7 @@ window.onload = wrap_img;
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="sd">"""Database Creation and Testing """</span>
+<span class="kn">import</span> <span class="nn">sqlite3</span>
 
 
 <span class="c1"># Builds working data for testing</span>
@@ -483,6 +489,25 @@ window.onload = wrap_img;
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Records exist uid toby, or error.
+Records exist uid niko, or error.
+Records exist uid lex, or error.
+Records exist uid whit, or error.
+Records exist uid indi, or error.
+Records exist uid raven, or error.
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -684,6 +709,68 @@ window.onload = wrap_img;
 </div>
 </div>
 </div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">sqlite3</span>
+<span class="n">database</span> <span class="o">=</span> <span class="s1">'instance/sqlite.db'</span> 
+
+<span class="k">def</span> <span class="nf">delete</span><span class="p">():</span>
+    <span class="c1"># Get the id of the row to delete</span>
+    <span class="n">row_id</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Enter the id of the row to delete: "</span><span class="p">)</span>
+
+    <span class="c1"># Connect to the database file</span>
+    <span class="n">conn</span> <span class="o">=</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">database</span><span class="p">)</span>
+
+    <span class="c1"># Create a cursor object to execute SQL commands</span>
+    <span class="n">cursor</span> <span class="o">=</span> <span class="n">conn</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
+
+    <span class="k">try</span><span class="p">:</span>
+        <span class="c1"># Execute the DELETE command using the id column</span>
+        <span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">"DELETE FROM users WHERE id = ?"</span><span class="p">,</span> <span class="p">(</span><span class="n">row_id</span><span class="p">,))</span>
+
+        <span class="k">if</span> <span class="n">cursor</span><span class="o">.</span><span class="n">rowcount</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="c1"># The row with the given id was not found in the table</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"No row with id </span><span class="si">{</span><span class="n">row_id</span><span class="si">}</span><span class="s2"> was found in the table"</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="c1"># The row was successfully deleted</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"The row with id </span><span class="si">{</span><span class="n">row_id</span><span class="si">}</span><span class="s2"> was successfully deleted from the table"</span><span class="p">)</span>
+    <span class="k">except</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">Error</span> <span class="k">as</span> <span class="n">error</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Error deleting row: </span><span class="si">{</span><span class="n">error</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+    <span class="k">finally</span><span class="p">:</span>
+        <span class="c1"># Commit the changes and close the database connection</span>
+        <span class="n">conn</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
+        <span class="n">conn</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+        
+        
+<span class="n">delete</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>The row with id 1 was successfully deleted from the table
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
 &lt;/div&gt;
  
 
