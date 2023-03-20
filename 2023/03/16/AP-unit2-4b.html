@@ -81,7 +81,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      8 min read
+      11 min read
     
 </span></p>
 
@@ -300,9 +300,7 @@ window.onload = wrap_img;
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>(1, 'Thomas Edison', 'toby', 'sha256$QQzFe9sXYCAtDuvc$a0e7ebbdb5342dc8bd7f1267618c613d910ea959ed9628ce8308fa052240b634', '1847-02-11')
-(2, 'Nikola Tesla', 'niko', 'sha256$iro3tb4WVuJem1rc$17c64da8399e6e8379b0db7c0f594b2df453d2ee09f37de9ea890653cc8a6eb6', '2023-03-15')
-(3, 'Alexander Graham Bell', 'lex', 'sha256$WDuiCVPog9ros1Oa$39583cc3a9e728ed9affc19e2c3bd0e56feb98857f6d5d928016e65ba8e00f9f', '2023-03-15')
+<pre>(3, 'Alexander Graham Bell', 'lex', 'sha256$WDuiCVPog9ros1Oa$39583cc3a9e728ed9affc19e2c3bd0e56feb98857f6d5d928016e65ba8e00f9f', '2023-03-15')
 (4, 'Eli Whitney', 'whit', 'sha256$AM3bFyz233kFrSWS$c24d8b5516cc221e7009d26ec865f7ab4f3b3ae15e76f7dc7c96104a80948aa5', '2023-03-15')
 (5, 'Indiana Jones', 'indi', 'sha256$olDyJANrYSjrFzM3$70c17a9214871eb3f785a7f3465bac2a85650a95aa548f8992639c6775ead3eb', '1920-10-21')
 (6, 'Marion Ravenwood', 'raven', 'sha256$0nOAJptWlqdxHGb7$9a66fe593f1863c417f11d5ea6639aa47d58cd3febf5e623825852595bba4993', '1921-10-21')
@@ -513,7 +511,7 @@ window.onload = wrap_img;
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>The row with uid niko was successfully deleted
+<pre>No uid  was not found in the table
 </pre>
 </div>
 </div>
@@ -576,6 +574,23 @@ window.onload = wrap_img;
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>(3, 'Alexander Graham Bell', 'lex', 'sha256$WDuiCVPog9ros1Oa$39583cc3a9e728ed9affc19e2c3bd0e56feb98857f6d5d928016e65ba8e00f9f', '2023-03-15')
+(4, 'Eli Whitney', 'whit', 'sha256$AM3bFyz233kFrSWS$c24d8b5516cc221e7009d26ec865f7ab4f3b3ae15e76f7dc7c96104a80948aa5', '2023-03-15')
+(5, 'Indiana Jones', 'indi', 'sha256$olDyJANrYSjrFzM3$70c17a9214871eb3f785a7f3465bac2a85650a95aa548f8992639c6775ead3eb', '1920-10-21')
+(6, 'Marion Ravenwood', 'raven', 'sha256$0nOAJptWlqdxHGb7$9a66fe593f1863c417f11d5ea6639aa47d58cd3febf5e623825852595bba4993', '1921-10-21')
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div>
     
 
@@ -602,11 +617,53 @@ window.onload = wrap_img;
 
 <div class="inner_cell">
     <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="sd">"""</span>
+<span class="sd">These imports define the key objects</span>
+<span class="sd">"""</span>
+
+<span class="kn">from</span> <span class="nn">flask</span> <span class="kn">import</span> <span class="n">Flask</span>
+<span class="kn">from</span> <span class="nn">flask_sqlalchemy</span> <span class="kn">import</span> <span class="n">SQLAlchemy</span>
+
+<span class="sd">"""</span>
+<span class="sd">These object and definitions are used throughout the Jupyter Notebook.</span>
+<span class="sd">"""</span>
+<span class="n">database</span> <span class="o">=</span> <span class="s1">'sqlite:///sqlite.db'</span>  <span class="c1"># path and filename of database</span>
+<span class="c1"># Setup of key Flask object (app)</span>
+<span class="n">app</span> <span class="o">=</span> <span class="n">Flask</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
+<span class="c1"># Setup SQLAlchemy object and properties for the database (db)</span>
+<span class="n">database</span> <span class="o">=</span> <span class="s1">'sqlite:///sqlite.db'</span> <span class="c1"># path and filename of database</span>
+<span class="n">app</span><span class="o">.</span><span class="n">config</span><span class="p">[</span><span class="s1">'SQLALCHEMY_TRACK_MODIFICATIONS'</span><span class="p">]</span> <span class="o">=</span> <span class="kc">False</span>
+<span class="n">app</span><span class="o">.</span><span class="n">config</span><span class="p">[</span><span class="s1">'SQLALCHEMY_DATABASE_URI'</span><span class="p">]</span> <span class="o">=</span> <span class="n">database</span>
+<span class="n">app</span><span class="o">.</span><span class="n">config</span><span class="p">[</span><span class="s1">'SECRET_KEY'</span><span class="p">]</span> <span class="o">=</span> <span class="s1">'SECRET_KEY'</span>
+<span class="n">db</span> <span class="o">=</span> <span class="n">SQLAlchemy</span><span class="p">()</span>
+
+
+<span class="c1"># This belongs in place where it runs once per project</span>
+<span class="n">db</span><span class="o">.</span><span class="n">init_app</span><span class="p">(</span><span class="n">app</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="sd">""" database dependencies to support sqliteDB examples """</span>
 <span class="kn">from</span> <span class="nn">random</span> <span class="kn">import</span> <span class="n">randrange</span>
 <span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">date</span>
 <span class="kn">import</span> <span class="nn">os</span><span class="o">,</span> <span class="nn">base64</span>
 <span class="kn">import</span> <span class="nn">json</span>
+<span class="kn">import</span> <span class="nn">sqlite3</span>
+
+
 
 <span class="c1"># from __init__ import app, db</span>
 <span class="kn">from</span> <span class="nn">sqlalchemy.exc</span> <span class="kn">import</span> <span class="n">IntegrityError</span>
@@ -719,18 +776,120 @@ window.onload = wrap_img;
 <div class="output_subarea output_text output_error">
 <pre>
 <span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">AttributeError</span>                            Traceback (most recent call last)
-<span class="ansi-green-fg">/var/folders/r0/j8t2jdsj4mz5cg5ssn4mncj40000gp/T/ipykernel_39744/2774053916.py</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-intense-fg ansi-bold">     13</span> 
-<span class="ansi-green-intense-fg ansi-bold">     14</span> <span class="ansi-red-fg"># Define the Post class to manage actions in 'posts' table,  with a relationship to 'users' table</span>
-<span class="ansi-green-fg">---&gt; 15</span><span class="ansi-red-fg"> </span><span class="ansi-green-fg">class</span> Post<span class="ansi-blue-fg">(</span>db<span class="ansi-blue-fg">.</span>Model<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
-<span class="ansi-green-intense-fg ansi-bold">     16</span>     __tablename__ <span class="ansi-blue-fg">=</span> <span class="ansi-blue-fg">'forumPosts'</span>
-<span class="ansi-green-intense-fg ansi-bold">     17</span> 
+<span class="ansi-red-fg">InvalidRequestError</span>                       Traceback (most recent call last)
+<span class="ansi-green-fg">/var/folders/r0/j8t2jdsj4mz5cg5ssn4mncj40000gp/T/ipykernel_39744/3600554168.py</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-intense-fg ansi-bold">     16</span> 
+<span class="ansi-green-intense-fg ansi-bold">     17</span> <span class="ansi-red-fg"># Define the Post class to manage actions in 'posts' table,  with a relationship to 'users' table</span>
+<span class="ansi-green-fg">---&gt; 18</span><span class="ansi-red-fg"> </span><span class="ansi-green-fg">class</span> Post<span class="ansi-blue-fg">(</span>db<span class="ansi-blue-fg">.</span>Model<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-intense-fg ansi-bold">     19</span>     __tablename__ <span class="ansi-blue-fg">=</span> <span class="ansi-blue-fg">'forumPosts'</span>
+<span class="ansi-green-intense-fg ansi-bold">     20</span> 
 
-<span class="ansi-red-fg">AttributeError</span>: 'str' object has no attribute 'Model'</pre>
+<span class="ansi-green-fg">/opt/anaconda3/lib/python3.9/site-packages/flask_sqlalchemy/model.py</span> in <span class="ansi-cyan-fg">__init__</span><span class="ansi-blue-fg">(cls, name, bases, d, **kwargs)</span>
+<span class="ansi-green-intense-fg ansi-bold">     98</span>                 cls<span class="ansi-blue-fg">.</span>metadata <span class="ansi-blue-fg">=</span> metadata
+<span class="ansi-green-intense-fg ansi-bold">     99</span> 
+<span class="ansi-green-fg">--&gt; 100</span><span class="ansi-red-fg">         </span>super<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">.</span>__init__<span class="ansi-blue-fg">(</span>name<span class="ansi-blue-fg">,</span> bases<span class="ansi-blue-fg">,</span> d<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">**</span>kwargs<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">    101</span> 
+<span class="ansi-green-intense-fg ansi-bold">    102</span> 
+
+<span class="ansi-green-fg">/opt/anaconda3/lib/python3.9/site-packages/flask_sqlalchemy/model.py</span> in <span class="ansi-cyan-fg">__init__</span><span class="ansi-blue-fg">(cls, name, bases, d, **kwargs)</span>
+<span class="ansi-green-intense-fg ansi-bold">    118</span>             cls<span class="ansi-blue-fg">.</span>__tablename__ <span class="ansi-blue-fg">=</span> camel_to_snake_case<span class="ansi-blue-fg">(</span>cls<span class="ansi-blue-fg">.</span>__name__<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">    119</span> 
+<span class="ansi-green-fg">--&gt; 120</span><span class="ansi-red-fg">         </span>super<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">.</span>__init__<span class="ansi-blue-fg">(</span>name<span class="ansi-blue-fg">,</span> bases<span class="ansi-blue-fg">,</span> d<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">**</span>kwargs<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">    121</span> 
+<span class="ansi-green-intense-fg ansi-bold">    122</span>         <span class="ansi-red-fg"># __table_cls__ has run. If no table was created, use the parent table.</span>
+
+<span class="ansi-green-fg">/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/orm/decl_api.py</span> in <span class="ansi-cyan-fg">__init__</span><span class="ansi-blue-fg">(cls, classname, bases, dict_, **kw)</span>
+<span class="ansi-green-intense-fg ansi-bold">    197</span> 
+<span class="ansi-green-intense-fg ansi-bold">    198</span>         <span class="ansi-green-fg">if</span> <span class="ansi-green-fg">not</span> cls<span class="ansi-blue-fg">.</span>__dict__<span class="ansi-blue-fg">.</span>get<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">"__abstract__"</span><span class="ansi-blue-fg">,</span> <span class="ansi-green-fg">False</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-fg">--&gt; 199</span><span class="ansi-red-fg">             </span>_as_declarative<span class="ansi-blue-fg">(</span>reg<span class="ansi-blue-fg">,</span> cls<span class="ansi-blue-fg">,</span> dict_<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">    200</span>         type<span class="ansi-blue-fg">.</span>__init__<span class="ansi-blue-fg">(</span>cls<span class="ansi-blue-fg">,</span> classname<span class="ansi-blue-fg">,</span> bases<span class="ansi-blue-fg">,</span> dict_<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">    201</span> 
+
+<span class="ansi-green-fg">/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/orm/decl_base.py</span> in <span class="ansi-cyan-fg">_as_declarative</span><span class="ansi-blue-fg">(registry, cls, dict_)</span>
+<span class="ansi-green-intense-fg ansi-bold">    246</span>     <span class="ansi-red-fg"># declarative scans the class for attributes.  no table or mapper</span>
+<span class="ansi-green-intense-fg ansi-bold">    247</span>     <span class="ansi-red-fg"># args passed separately.</span>
+<span class="ansi-green-fg">--&gt; 248</span><span class="ansi-red-fg">     </span><span class="ansi-green-fg">return</span> _MapperConfig<span class="ansi-blue-fg">.</span>setup_mapping<span class="ansi-blue-fg">(</span>registry<span class="ansi-blue-fg">,</span> cls<span class="ansi-blue-fg">,</span> dict_<span class="ansi-blue-fg">,</span> <span class="ansi-green-fg">None</span><span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">{</span><span class="ansi-blue-fg">}</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">    249</span> 
+<span class="ansi-green-intense-fg ansi-bold">    250</span> 
+
+<span class="ansi-green-fg">/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/orm/decl_base.py</span> in <span class="ansi-cyan-fg">setup_mapping</span><span class="ansi-blue-fg">(cls, registry, cls_, dict_, table, mapper_kw)</span>
+<span class="ansi-green-intense-fg ansi-bold">    327</span>             )
+<span class="ansi-green-intense-fg ansi-bold">    328</span>         <span class="ansi-green-fg">else</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-fg">--&gt; 329</span><span class="ansi-red-fg">             return _ClassScanMapperConfig(
+</span><span class="ansi-green-intense-fg ansi-bold">    330</span>                 registry<span class="ansi-blue-fg">,</span> cls_<span class="ansi-blue-fg">,</span> dict_<span class="ansi-blue-fg">,</span> table<span class="ansi-blue-fg">,</span> mapper_kw
+<span class="ansi-green-intense-fg ansi-bold">    331</span>             )
+
+<span class="ansi-green-fg">/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/orm/decl_base.py</span> in <span class="ansi-cyan-fg">__init__</span><span class="ansi-blue-fg">(self, registry, cls_, dict_, table, mapper_kw)</span>
+<span class="ansi-green-intense-fg ansi-bold">    576</span>             self<span class="ansi-blue-fg">.</span>_extract_declared_columns<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">    577</span> 
+<span class="ansi-green-fg">--&gt; 578</span><span class="ansi-red-fg">             </span>self<span class="ansi-blue-fg">.</span>_setup_table<span class="ansi-blue-fg">(</span>table<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">    579</span> 
+<span class="ansi-green-intense-fg ansi-bold">    580</span>             self<span class="ansi-blue-fg">.</span>_setup_inheriting_columns<span class="ansi-blue-fg">(</span>mapper_kw<span class="ansi-blue-fg">)</span>
+
+<span class="ansi-green-fg">/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/orm/decl_base.py</span> in <span class="ansi-cyan-fg">_setup_table</span><span class="ansi-blue-fg">(self, table)</span>
+<span class="ansi-green-intense-fg ansi-bold">   1661</span>                 table = self.set_cls_attribute(
+<span class="ansi-green-intense-fg ansi-bold">   1662</span>                     <span class="ansi-blue-fg">"__table__"</span><span class="ansi-blue-fg">,</span>
+<span class="ansi-green-fg">-&gt; 1663</span><span class="ansi-red-fg">                     table_cls(
+</span><span class="ansi-green-intense-fg ansi-bold">   1664</span>                         tablename<span class="ansi-blue-fg">,</span>
+<span class="ansi-green-intense-fg ansi-bold">   1665</span>                         self<span class="ansi-blue-fg">.</span>_metadata_for_cls<span class="ansi-blue-fg">(</span>manager<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">,</span>
+
+<span class="ansi-green-fg">/opt/anaconda3/lib/python3.9/site-packages/flask_sqlalchemy/model.py</span> in <span class="ansi-cyan-fg">__table_cls__</span><span class="ansi-blue-fg">(cls, *args, **kwargs)</span>
+<span class="ansi-green-intense-fg ansi-bold">    145</span>         <span class="ansi-red-fg"># applied to models by name.</span>
+<span class="ansi-green-intense-fg ansi-bold">    146</span>         <span class="ansi-green-fg">if</span> key <span class="ansi-green-fg">in</span> cls<span class="ansi-blue-fg">.</span>metadata<span class="ansi-blue-fg">.</span>tables<span class="ansi-blue-fg">:</span>
+<span class="ansi-green-fg">--&gt; 147</span><span class="ansi-red-fg">             </span><span class="ansi-green-fg">return</span> sa<span class="ansi-blue-fg">.</span>Table<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">*</span>args<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">**</span>kwargs<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">    148</span> 
+<span class="ansi-green-intense-fg ansi-bold">    149</span>         <span class="ansi-red-fg"># If a primary key is found, create a table for joined-table inheritance.</span>
+
+<span class="ansi-green-fg">&lt;string&gt;</span> in <span class="ansi-cyan-fg">__new__</span><span class="ansi-blue-fg">(cls, *args, **kw)</span>
+
+<span class="ansi-green-fg">/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/util/deprecations.py</span> in <span class="ansi-cyan-fg">warned</span><span class="ansi-blue-fg">(fn, *args, **kwargs)</span>
+<span class="ansi-green-intense-fg ansi-bold">    275</span>                         stacklevel<span class="ansi-blue-fg">=</span><span class="ansi-cyan-fg">3</span><span class="ansi-blue-fg">,</span>
+<span class="ansi-green-intense-fg ansi-bold">    276</span>                     )
+<span class="ansi-green-fg">--&gt; 277</span><span class="ansi-red-fg">             </span><span class="ansi-green-fg">return</span> fn<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">*</span>args<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">**</span>kwargs<span class="ansi-blue-fg">)</span>  <span class="ansi-red-fg"># type: ignore[no-any-return]</span>
+<span class="ansi-green-intense-fg ansi-bold">    278</span> 
+<span class="ansi-green-intense-fg ansi-bold">    279</span>         doc <span class="ansi-blue-fg">=</span> fn<span class="ansi-blue-fg">.</span>__doc__ <span class="ansi-green-fg">is</span> <span class="ansi-green-fg">not</span> <span class="ansi-green-fg">None</span> <span class="ansi-green-fg">and</span> fn<span class="ansi-blue-fg">.</span>__doc__ <span class="ansi-green-fg">or</span> <span class="ansi-blue-fg">""</span>
+
+<span class="ansi-green-fg">/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/sql/schema.py</span> in <span class="ansi-cyan-fg">__new__</span><span class="ansi-blue-fg">(cls, *args, **kw)</span>
+<span class="ansi-green-intense-fg ansi-bold">    426</span>         )
+<span class="ansi-green-intense-fg ansi-bold">    427</span>         <span class="ansi-green-fg">def</span> __new__<span class="ansi-blue-fg">(</span>cls<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">*</span>args<span class="ansi-blue-fg">:</span> Any<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">**</span>kw<span class="ansi-blue-fg">:</span> Any<span class="ansi-blue-fg">)</span> <span class="ansi-blue-fg">-&gt;</span> Any<span class="ansi-blue-fg">:</span>
+<span class="ansi-green-fg">--&gt; 428</span><span class="ansi-red-fg">             </span><span class="ansi-green-fg">return</span> cls<span class="ansi-blue-fg">.</span>_new<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">*</span>args<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">**</span>kw<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">    429</span> 
+<span class="ansi-green-intense-fg ansi-bold">    430</span>     <span class="ansi-blue-fg">@</span>classmethod
+
+<span class="ansi-green-fg">/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/sql/schema.py</span> in <span class="ansi-cyan-fg">_new</span><span class="ansi-blue-fg">(cls, *args, **kw)</span>
+<span class="ansi-green-intense-fg ansi-bold">    458</span>         <span class="ansi-green-fg">if</span> key <span class="ansi-green-fg">in</span> metadata<span class="ansi-blue-fg">.</span>tables<span class="ansi-blue-fg">:</span>
+<span class="ansi-green-intense-fg ansi-bold">    459</span>             <span class="ansi-green-fg">if</span> <span class="ansi-green-fg">not</span> keep_existing <span class="ansi-green-fg">and</span> <span class="ansi-green-fg">not</span> extend_existing <span class="ansi-green-fg">and</span> bool<span class="ansi-blue-fg">(</span>args<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-fg">--&gt; 460</span><span class="ansi-red-fg">                 raise exc.InvalidRequestError(
+</span><span class="ansi-green-intense-fg ansi-bold">    461</span>                     <span class="ansi-blue-fg">"Table '%s' is already defined for this MetaData "</span>
+<span class="ansi-green-intense-fg ansi-bold">    462</span>                     <span class="ansi-blue-fg">"instance.  Specify 'extend_existing=True' "</span>
+
+<span class="ansi-red-fg">InvalidRequestError</span>: Table 'forumPosts' is already defined for this MetaData instance.  Specify 'extend_existing=True' to redefine options and columns on an existing Table object.</pre>
 </div>
 </div>
 
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">initSports</span><span class="p">():</span>
+    <span class="sd">"""Create database and tables"""</span>
+    <span class="k">with</span> <span class="n">app</span><span class="o">.</span><span class="n">app_context</span><span class="p">():</span>
+        <span class="c1"># db.init_app(app)</span>
+        <span class="n">db</span><span class="o">.</span><span class="n">create_all</span><span class="p">()</span>
+        
+<span class="n">initSports</span><span class="p">()</span>
+</pre></div>
+
+    </div>
 </div>
 </div>
 
