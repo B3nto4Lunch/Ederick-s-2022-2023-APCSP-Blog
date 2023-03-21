@@ -426,6 +426,7 @@ window.onload = wrap_img;
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">sqlite3</span>
+<span class="n">db</span> <span class="o">=</span> <span class="s2">"/Users/ederickwong/vscode/Ederick-s-2022-2023-APCSP-Blog/_notebooks/instance/books.db"</span>
 
 <span class="c1"># Define the Book class</span>
 <span class="k">class</span> <span class="nc">Book</span><span class="p">:</span>
@@ -437,7 +438,7 @@ window.onload = wrap_img;
 
 <span class="c1"># Define a function to display all the books in the database</span>
 <span class="k">def</span> <span class="nf">display_books</span><span class="p">():</span>
-    <span class="k">with</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s2">"books.db"</span><span class="p">)</span> <span class="k">as</span> <span class="n">conn</span><span class="p">:</span>
+    <span class="k">with</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">db</span><span class="p">)</span> <span class="k">as</span> <span class="n">conn</span><span class="p">:</span>
         <span class="n">c</span> <span class="o">=</span> <span class="n">conn</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
         <span class="n">c</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">"SELECT * FROM books"</span><span class="p">)</span>
         <span class="n">books</span> <span class="o">=</span> <span class="n">c</span><span class="o">.</span><span class="n">fetchall</span><span class="p">()</span>
@@ -454,7 +455,7 @@ window.onload = wrap_img;
     <span class="n">year_published</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Enter the year the book was published: "</span><span class="p">)</span>
     <span class="n">isbn</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Enter the ISBN of the book: "</span><span class="p">)</span>
     <span class="n">new_book</span> <span class="o">=</span> <span class="n">Book</span><span class="p">(</span><span class="n">title</span><span class="p">,</span> <span class="n">author</span><span class="p">,</span> <span class="n">year_published</span><span class="p">,</span> <span class="n">isbn</span><span class="p">)</span>
-    <span class="k">with</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s2">"books.db"</span><span class="p">)</span> <span class="k">as</span> <span class="n">conn</span><span class="p">:</span>
+    <span class="k">with</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">db</span><span class="p">)</span> <span class="k">as</span> <span class="n">conn</span><span class="p">:</span>
         <span class="n">c</span> <span class="o">=</span> <span class="n">conn</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
         <span class="n">c</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">"INSERT INTO books VALUES (?, ?, ?, ?)"</span><span class="p">,</span> <span class="p">(</span><span class="n">new_book</span><span class="o">.</span><span class="n">title</span><span class="p">,</span> <span class="n">new_book</span><span class="o">.</span><span class="n">author</span><span class="p">,</span> <span class="n">new_book</span><span class="o">.</span><span class="n">year_published</span><span class="p">,</span> <span class="n">new_book</span><span class="o">.</span><span class="n">isbn</span><span class="p">))</span>
         <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">new_book</span><span class="o">.</span><span class="n">title</span><span class="si">}</span><span class="s2"> by </span><span class="si">{</span><span class="n">new_book</span><span class="o">.</span><span class="n">author</span><span class="si">}</span><span class="s2"> has been added to the database."</span><span class="p">)</span>
@@ -462,10 +463,10 @@ window.onload = wrap_img;
 <span class="c1"># Define a function to update an existing book in the database</span>
 <span class="k">def</span> <span class="nf">update_book</span><span class="p">():</span>
     <span class="n">isbn</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Enter the ISBN of the book you want to update: "</span><span class="p">)</span>
-    <span class="k">with</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s2">"books.db"</span><span class="p">)</span> <span class="k">as</span> <span class="n">conn</span><span class="p">:</span>
+    <span class="k">with</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">db</span><span class="p">)</span> <span class="k">as</span> <span class="n">conn</span><span class="p">:</span>
         <span class="n">c</span> <span class="o">=</span> <span class="n">conn</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
         <span class="n">c</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">"SELECT * FROM books WHERE isbn=?"</span><span class="p">,</span> <span class="p">(</span><span class="n">isbn</span><span class="p">,))</span>
-        <span class="n">book</span> <span class="o">=</span> <span class="n">c</span><span class="o">.</span><span class="n">fetchone</span><span class="p">()</span>
+        <span class="n">book</span> <span class="o">=</span> <span class="n">c</span><span class="o">.</span><span class="n">fetchone</span><span class="p">()</span> <span class="c1"># fetchone() Method. This method retrieves the next row of a query result set and returns a single sequence, or None if no more rows are available.</span>
         <span class="k">if</span> <span class="n">book</span><span class="p">:</span>
             <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"You are updating </span><span class="si">{</span><span class="n">book</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="s2"> by </span><span class="si">{</span><span class="n">book</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
             <span class="n">title</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Enter the new title of the book (leave blank to keep the same): "</span><span class="p">)</span>
@@ -484,7 +485,7 @@ window.onload = wrap_img;
 <span class="c1"># Define a function to delete an existing book from the database</span>
 <span class="k">def</span> <span class="nf">delete_book</span><span class="p">():</span>
     <span class="n">isbn</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Enter the ISBN of the book you want to delete: "</span><span class="p">)</span>
-    <span class="k">with</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s2">"books.db"</span><span class="p">)</span> <span class="k">as</span> <span class="n">conn</span><span class="p">:</span>
+    <span class="k">with</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">db</span><span class="p">)</span> <span class="k">as</span> <span class="n">conn</span><span class="p">:</span>
         <span class="n">c</span> <span class="o">=</span> <span class="n">conn</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
         <span class="n">c</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">"SELECT * FROM books WHERE isbn=?"</span><span class="p">,</span> <span class="p">(</span><span class="n">isbn</span><span class="p">,))</span>
         <span class="n">book</span> <span class="o">=</span> <span class="n">c</span><span class="o">.</span><span class="n">fetchone</span><span class="p">()</span>
@@ -495,10 +496,25 @@ window.onload = wrap_img;
                 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">book</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="s2"> by </span><span class="si">{</span><span class="n">book</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="si">}</span><span class="s2"> has been deleted from the database."</span><span class="p">)</span>
         <span class="k">else</span><span class="p">:</span>
             <span class="nb">print</span><span class="p">(</span><span class="s2">"No"</span><span class="p">)</span>
-<span class="n">delete_book</span><span class="p">()</span>
+<span class="n">update_book</span><span class="p">()</span>
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>You are updating To Kill a Mockingbird by Harper Lee
+To Kill a Mockingbird by Harper Lee has been updated in the database.
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
