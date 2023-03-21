@@ -81,7 +81,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      10 min read
+      11 min read
     
 </span></p>
 
@@ -495,9 +495,38 @@ window.onload = wrap_img;
                 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">book</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="s2"> by </span><span class="si">{</span><span class="n">book</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="si">}</span><span class="s2"> has been deleted from the database."</span><span class="p">)</span>
         <span class="k">else</span><span class="p">:</span>
             <span class="nb">print</span><span class="p">(</span><span class="s2">"No"</span><span class="p">)</span>
+<span class="n">delete_book</span><span class="p">()</span>
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">OperationalError</span>                          Traceback (most recent call last)
+<span class="ansi-green-fg">/var/folders/r0/j8t2jdsj4mz5cg5ssn4mncj40000gp/T/ipykernel_75522/1980942257.py</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-intense-fg ansi-bold">     69</span>         <span class="ansi-green-fg">else</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-intense-fg ansi-bold">     70</span>             print<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">"No"</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-fg">---&gt; 71</span><span class="ansi-red-fg"> </span>delete_book<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
+
+<span class="ansi-green-fg">/var/folders/r0/j8t2jdsj4mz5cg5ssn4mncj40000gp/T/ipykernel_75522/1980942257.py</span> in <span class="ansi-cyan-fg">delete_book</span><span class="ansi-blue-fg">()</span>
+<span class="ansi-green-intense-fg ansi-bold">     60</span>     <span class="ansi-green-fg">with</span> sqlite3<span class="ansi-blue-fg">.</span>connect<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">"library.db"</span><span class="ansi-blue-fg">)</span> <span class="ansi-green-fg">as</span> conn<span class="ansi-blue-fg">:</span>
+<span class="ansi-green-intense-fg ansi-bold">     61</span>         c <span class="ansi-blue-fg">=</span> conn<span class="ansi-blue-fg">.</span>cursor<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-fg">---&gt; 62</span><span class="ansi-red-fg">         </span>c<span class="ansi-blue-fg">.</span>execute<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">"SELECT * FROM books WHERE isbn=?"</span><span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">(</span>isbn<span class="ansi-blue-fg">,</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">     63</span>         book <span class="ansi-blue-fg">=</span> c<span class="ansi-blue-fg">.</span>fetchone<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">     64</span>         <span class="ansi-green-fg">if</span> book<span class="ansi-blue-fg">:</span>
+
+<span class="ansi-red-fg">OperationalError</span>: no such table: books</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -712,6 +741,15 @@ window.onload = wrap_img;
 </div>
     
 
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Does this show procedural abstraction? if so, explain:</p>
+<p>Yes, this code shows procedural abstraction. Procedural abstraction is a programming concept that involves breaking down a program into smaller, more manageable tasks, each of which can be executed as a procedure or function. In this code, each function (display_books, add_book, update_book, and delete_book) represents a specific task or operation that can be performed on the database, and each function encapsulates the details of that operation. This allows the main program or other parts of the program to interact with the database using a simple function call, without needing to know the details of how the operation is performed. Procedural abstraction helps to simplify complex programs and makes them easier to maintain and modify.</p>
+
+</div>
+</div>
+</div>
 &lt;/div&gt;
  
 
