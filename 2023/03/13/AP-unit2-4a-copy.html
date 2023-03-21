@@ -502,34 +502,6 @@ window.onload = wrap_img;
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-<div class="output_subarea output_text output_error">
-<pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">OperationalError</span>                          Traceback (most recent call last)
-<span class="ansi-green-fg">/var/folders/r0/j8t2jdsj4mz5cg5ssn4mncj40000gp/T/ipykernel_75522/1980942257.py</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-intense-fg ansi-bold">     69</span>         <span class="ansi-green-fg">else</span><span class="ansi-blue-fg">:</span>
-<span class="ansi-green-intense-fg ansi-bold">     70</span>             print<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">"No"</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-fg">---&gt; 71</span><span class="ansi-red-fg"> </span>delete_book<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
-
-<span class="ansi-green-fg">/var/folders/r0/j8t2jdsj4mz5cg5ssn4mncj40000gp/T/ipykernel_75522/1980942257.py</span> in <span class="ansi-cyan-fg">delete_book</span><span class="ansi-blue-fg">()</span>
-<span class="ansi-green-intense-fg ansi-bold">     60</span>     <span class="ansi-green-fg">with</span> sqlite3<span class="ansi-blue-fg">.</span>connect<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">"library.db"</span><span class="ansi-blue-fg">)</span> <span class="ansi-green-fg">as</span> conn<span class="ansi-blue-fg">:</span>
-<span class="ansi-green-intense-fg ansi-bold">     61</span>         c <span class="ansi-blue-fg">=</span> conn<span class="ansi-blue-fg">.</span>cursor<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-fg">---&gt; 62</span><span class="ansi-red-fg">         </span>c<span class="ansi-blue-fg">.</span>execute<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">"SELECT * FROM books WHERE isbn=?"</span><span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">(</span>isbn<span class="ansi-blue-fg">,</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">     63</span>         book <span class="ansi-blue-fg">=</span> c<span class="ansi-blue-fg">.</span>fetchone<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">     64</span>         <span class="ansi-green-fg">if</span> book<span class="ansi-blue-fg">:</span>
-
-<span class="ansi-red-fg">OperationalError</span>: no such table: books</pre>
-</div>
-</div>
-
-</div>
-</div>
-
 </div>
     
 
