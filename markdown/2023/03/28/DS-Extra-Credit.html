@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Data Structures Extra Credit | Ederick Wong’s 2022-2023 APCSP Blog</title>
+<meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="Data Structures Extra Credit" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Extra Credit" />
+<meta property="og:description" content="Extra Credit" />
+<link rel="canonical" href="https://b3nto4lunch.github.io/Ederick-s-2022-2023-APCSP-Blog/markdown/2023/03/28/DS-Extra-Credit.html" />
+<meta property="og:url" content="https://b3nto4lunch.github.io/Ederick-s-2022-2023-APCSP-Blog/markdown/2023/03/28/DS-Extra-Credit.html" />
+<meta property="og:site_name" content="Ederick Wong’s 2022-2023 APCSP Blog" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2023-03-28T00:00:00-05:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Data Structures Extra Credit" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2023-03-28T00:00:00-05:00","datePublished":"2023-03-28T00:00:00-05:00","description":"Extra Credit","headline":"Data Structures Extra Credit","mainEntityOfPage":{"@type":"WebPage","@id":"https://b3nto4lunch.github.io/Ederick-s-2022-2023-APCSP-Blog/markdown/2023/03/28/DS-Extra-Credit.html"},"url":"https://b3nto4lunch.github.io/Ederick-s-2022-2023-APCSP-Blog/markdown/2023/03/28/DS-Extra-Credit.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/Ederick-s-2022-2023-APCSP-Blog/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://b3nto4lunch.github.io/Ederick-s-2022-2023-APCSP-Blog/feed.xml" title="Ederick Wong's 2022-2023 APCSP Blog" /><link rel="shortcut icon" type="image/x-icon" href="/Ederick-s-2022-2023-APCSP-Blog/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+
+<script>
+function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title") && (el.className != "emoji")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+}
+window.onload = wrap_img;
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+    // add link icon to anchor tags
+    var elem = document.querySelectorAll(".anchor-link")
+    elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+    });
+</script>
+</head>
+<body><header class="site-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/Ederick-s-2022-2023-APCSP-Blog/">Ederick Wong&#39;s 2022-2023 APCSP Blog</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/Ederick-s-2022-2023-APCSP-Blog/about/">About Me</a><a class="page-link" href="/Ederick-s-2022-2023-APCSP-Blog/_pages/frontend.html">Frontend</a><a class="page-link" href="/Ederick-s-2022-2023-APCSP-Blog/search/">Search</a><a class="page-link" href="/Ederick-s-2022-2023-APCSP-Blog/categories/">Tags</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Data Structures Extra Credit</h1><p class="page-description">Extra Credit</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2023-03-28T00:00:00-05:00" itemprop="datePublished">
+        Mar 28, 2023
+      </time>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      3 min read
+    
+</span></p>
+
+    
+      <p class="category-tags"><i class="fas fa-tags category-tags-icon"></i></i> 
+      
+        <a class="category-tags-link" href="/Ederick-s-2022-2023-APCSP-Blog/categories/#markdown">markdown</a>
+        
+      
+      </p>
+    
+
+    </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <ul id="toc" class="section-nav">
+<li class="toc-entry toc-h1"><a href="#notes">Notes</a></li>
+<li class="toc-entry toc-h1"><a href="#stories">Stories</a></li>
+<li class="toc-entry toc-h1"><a href="#facts-about-san-marcos">Facts about San Marcos</a></li>
+<li class="toc-entry toc-h1"><a href="#pathways">Pathways</a></li>
+<li class="toc-entry toc-h1"><a href="#list-of-departments">List of Departments</a></li>
+<li class="toc-entry toc-h1"><a href="#clubs">Clubs</a></li>
+<li class="toc-entry toc-h1"><a href="#internships">Internships</a></li>
+<li class="toc-entry toc-h1"><a href="#programs">Programs</a></li>
+<li class="toc-entry toc-h1"><a href="#paying-for-college">Paying for College</a></li>
+<li class="toc-entry toc-h1"><a href="#john-is-a-debt-free-college-student">John is a Debt-Free College Student</a></li>
+<li class="toc-entry toc-h1"><a href="#life-after-csusm">Life after CSUSM</a></li>
+</ul><h1 id="notes">
+<a class="anchor" href="#notes" aria-hidden="true"><span class="octicon octicon-link"></span></a>Notes</h1>
+
+<p>Ashley and John:</p>
+<ul>
+  <li>Graduated from the CSUSM Recently</li>
+  <li>Asked question about CS, Medical Field</li>
+</ul>
+
+<h1 id="stories">
+<a class="anchor" href="#stories" aria-hidden="true"><span class="octicon octicon-link"></span></a>Stories</h1>
+
+<ul>
+  <li>Ashley works in a quantum computing group, came to CS because she liked Physics</li>
+  <li>Took AP Physics, got a D, still pursued it</li>
+  <li>From Palm Springs Area</li>
+  <li>Pursuing college was difficult, had lots of failures, continued pursuing and eventually got an opportunity for a PhD at Uni of Cali.</li>
+  <li>Cal State opened lots of doors for Ashley</li>
+  <li>
+    <p>Uses Python, admits to not being the best, but keeps trying</p>
+  </li>
+  <li>John is from Escindido</li>
+  <li>Sort of a delinquent</li>
+  <li>At palomar for about three years</li>
+  <li>Had some associates, when pandemic hit, that’s when he transferred</li>
+  <li>Pursued computer science</li>
+  <li>Did not get the campus experience until the last semester, then graduated</li>
+  <li>Took six years to get bachelors degree</li>
+</ul>
+
+<h1 id="facts-about-san-marcos">
+<a class="anchor" href="#facts-about-san-marcos" aria-hidden="true"><span class="octicon octicon-link"></span></a>Facts about San Marcos</h1>
+<ul>
+  <li>Newer Uni (1989)</li>
+  <li>21 of 23 graduates generations</li>
+  <li>Lots of local industries wanting to take in new CS majors</li>
+  <li>Lots of opportunity</li>
+  <li>Lots of Stairs, “Will have nice legs,” says Ashley,</li>
+</ul>
+
+<h1 id="pathways">
+<a class="anchor" href="#pathways" aria-hidden="true"><span class="octicon octicon-link"></span></a>Pathways</h1>
+<ul>
+  <li>Biological Sciences</li>
+  <li>Computer Science</li>
+  <li>Computer Information Services (5 years old only!)</li>
+  <li>Computer Engineering</li>
+  <li>Small pathway = more room to change campus and update it for what newer students want to learn today</li>
+  <li>You can change paths with synchronized classes.</li>
+  <li>Electrical Engineering</li>
+  <li>Software Engineering</li>
+</ul>
+
+<h1 id="list-of-departments">
+<a class="anchor" href="#list-of-departments" aria-hidden="true"><span class="octicon octicon-link"></span></a>List of Departments</h1>
+<ul>
+  <li>Physics</li>
+  <li>Chemistry</li>
+  <li>Biological Sciences</li>
+  <li>Math</li>
+  <li>Computer Science</li>
+  <li>Electrical Engineering</li>
+</ul>
+
+<h1 id="clubs">
+<a class="anchor" href="#clubs" aria-hidden="true"><span class="octicon octicon-link"></span></a>Clubs</h1>
+<ul>
+  <li>Cybersecurity</li>
+  <li>Robotics</li>
+  <li>3D Printing</li>
+  <li>Women in STEM</li>
+  <li>Society of Women Enginers</li>
+  <li>Society of Physics Students</li>
+  <li>National Society of Black Engineers</li>
+  <li>oStem – empowering LGBTQ</li>
+</ul>
+
+<h1 id="internships">
+<a class="anchor" href="#internships" aria-hidden="true"><span class="octicon octicon-link"></span></a>Internships</h1>
+<p>What is an intership? An internship is a period of work experience offered bhy an roganization for a limited period of  time.
+How to do you find these internship opportunities? Join clubs, lots of them offer internships
+Check Emails
+Google is a good source online</p>
+
+<h1 id="programs">
+<a class="anchor" href="#programs" aria-hidden="true"><span class="octicon octicon-link"></span></a>Programs</h1>
+<ul>
+  <li>Lots of programs that can better interests at SM</li>
+  <li>Summer Scholars Program: a 10 week summer program provides students with intensive research experience together with enrichment activities aimed at career developments and or proparation for graduate school. Full time is 6,000 and Part is 3,000</li>
+  <li>Quantum Bridge Program: A 4 week program fir admitted CSUSM students interested in learning and teaching.</li>
+  <li>People conduct lots of things, including microplastics, meteorites, cancer cells, etc.</li>
+</ul>
+
+<h1 id="paying-for-college">
+<a class="anchor" href="#paying-for-college" aria-hidden="true"><span class="octicon octicon-link"></span></a>Paying for College</h1>
+<ul>
+  <li>Scholarship: Privately funded by the school to get a part or full ride to a specfiic school</li>
+  <li>Grant: Typically government funded money to help you through school</li>
+  <li>Looking for scholarship: You have to look for them yourself, you can get one in virtually anything
+    <ul>
+      <li>BEING MEXICAN</li>
+      <li>Taxes are a factor</li>
+    </ul>
+  </li>
+  <li>Loans are very important. College Debt is a very real and very scary thing. There are two types of loans you can get. You do not generally want to get a loan, but if you do, there are two types of loans: subsidized and unsubsizided.
+    <ul>
+      <li>unsubsidzed: A loan that will prevent you from dropping further in debt. Interest acues on your loan the second you are lended the money.</li>
+      <li>subsidized: don’t worry about the money you get from college until you are 6 months out of graduating college.</li>
+    </ul>
+  </li>
+  <li>Financial Aid College helps</li>
+</ul>
+
+<h1 id="john-is-a-debt-free-college-student">
+<a class="anchor" href="#john-is-a-debt-free-college-student" aria-hidden="true"><span class="octicon octicon-link"></span></a>John is a Debt-Free College Student</h1>
+
+<h1 id="life-after-csusm">
+<a class="anchor" href="#life-after-csusm" aria-hidden="true"><span class="octicon octicon-link"></span></a>Life after CSUSM</h1>
+<ul>
+  <li>Get lots of internships everywhere</li>
+  <li>Even Safari Parks</li>
+  <li>Paid for Interns</li>
+  <li>Masters Program is about two years</li>
+  <li>You can get a raise or someone pays you to get into College.</li>
+</ul>
+
+  </div><a class="u-url" href="/Ederick-s-2022-2023-APCSP-Blog/markdown/2023/03/28/DS-Extra-Credit.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/Ederick-s-2022-2023-APCSP-Blog/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="https://b3nto4lunch.github.io/Ederick-s-2022-2023-APCSP-Blog/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/Ederick-s-2022-2023-APCSP-Blog/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+      </div>
+      <div class="footer-col">
+        <p>A blog for my APCSP course.</p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"><li>
+  <a rel="me" href="” https://github.com/nighthawkcoders “" target="_blank" title="github">
+    <svg class="svg-icon grey">
+      <use xlink:href="/Ederick-s-2022-2023-APCSP-Blog/assets/minima-social-icons.svg#github"></use>
+    </svg>
+  </a>
+</li>
+<li>
+  <a rel="me" href="” https://twitter.com/NighthawkCoding “" target="_blank" title="twitter">
+    <svg class="svg-icon grey">
+      <use xlink:href="/Ederick-s-2022-2023-APCSP-Blog/assets/minima-social-icons.svg#twitter"></use>
+    </svg>
+  </a>
+</li>
+<li>
+  <a rel="me" href="” https://www.youtube.com/channel/UClIKOsDS5dsfzFA3zveDT3Q “" target="_blank" title="youtube">
+    <svg class="svg-icon grey">
+      <use xlink:href="/Ederick-s-2022-2023-APCSP-Blog/assets/minima-social-icons.svg#youtube"></use>
+    </svg>
+  </a>
+</li>
+</ul>
+</div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
