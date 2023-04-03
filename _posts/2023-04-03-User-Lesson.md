@@ -1,3 +1,11 @@
+---
+title: Guide to User Class
+toc: true
+layout: post
+description: Extra Credit
+categories: [markdown]
+---
+
 # Guide to User Class
 > Big Idea 2
 - toc: true
