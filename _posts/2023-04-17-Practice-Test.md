@@ -19,7 +19,7 @@ Q64: Cloud Computing
     - CLOUD COMPUTING HAS NOTHING TO DO WITH IPRs, so do not mention it in the exam. I had a lot of trouble between C and D because of this.
 
 Q51: Which of the Following demonstrates symmetric encryption?
-    - Symmetric encryption is a type of encryption algorithm that uses a single key for both encryption and decryption. In other words, the same key is used to both scramble (encrypt) and unscramble (decrypt) the data. This means that the same key is shared between the sender and the receiver of the encrypted data.
+- Symmetric encryption is a type of encryption algorithm that uses a single key for both encryption and decryption. In other words, the same key is used to both scramble (encrypt) and unscramble (decrypt) the data. This means that the same key is shared between the sender and the receiver of the encrypted data.
 
     - The process of symmetric encryption typically involves the following steps:
 
@@ -36,3 +36,12 @@ Q51: Which of the Following demonstrates symmetric encryption?
     - To maintain the confidentiality and security of symmetric encryption, it is essential to use secure key management practices, such as securely distributing and storing the key, changing the key periodically, and limiting access to the key only to authorized parties.
     
 
+# Q54 Abstraction
+
+![]({{ site.baseurl }}/images/Question2.png)
+
+# Q9
+
+![]({{ site.baseurl }}/images/Questions.png)
+
+Overall, the test was not too challenging and only took me roughly an hour and fifteen minutes to finish. These were just some of the questions that caught me off guard and will need further preparation so that I am more comfortable taking the exam in May
