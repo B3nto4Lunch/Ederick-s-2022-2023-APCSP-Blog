@@ -28,15 +28,24 @@ outlining the crucial ideas or key points that will be needed to be digested by 
         - etc.
     - Obviously, these are just a few of the many examples that can be used as personal data when adding data related to the user.
 
-    # Extracting Information from Data
+# Extracting Information from Data
 
-    - The ability to process information depends on the capabilities of the user and their tools
-    - Regardless of size, data sets will compose challenges (need for clean data, incomplete, invalid, or the need to combine data)
-    - If data is combined, it may not be the same
-    - Problems of bias often occur when collected data related to a specific subject.
+- The ability to process information depends on the capabilities of the user and their tools
+- Regardless of size, data sets will compose challenges (need for clean data, incomplete, invalid, or the need to combine data)
+- If data is combined, it may not be the same
+- Problems of bias often occur when collected data related to a specific subject.
 
-    # Metadata
+# Metadata
 
-    - In Progress
+- Metadata can be used to add more information about a work or image
+- Metadata can have a variety of different usages, but it is mainly for easier interpretation and facts for analyzation
+
+# Examples of Adding Data Related to User
+ - Updating a blog
+ - Updating a Bio
+ - Adding manipulation of a work
+
+# Hacks
+Not sure what hacks will be yet, but I can say that a few questions will be asked + make some code for manipulating an image.
 
 
