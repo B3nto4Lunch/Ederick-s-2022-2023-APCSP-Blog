@@ -81,7 +81,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      11 min read
+      12 min read
     
 </span></p>
 
@@ -333,6 +333,30 @@ window.onload = wrap_img;
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">OperationalError</span>                          Traceback (most recent call last)
+<span class="ansi-green-intense-fg ansi-bold">/home/b3nto4lunch/vscode/Ederick-s-2022-2023-APCSP-Blog/_notebooks/2023-03-13-AP-unit2-4a copy.ipynb Cell 6</span> in <span class="ansi-cyan-fg">&lt;cell line: 35&gt;</span><span class="ansi-blue-fg">()</span>
+<span class="ansi-green-intense-fg ansi-bold">     &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/home/b3nto4lunch/vscode/Ederick-s-2022-2023-APCSP-Blog/_notebooks/2023-03-13-AP-unit2-4a%20copy.ipynb#W5sdnNjb2RlLXJlbW90ZQ%3D%3D?line=31'&gt;32&lt;/a&gt;</span> c = conn.cursor()
+<span class="ansi-green-intense-fg ansi-bold">     &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/home/b3nto4lunch/vscode/Ederick-s-2022-2023-APCSP-Blog/_notebooks/2023-03-13-AP-unit2-4a%20copy.ipynb#W5sdnNjb2RlLXJlbW90ZQ%3D%3D?line=33'&gt;34&lt;/a&gt;</span> # Create a table to store books
+<span class="ansi-green-fg">---&gt; &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/home/b3nto4lunch/vscode/Ederick-s-2022-2023-APCSP-Blog/_notebooks/2023-03-13-AP-unit2-4a%20copy.ipynb#W5sdnNjb2RlLXJlbW90ZQ%3D%3D?line=34'&gt;35&lt;/a&gt;</span> c.execute('''CREATE TABLE books
+<span class="ansi-green-intense-fg ansi-bold">     &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/home/b3nto4lunch/vscode/Ederick-s-2022-2023-APCSP-Blog/_notebooks/2023-03-13-AP-unit2-4a%20copy.ipynb#W5sdnNjb2RlLXJlbW90ZQ%3D%3D?line=35'&gt;36&lt;/a&gt;</span>              (title text, author text, year_published int, isbn text)''')
+<span class="ansi-green-intense-fg ansi-bold">     &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/home/b3nto4lunch/vscode/Ederick-s-2022-2023-APCSP-Blog/_notebooks/2023-03-13-AP-unit2-4a%20copy.ipynb#W5sdnNjb2RlLXJlbW90ZQ%3D%3D?line=37'&gt;38&lt;/a&gt;</span> # Define some sample books
+<span class="ansi-green-intense-fg ansi-bold">     &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/home/b3nto4lunch/vscode/Ederick-s-2022-2023-APCSP-Blog/_notebooks/2023-03-13-AP-unit2-4a%20copy.ipynb#W5sdnNjb2RlLXJlbW90ZQ%3D%3D?line=38'&gt;39&lt;/a&gt;</span> b1 = Book('To Kill a Mockingbird', 'Harper Lee', 1960, '9780061120084')
+
+<span class="ansi-red-fg">OperationalError</span>: table books already exists</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div>
     
 
@@ -508,10 +532,23 @@ window.onload = wrap_img;
 
 <div class="output_area">
 
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>You are updating 1984 by George Orwell
-1984 by George Orwell has been updated in the database.
-</pre>
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">OperationalError</span>                          Traceback (most recent call last)
+<span class="ansi-green-intense-fg ansi-bold">/home/b3nto4lunch/vscode/Ederick-s-2022-2023-APCSP-Blog/_notebooks/2023-03-13-AP-unit2-4a copy.ipynb Cell 10</span> in <span class="ansi-cyan-fg">&lt;cell line: 72&gt;</span><span class="ansi-blue-fg">()</span>
+<span class="ansi-green-intense-fg ansi-bold">     &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/home/b3nto4lunch/vscode/Ederick-s-2022-2023-APCSP-Blog/_notebooks/2023-03-13-AP-unit2-4a%20copy.ipynb#X12sdnNjb2RlLXJlbW90ZQ%3D%3D?line=69'&gt;70&lt;/a&gt;</span>         else:
+<span class="ansi-green-intense-fg ansi-bold">     &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/home/b3nto4lunch/vscode/Ederick-s-2022-2023-APCSP-Blog/_notebooks/2023-03-13-AP-unit2-4a%20copy.ipynb#X12sdnNjb2RlLXJlbW90ZQ%3D%3D?line=70'&gt;71&lt;/a&gt;</span>             print("No")
+<span class="ansi-green-fg">---&gt; &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/home/b3nto4lunch/vscode/Ederick-s-2022-2023-APCSP-Blog/_notebooks/2023-03-13-AP-unit2-4a%20copy.ipynb#X12sdnNjb2RlLXJlbW90ZQ%3D%3D?line=71'&gt;72&lt;/a&gt;</span> update_book()
+
+<span class="ansi-green-intense-fg ansi-bold">/home/b3nto4lunch/vscode/Ederick-s-2022-2023-APCSP-Blog/_notebooks/2023-03-13-AP-unit2-4a copy.ipynb Cell 10</span> in <span class="ansi-cyan-fg">update_book</span><span class="ansi-blue-fg">()</span>
+<span class="ansi-green-intense-fg ansi-bold">     &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/home/b3nto4lunch/vscode/Ederick-s-2022-2023-APCSP-Blog/_notebooks/2023-03-13-AP-unit2-4a%20copy.ipynb#X12sdnNjb2RlLXJlbW90ZQ%3D%3D?line=36'&gt;37&lt;/a&gt;</span> def update_book():
+<span class="ansi-green-intense-fg ansi-bold">     &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/home/b3nto4lunch/vscode/Ederick-s-2022-2023-APCSP-Blog/_notebooks/2023-03-13-AP-unit2-4a%20copy.ipynb#X12sdnNjb2RlLXJlbW90ZQ%3D%3D?line=37'&gt;38&lt;/a&gt;</span>     isbn = input("Enter the ISBN of the book you want to update: ")
+<span class="ansi-green-fg">---&gt; &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/home/b3nto4lunch/vscode/Ederick-s-2022-2023-APCSP-Blog/_notebooks/2023-03-13-AP-unit2-4a%20copy.ipynb#X12sdnNjb2RlLXJlbW90ZQ%3D%3D?line=38'&gt;39&lt;/a&gt;</span>     with sqlite3.connect(db) as conn:
+<span class="ansi-green-intense-fg ansi-bold">     &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/home/b3nto4lunch/vscode/Ederick-s-2022-2023-APCSP-Blog/_notebooks/2023-03-13-AP-unit2-4a%20copy.ipynb#X12sdnNjb2RlLXJlbW90ZQ%3D%3D?line=39'&gt;40&lt;/a&gt;</span>         c = conn.cursor()
+<span class="ansi-green-intense-fg ansi-bold">     &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/home/b3nto4lunch/vscode/Ederick-s-2022-2023-APCSP-Blog/_notebooks/2023-03-13-AP-unit2-4a%20copy.ipynb#X12sdnNjb2RlLXJlbW90ZQ%3D%3D?line=40'&gt;41&lt;/a&gt;</span>         c.execute("SELECT * FROM books WHERE isbn=?", (isbn,))
+
+<span class="ansi-red-fg">OperationalError</span>: unable to open database file</pre>
 </div>
 </div>
 

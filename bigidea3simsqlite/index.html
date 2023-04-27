@@ -79,7 +79,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      25 min read
+      29 min read
     
 </span></p>
 
@@ -191,6 +191,7 @@ window.onload = wrap_img;
 <li class="toc-entry toc-h2"><a href="#Database-Homework">Database Homework </a></li>
 </ul>
 </li>
+<li class="toc-entry toc-h1"><a href="#Extra-Credit-(CRUD-Menu-Connected-to-Book-DB)">Extra Credit (CRUD Menu Connected to Book DB) </a></li>
 <li class="toc-entry toc-h1"><a href="#Grading">Grading </a></li>
 </ul><!--
 #################################################
@@ -1423,9 +1424,68 @@ The difference between the value and the index is 200.
 <span class="c1"># What kind of iteration happens in the real world?</span>
 <span class="c1"># What occurs repeatedly, even over a long period of time?</span>
 <span class="c1"># You could model the results of a disease spreading through a population without it taking IRL years.</span>
+
+<span class="kn">import</span> <span class="nn">random</span>
+
+<span class="n">suits</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'hearts'</span><span class="p">,</span> <span class="s1">'diamonds'</span><span class="p">,</span> <span class="s1">'clubs'</span><span class="p">,</span> <span class="s1">'spades'</span><span class="p">]</span>
+<span class="n">ranks</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'2'</span><span class="p">,</span> <span class="s1">'3'</span><span class="p">,</span> <span class="s1">'4'</span><span class="p">,</span> <span class="s1">'5'</span><span class="p">,</span> <span class="s1">'6'</span><span class="p">,</span> <span class="s1">'7'</span><span class="p">,</span> <span class="s1">'8'</span><span class="p">,</span> <span class="s1">'9'</span><span class="p">,</span> <span class="s1">'10'</span><span class="p">,</span> <span class="s1">'J'</span><span class="p">,</span> <span class="s1">'Q'</span><span class="p">,</span> <span class="s1">'K'</span><span class="p">,</span> <span class="s1">'A'</span><span class="p">]</span>
+<span class="n">deck</span> <span class="o">=</span> <span class="p">[(</span><span class="n">rank</span><span class="p">,</span> <span class="n">suit</span><span class="p">)</span> <span class="k">for</span> <span class="n">suit</span> <span class="ow">in</span> <span class="n">suits</span> <span class="k">for</span> <span class="n">rank</span> <span class="ow">in</span> <span class="n">ranks</span><span class="p">]</span>
+
+<span class="k">def</span> <span class="nf">play_higher_or_lower</span><span class="p">():</span>
+    <span class="n">suits</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'hearts'</span><span class="p">,</span> <span class="s1">'diamonds'</span><span class="p">,</span> <span class="s1">'clubs'</span><span class="p">,</span> <span class="s1">'spades'</span><span class="p">]</span>
+    <span class="n">ranks</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'2'</span><span class="p">,</span> <span class="s1">'3'</span><span class="p">,</span> <span class="s1">'4'</span><span class="p">,</span> <span class="s1">'5'</span><span class="p">,</span> <span class="s1">'6'</span><span class="p">,</span> <span class="s1">'7'</span><span class="p">,</span> <span class="s1">'8'</span><span class="p">,</span> <span class="s1">'9'</span><span class="p">,</span> <span class="s1">'10'</span><span class="p">,</span> <span class="s1">'J'</span><span class="p">,</span> <span class="s1">'Q'</span><span class="p">,</span> <span class="s1">'K'</span><span class="p">,</span> <span class="s1">'A'</span><span class="p">]</span>
+    <span class="n">deck</span> <span class="o">=</span> <span class="p">[(</span><span class="n">rank</span><span class="p">,</span> <span class="n">suit</span><span class="p">)</span> <span class="k">for</span> <span class="n">suit</span> <span class="ow">in</span> <span class="n">suits</span> <span class="k">for</span> <span class="n">rank</span> <span class="ow">in</span> <span class="n">ranks</span><span class="p">]</span>
+
+    <span class="k">def</span> <span class="nf">shuffle_deck</span><span class="p">(</span><span class="n">deck</span><span class="p">):</span>
+        <span class="n">random</span><span class="o">.</span><span class="n">shuffle</span><span class="p">(</span><span class="n">deck</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">deck</span>
+
+    <span class="n">deck</span> <span class="o">=</span> <span class="n">shuffle_deck</span><span class="p">(</span><span class="n">deck</span><span class="p">)</span>
+    <span class="n">score</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">current_card</span> <span class="o">=</span> <span class="n">deck</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+
+    <span class="k">while</span> <span class="n">deck</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Current card: </span><span class="si">{</span><span class="n">current_card</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+        <span class="n">guess</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Will the next card be higher or lower? (h/l) "</span><span class="p">)</span>
+        <span class="n">next_card</span> <span class="o">=</span> <span class="n">deck</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="p">(</span><span class="n">ranks</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="n">next_card</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="o">&gt;</span> <span class="n">ranks</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="n">current_card</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="ow">and</span> <span class="n">guess</span> <span class="o">==</span> <span class="s1">'h'</span><span class="p">)</span> <span class="ow">or</span> <span class="p">(</span><span class="n">ranks</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="n">next_card</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="o">&lt;</span> <span class="n">ranks</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="n">current_card</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="ow">and</span> <span class="n">guess</span> <span class="o">==</span> <span class="s1">'l'</span><span class="p">):</span>
+            <span class="n">score</span> <span class="o">+=</span> <span class="mi">1</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">"Correct!"</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">"Incorrect!"</span><span class="p">)</span>
+            <span class="k">break</span>
+
+        <span class="n">current_card</span> <span class="o">=</span> <span class="n">next_card</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Game over. Your score is </span><span class="si">{</span><span class="n">score</span><span class="si">}</span><span class="s2">."</span><span class="p">)</span>
+
+<span class="n">play_higher_or_lower</span><span class="p">()</span>
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Current card: ('5', 'clubs')
+Correct!
+Current card: ('Q', 'clubs')
+Correct!
+Current card: ('A', 'hearts')
+Correct!
+Current card: ('J', 'hearts')
+Incorrect!
+Game over. Your score is 3.
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -1868,8 +1928,156 @@ The difference between the value and the index is 200.
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># If you've already run the db.init_app(app) function while in this notebook,</span>
-<span class="c1"># don't do it again until you've closed it!</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="sd">""" database dependencies to support sqlite examples """</span>
+<span class="kn">import</span> <span class="nn">datetime</span>
+<span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span>
+<span class="kn">import</span> <span class="nn">json</span>
+
+<span class="kn">from</span> <span class="nn">sqlalchemy.exc</span> <span class="kn">import</span> <span class="n">IntegrityError</span>
+<span class="kn">from</span> <span class="nn">werkzeug.security</span> <span class="kn">import</span> <span class="n">generate_password_hash</span><span class="p">,</span> <span class="n">check_password_hash</span>
+
+
+<span class="sd">''' Tutorial: https://www.sqlalchemy.org/library.html#tutorials, try to get into a Python shell and follow along '''</span>
+
+<span class="c1"># Define the User class to manage actions in the 'users' table</span>
+<span class="c1"># -- Object Relational Mapping (ORM) is the key concept of SQLAlchemy</span>
+<span class="c1"># -- a.) db.Model is like an inner layer of the onion in ORM</span>
+<span class="c1"># -- b.) User represents data we want to store, something that is built on db.Model</span>
+<span class="c1"># -- c.) SQLAlchemy ORM is layer on top of SQLAlchemy Core, then SQLAlchemy engine, SQL</span>
+
+<span class="kn">import</span> <span class="nn">sqlite3</span>
+
+<span class="c1"># Define a Book class</span>
+<span class="k">class</span> <span class="nc">Book</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">title</span><span class="p">,</span> <span class="n">author</span><span class="p">,</span> <span class="n">year_published</span><span class="p">,</span> <span class="n">isbn</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">title</span> <span class="o">=</span> <span class="n">title</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">author</span> <span class="o">=</span> <span class="n">author</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">year_published</span> <span class="o">=</span> <span class="n">year_published</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">isbn</span> <span class="o">=</span> <span class="n">isbn</span>
+
+<span class="c1"># Create a connection to the database</span>
+<span class="n">conn</span> <span class="o">=</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s1">'books.db'</span><span class="p">)</span>
+
+<span class="c1"># Create a cursor object</span>
+<span class="n">c</span> <span class="o">=</span> <span class="n">conn</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
+
+<span class="c1"># Create a table to store books</span>
+<span class="n">c</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s1">'''CREATE TABLE books</span>
+<span class="s1">             (title text, author text, year_published int, isbn text)'''</span><span class="p">)</span>
+
+<span class="c1"># Define some sample books</span>
+<span class="n">b1</span> <span class="o">=</span> <span class="n">Book</span><span class="p">(</span><span class="s1">'To Kill a Mockingbird'</span><span class="p">,</span> <span class="s1">'Harper Lee'</span><span class="p">,</span> <span class="mi">1960</span><span class="p">,</span> <span class="s1">'9780061120084'</span><span class="p">)</span>
+<span class="n">b2</span> <span class="o">=</span> <span class="n">Book</span><span class="p">(</span><span class="s1">'1984'</span><span class="p">,</span> <span class="s1">'George Orwell'</span><span class="p">,</span> <span class="mi">1949</span><span class="p">,</span> <span class="s1">'9780451524935'</span><span class="p">)</span>
+<span class="n">b3</span> <span class="o">=</span> <span class="n">Book</span><span class="p">(</span><span class="s1">'Pride and Prejudice'</span><span class="p">,</span> <span class="s1">'Jane Austen'</span><span class="p">,</span> <span class="mi">1813</span><span class="p">,</span> <span class="s1">'9780486284736'</span><span class="p">)</span>
+
+<span class="c1"># Add the sample books to the database</span>
+<span class="n">books</span> <span class="o">=</span> <span class="p">[</span><span class="n">b1</span><span class="p">,</span> <span class="n">b2</span><span class="p">,</span> <span class="n">b3</span><span class="p">]</span>
+<span class="k">for</span> <span class="n">book</span> <span class="ow">in</span> <span class="n">books</span><span class="p">:</span>
+    <span class="n">c</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">"INSERT INTO books VALUES (?, ?, ?, ?)"</span><span class="p">,</span>
+              <span class="p">(</span><span class="n">book</span><span class="o">.</span><span class="n">title</span><span class="p">,</span> <span class="n">book</span><span class="o">.</span><span class="n">author</span><span class="p">,</span> <span class="n">book</span><span class="o">.</span><span class="n">year_published</span><span class="p">,</span> <span class="n">book</span><span class="o">.</span><span class="n">isbn</span><span class="p">))</span>
+
+<span class="c1"># Save changes to the database</span>
+<span class="n">conn</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
+
+<span class="c1"># Close the connection to the database</span>
+<span class="n">conn</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Extra-Credit-(CRUD-Menu-Connected-to-Book-DB)">
+<a class="anchor" href="#Extra-Credit-(CRUD-Menu-Connected-to-Book-DB)" aria-hidden="true"><span class="octicon octicon-link"></span></a>Extra Credit (CRUD Menu Connected to Book DB)<a class="anchor-link" href="#Extra-Credit-(CRUD-Menu-Connected-to-Book-DB)"> </a>
+</h1>
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">sqlite3</span>
+<span class="n">db</span> <span class="o">=</span> <span class="s2">"/Users/ederickwong/vscode/Ederick-s-2022-2023-APCSP-Blog/_notebooks/instance/books.db"</span>
+
+<span class="c1"># Define the Book class</span>
+<span class="k">class</span> <span class="nc">Book</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">title</span><span class="p">,</span> <span class="n">author</span><span class="p">,</span> <span class="n">year_published</span><span class="p">,</span> <span class="n">isbn</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">title</span> <span class="o">=</span> <span class="n">title</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">author</span> <span class="o">=</span> <span class="n">author</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">year_published</span> <span class="o">=</span> <span class="n">year_published</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">isbn</span> <span class="o">=</span> <span class="n">isbn</span>
+
+<span class="c1"># Define a function to display all the books in the database</span>
+<span class="k">def</span> <span class="nf">display_books</span><span class="p">():</span>
+    <span class="k">with</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">db</span><span class="p">)</span> <span class="k">as</span> <span class="n">conn</span><span class="p">:</span>
+        <span class="n">c</span> <span class="o">=</span> <span class="n">conn</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
+        <span class="n">c</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">"SELECT * FROM books"</span><span class="p">)</span>
+        <span class="n">books</span> <span class="o">=</span> <span class="n">c</span><span class="o">.</span><span class="n">fetchall</span><span class="p">()</span>
+        <span class="k">if</span> <span class="n">books</span><span class="p">:</span>
+            <span class="k">for</span> <span class="n">book</span> <span class="ow">in</span> <span class="n">books</span><span class="p">:</span>
+                <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">book</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="s2"> - </span><span class="si">{</span><span class="n">book</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="si">}</span><span class="s2"> by </span><span class="si">{</span><span class="n">book</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="si">}</span><span class="s2">, published in </span><span class="si">{</span><span class="n">book</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="si">}</span><span class="s2">. ISBN: </span><span class="si">{</span><span class="n">book</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">"There are no books in the database."</span><span class="p">)</span>
+
+<span class="c1"># Define a function to add a new book to the database</span>
+<span class="k">def</span> <span class="nf">add_book</span><span class="p">():</span>
+    <span class="n">title</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Enter the title of the book: "</span><span class="p">)</span>
+    <span class="n">author</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Enter the author of the book: "</span><span class="p">)</span>
+    <span class="n">year_published</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Enter the year the book was published: "</span><span class="p">)</span>
+    <span class="n">isbn</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Enter the ISBN of the book: "</span><span class="p">)</span>
+    <span class="n">new_book</span> <span class="o">=</span> <span class="n">Book</span><span class="p">(</span><span class="n">title</span><span class="p">,</span> <span class="n">author</span><span class="p">,</span> <span class="n">year_published</span><span class="p">,</span> <span class="n">isbn</span><span class="p">)</span>
+    <span class="k">with</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">db</span><span class="p">)</span> <span class="k">as</span> <span class="n">conn</span><span class="p">:</span>
+        <span class="n">c</span> <span class="o">=</span> <span class="n">conn</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
+        <span class="n">c</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">"INSERT INTO books VALUES (?, ?, ?, ?)"</span><span class="p">,</span> <span class="p">(</span><span class="n">new_book</span><span class="o">.</span><span class="n">title</span><span class="p">,</span> <span class="n">new_book</span><span class="o">.</span><span class="n">author</span><span class="p">,</span> <span class="n">new_book</span><span class="o">.</span><span class="n">year_published</span><span class="p">,</span> <span class="n">new_book</span><span class="o">.</span><span class="n">isbn</span><span class="p">))</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">new_book</span><span class="o">.</span><span class="n">title</span><span class="si">}</span><span class="s2"> by </span><span class="si">{</span><span class="n">new_book</span><span class="o">.</span><span class="n">author</span><span class="si">}</span><span class="s2"> has been added to the database."</span><span class="p">)</span>
+
+<span class="c1"># Define a function to update an existing book in the database</span>
+<span class="k">def</span> <span class="nf">update_book</span><span class="p">():</span>
+    <span class="n">isbn</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Enter the ISBN of the book you want to update: "</span><span class="p">)</span>
+    <span class="k">with</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">db</span><span class="p">)</span> <span class="k">as</span> <span class="n">conn</span><span class="p">:</span>
+        <span class="n">c</span> <span class="o">=</span> <span class="n">conn</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
+        <span class="n">c</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">"SELECT * FROM books WHERE isbn=?"</span><span class="p">,</span> <span class="p">(</span><span class="n">isbn</span><span class="p">,))</span>
+        <span class="n">book</span> <span class="o">=</span> <span class="n">c</span><span class="o">.</span><span class="n">fetchone</span><span class="p">()</span> <span class="c1"># fetchone() Method. This method retrieves the next row of a query result set and returns a single sequence, or None if no more rows are available.</span>
+        <span class="k">if</span> <span class="n">book</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"You are updating </span><span class="si">{</span><span class="n">book</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="s2"> by </span><span class="si">{</span><span class="n">book</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+            <span class="n">title</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Enter the new title of the book (leave blank to keep the same): "</span><span class="p">)</span>
+            <span class="n">author</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Enter the new author of the book (leave blank to keep the same): "</span><span class="p">)</span>
+            <span class="n">year_published</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Enter the new year the book was published (leave blank to keep the same): "</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">title</span><span class="p">:</span>
+                <span class="n">c</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">"UPDATE books SET title=? WHERE isbn=?"</span><span class="p">,</span> <span class="p">(</span><span class="n">title</span><span class="p">,</span> <span class="n">isbn</span><span class="p">))</span>
+            <span class="k">if</span> <span class="n">author</span><span class="p">:</span>
+                <span class="n">c</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">"UPDATE books SET author=? WHERE isbn=?"</span><span class="p">,</span> <span class="p">(</span><span class="n">author</span><span class="p">,</span> <span class="n">isbn</span><span class="p">))</span>
+            <span class="k">if</span> <span class="n">year_published</span><span class="p">:</span>
+                <span class="n">c</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">"UPDATE books SET year_published=? WHERE isbn=?"</span><span class="p">,</span> <span class="p">(</span><span class="n">year_published</span><span class="p">,</span> <span class="n">isbn</span><span class="p">))</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">book</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="s2"> by </span><span class="si">{</span><span class="n">book</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="si">}</span><span class="s2"> has been updated in the database."</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">"No book with that ISBN was found in the database."</span><span class="p">)</span>
+
+<span class="c1"># Define a function to delete an existing book from the database</span>
+<span class="k">def</span> <span class="nf">delete_book</span><span class="p">():</span>
+    <span class="n">isbn</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Enter the ISBN of the book you want to delete: "</span><span class="p">)</span>
+    <span class="k">with</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">db</span><span class="p">)</span> <span class="k">as</span> <span class="n">conn</span><span class="p">:</span>
+        <span class="n">c</span> <span class="o">=</span> <span class="n">conn</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
+        <span class="n">c</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">"SELECT * FROM books WHERE isbn=?"</span><span class="p">,</span> <span class="p">(</span><span class="n">isbn</span><span class="p">,))</span>
+        <span class="n">book</span> <span class="o">=</span> <span class="n">c</span><span class="o">.</span><span class="n">fetchone</span><span class="p">()</span>
+        <span class="k">if</span> <span class="n">book</span><span class="p">:</span>
+            <span class="n">confirm</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Are you sure you want to delete </span><span class="si">{</span><span class="n">book</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="s2"> by </span><span class="si">{</span><span class="n">book</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="si">}</span><span class="s2">? (y/n)"</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">confirm</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="o">==</span> <span class="s2">"y"</span><span class="p">:</span>
+                <span class="n">c</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">"DELETE FROM books WHERE isbn=?"</span><span class="p">,</span> <span class="p">(</span><span class="n">isbn</span><span class="p">,))</span>
+                <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">book</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="s2"> by </span><span class="si">{</span><span class="n">book</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="si">}</span><span class="s2"> has been deleted from the database."</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">"No"</span><span class="p">)</span>
+<span class="n">update_book</span><span class="p">()</span>
 </pre></div>
 
     </div>
